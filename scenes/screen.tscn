@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cmfnyn8hqbf1j"]
+[gd_scene load_steps=7 format=3 uid="uid://wvox6wba1rx2"]
 
 [ext_resource type="Theme" uid="uid://lkbwdl03g4jg" path="res://themes/desktop.tres" id="1_va2bg"]
 [ext_resource type="Texture2D" uid="uid://cqvmpp3h52nth" path="res://sprites/background.png" id="2_cw334"]
@@ -15,7 +15,7 @@ gradient = SubResource("Gradient_cgybt")
 font_size = 12
 font_color = Color(0.580392, 0.580392, 0.580392, 1)
 
-[node name="Control" type="Control"]
+[node name="Control2" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1152.0

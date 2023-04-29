@@ -12,7 +12,7 @@ colors = PackedColorArray(0, 0, 0, 1, 0.203922, 0.203922, 0.203922, 0, 1, 1, 1, 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_vsxg5"]
 gradient = SubResource("Gradient_cgybt")
 
-[node name="Control" type="Control"]
+[node name="Control2" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1152.0
@@ -171,3 +171,7 @@ size_flags_horizontal = 3
 
 [node name="InfoNews" parent="VBoxContainer/desktop" instance=ExtResource("4_go67q")]
 layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 186.0
+offset_bottom = 97.0

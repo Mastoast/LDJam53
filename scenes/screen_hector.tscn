@@ -1,8 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://hw6qawpbi8am"]
+[gd_scene load_steps=7 format=3 uid="uid://bp576f50lh4f0"]
 
 [ext_resource type="Theme" uid="uid://lkbwdl03g4jg" path="res://themes/desktop.tres" id="1_h7qyw"]
 [ext_resource type="Texture2D" uid="uid://cqvmpp3h52nth" path="res://sprites/background.png" id="2_5fb65"]
-[ext_resource type="Texture2D" uid="uid://ddb0espyq3xlr" path="res://icon.svg" id="3_6wdp7"]
+[ext_resource type="Texture2D" uid="uid://xvlg1c042cst" path="res://sprites/logo_surveillance.png" id="3_u2430"]
 
 [sub_resource type="Gradient" id="Gradient_cgybt"]
 offsets = PackedFloat32Array(0, 0.894977, 1)
@@ -73,7 +73,7 @@ theme_override_constants/separation = 5
 
 [node name="logo" type="TextureRect" parent="VBoxContainer/head/MarginContainer/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("3_6wdp7")
+texture = ExtResource("3_u2430")
 expand_mode = 3
 
 [node name="company_name" type="Label" parent="VBoxContainer/head/MarginContainer/HBoxContainer"]
