@@ -1,10 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://h00ax2qf64ci"]
+[gd_scene load_steps=7 format=3 uid="uid://b5oc5xs4oow3y"]
 
 [ext_resource type="Theme" uid="uid://lkbwdl03g4jg" path="res://themes/desktop.tres" id="1_cqbv3"]
 [ext_resource type="Texture2D" uid="uid://cqvmpp3h52nth" path="res://sprites/background.png" id="2_pgsrd"]
 [ext_resource type="Texture2D" uid="uid://ddb0espyq3xlr" path="res://icon.svg" id="3_xrncx"]
-[ext_resource type="Theme" uid="uid://c7xtbcq7r2wol" path="res://themes/INFONEWS.tres" id="4_kl7x3"]
-[ext_resource type="Texture2D" uid="uid://bsgj6ieqv2xme" path="res://sprites/close_delete_remove_cross_icon_149505.png" id="5_3pa43"]
+[ext_resource type="PackedScene" uid="uid://7ed2g1714ltk" path="res://scenes/info_news.tscn" id="4_go67q"]
 
 [sub_resource type="Gradient" id="Gradient_cgybt"]
 offsets = PackedFloat32Array(0, 0.894977, 1)
@@ -12,8 +11,6 @@ colors = PackedColorArray(0, 0, 0, 1, 0.203922, 0.203922, 0.203922, 0, 1, 1, 1, 
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_vsxg5"]
 gradient = SubResource("Gradient_cgybt")
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a8kk0"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -172,58 +169,5 @@ offset_bottom = -26.0
 grow_vertical = 2
 size_flags_horizontal = 3
 
-[node name="InfoNews" type="VBoxContainer" parent="VBoxContainer/desktop"]
-modulate = Color(0, 0.796078, 0.933333, 1)
+[node name="InfoNews" parent="VBoxContainer/desktop" instance=ExtResource("4_go67q")]
 layout_mode = 0
-offset_left = 881.0
-offset_top = 16.0
-offset_right = 1067.0
-offset_bottom = 113.0
-theme = ExtResource("4_kl7x3")
-
-[node name="ColorRect" type="ColorRect" parent="VBoxContainer/desktop/InfoNews"]
-layout_mode = 2
-size_flags_vertical = 3
-color = Color(0, 0.670588, 0.941176, 1)
-
-[node name="Title" type="HBoxContainer" parent="VBoxContainer/desktop/InfoNews/ColorRect"]
-layout_mode = 2
-offset_top = -1.0
-offset_right = 185.0
-offset_bottom = 21.0
-size_flags_vertical = 3
-
-[node name="Panel" type="Panel" parent="VBoxContainer/desktop/InfoNews/ColorRect/Title"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_styles/panel = SubResource("StyleBoxEmpty_a8kk0")
-
-[node name="Label" type="Label" parent="VBoxContainer/desktop/InfoNews/ColorRect/Title/Panel"]
-layout_mode = 2
-offset_left = 27.0
-offset_top = 1.0
-offset_right = 111.0
-offset_bottom = 27.0
-theme_override_colors/font_color = Color(0, 0.105882, 1, 1)
-text = "INFONEWS
-"
-
-[node name="TextureButton" type="TextureButton" parent="VBoxContainer/desktop/InfoNews/ColorRect/Title/Panel"]
-layout_mode = 0
-offset_left = 161.0
-offset_top = 2.0
-offset_right = 284.0
-offset_bottom = 117.0
-scale = Vector2(0.2, 0.2)
-texture_normal = ExtResource("5_3pa43")
-ignore_texture_size = true
-stretch_mode = 5
-
-[node name="Corps texte" type="Panel" parent="VBoxContainer/desktop/InfoNews/ColorRect"]
-layout_mode = 2
-offset_left = 1.0
-offset_top = 25.0
-offset_right = 185.0
-offset_bottom = 96.0
-size_flags_vertical = 3
-size_flags_stretch_ratio = 3.0

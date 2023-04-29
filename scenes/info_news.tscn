@@ -1,0 +1,70 @@
+[gd_scene load_steps=5 format=3 uid="uid://7ed2g1714ltk"]
+
+[ext_resource type="Theme" uid="uid://c7xtbcq7r2wol" path="res://themes/INFONEWS.tres" id="1_haqy7"]
+[ext_resource type="Script" path="res://scripts/info_news.gd" id="2_3n34s"]
+[ext_resource type="Texture2D" uid="uid://bsgj6ieqv2xme" path="res://sprites/close_delete_remove_cross_icon_149505.png" id="2_6dran"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a8kk0"]
+
+[node name="InfoNews" type="VBoxContainer"]
+modulate = Color(0, 0.796078, 0.933333, 1)
+offset_left = 881.0
+offset_top = 16.0
+offset_right = 1067.0
+offset_bottom = 113.0
+theme = ExtResource("1_haqy7")
+script = ExtResource("2_3n34s")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0, 0.670588, 0.941176, 1)
+
+[node name="Title" type="HBoxContainer" parent="ColorRect"]
+layout_mode = 2
+offset_top = -1.0
+offset_right = 185.0
+offset_bottom = 21.0
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="ColorRect/Title"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_a8kk0")
+
+[node name="Label" type="Label" parent="ColorRect/Title/Panel"]
+layout_mode = 2
+offset_left = 27.0
+offset_top = 1.0
+offset_right = 111.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(0, 0.105882, 1, 1)
+text = "INFONEWS
+"
+
+[node name="TextureButton" type="TextureButton" parent="ColorRect/Title/Panel"]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 2.0
+offset_right = 284.0
+offset_bottom = 117.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("2_6dran")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Corps texte" type="Panel" parent="ColorRect"]
+layout_mode = 2
+offset_left = 1.0
+offset_top = 25.0
+offset_right = 185.0
+offset_bottom = 96.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+
+[node name="end_timer" type="Timer" parent="."]
+
+[node name="start_timer" type="Timer" parent="."]
+
+[connection signal="pressed" from="ColorRect/Title/Panel/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="timeout" from="end_timer" to="." method="_on_end_timer_timeout"]
