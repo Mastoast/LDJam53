@@ -1,9 +1,27 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://lkbwdl03g4jg"]
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://lkbwdl03g4jg"]
 
 [ext_resource type="FontFile" uid="uid://bbqsv3m0wu4mi" path="res://font/Ubuntu-Regular.ttf" id="1_sdf7p"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lr3mb"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_srd0y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hqkm6"]
+bg_color = Color(0.721569, 0.721569, 0.721569, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t4o3n"]
+bg_color = Color(0.721569, 0.721569, 0.721569, 1)
+
 [resource]
 LineEdit/colors/font_color = Color(1, 1, 1, 1)
+ScrollContainer/styles/panel = SubResource("StyleBoxEmpty_lr3mb")
 TextEdit/colors/background_color = Color(0.0509804, 0.0509804, 0.0509804, 1)
 TextEdit/fonts/font = ExtResource("1_sdf7p")
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_srd0y")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_hqkm6")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_t4o3n")
 VSeparator/constants/separation = 10
