@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://wvox6wba1rx2"]
+[gd_scene load_steps=8 format=3 uid="uid://cmfnyn8hqbf1j"]
 
 [ext_resource type="Theme" uid="uid://lkbwdl03g4jg" path="res://themes/desktop.tres" id="1_va2bg"]
+[ext_resource type="Script" path="res://scripts/gameHandler.gd" id="2_baaq8"]
 [ext_resource type="Texture2D" uid="uid://cqvmpp3h52nth" path="res://sprites/background.png" id="2_cw334"]
 [ext_resource type="Texture2D" uid="uid://ddb0espyq3xlr" path="res://icon.svg" id="3_khwec"]
 
@@ -15,12 +16,13 @@ gradient = SubResource("Gradient_cgybt")
 font_size = 12
 font_color = Color(0.580392, 0.580392, 0.580392, 1)
 
-[node name="Control2" type="Control"]
+[node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 theme = ExtResource("1_va2bg")
+script = ExtResource("2_baaq8")
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(576, 324)

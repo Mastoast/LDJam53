@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bp576f50lh4f0"]
+[gd_scene load_steps=7 format=3 uid="uid://hw6qawpbi8am"]
 
 [ext_resource type="Theme" uid="uid://lkbwdl03g4jg" path="res://themes/desktop.tres" id="1_h7qyw"]
 [ext_resource type="Texture2D" uid="uid://cqvmpp3h52nth" path="res://sprites/background.png" id="2_5fb65"]
@@ -25,16 +25,6 @@ theme = ExtResource("1_h7qyw")
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(576, 324)
 texture = ExtResource("2_5fb65")
-
-[node name="Button" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = -1
-offset_left = 1026.0
-offset_top = 590.0
-offset_right = 1084.0
-offset_bottom = 631.0
-grow_horizontal = 0
-text = "SEND"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -103,34 +93,33 @@ layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 12.0
 
-[node name="window3" type="Panel" parent="VBoxContainer/desktop"]
+[node name="message_window" type="Panel" parent="VBoxContainer/desktop"]
 layout_mode = 0
-offset_left = 261.0
-offset_top = 106.0
-offset_right = 1129.0
-offset_bottom = 457.0
+offset_left = 268.0
+offset_top = 23.0
+offset_right = 1136.0
+offset_bottom = 436.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 5.0
 
-[node name="Panel" type="Panel" parent="VBoxContainer/desktop/window3"]
+[node name="Panel" type="Panel" parent="VBoxContainer/desktop/message_window"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 32.0
 grow_horizontal = 2
 
-[node name="Label" type="Label" parent="VBoxContainer/desktop/window3/Panel"]
+[node name="Label" type="Label" parent="VBoxContainer/desktop/message_window/Panel"]
 layout_mode = 1
-anchors_preset = 10
+anchors_preset = 15
 anchor_right = 1.0
-offset_left = 2.0
-offset_top = 2.0
-offset_right = 2.0
-offset_bottom = 28.0
+anchor_bottom = 1.0
 grow_horizontal = 2
+grow_vertical = 2
 text = "MESSAGE HISTORY"
+vertical_alignment = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/desktop/window3"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/desktop/message_window"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -143,23 +132,61 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 10
 
-[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/desktop/window3/MarginContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/desktop/message_window/MarginContainer"]
 layout_mode = 2
 
-[node name="TextEdit" type="TextEdit" parent="VBoxContainer/desktop/window3/MarginContainer/ScrollContainer"]
+[node name="message_list" type="VBoxContainer" parent="VBoxContainer/desktop/message_window/MarginContainer/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "message 1message 1message 1message 1message 1message 1message 1message 1message 1message 1message 1message 1message 1"
-editable = false
-context_menu_enabled = false
-shortcut_keys_enabled = false
-selecting_enabled = false
-deselect_on_focus_loss_enabled = false
-drag_and_drop_selection_enabled = false
-virtual_keyboard_enabled = false
-middle_mouse_paste_enabled = false
-wrap_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/desktop/message_window/MarginContainer/ScrollContainer/message_list"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Mon premier message"
+fit_content = true
+scroll_active = false
+text_direction = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="VBoxContainer/desktop/message_window/MarginContainer/ScrollContainer/message_list"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "La Réponse"
+fit_content = true
+scroll_active = false
+text_direction = 2
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="VBoxContainer/desktop/message_window/MarginContainer/ScrollContainer/message_list"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "La Réponse"
+fit_content = true
+scroll_active = false
+text_direction = 1
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="VBoxContainer/desktop/message_window/MarginContainer/ScrollContainer/message_list"]
+clip_contents = false
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+bbcode_enabled = true
+text = "[tornado radius=5.0 freq=4.0][wave amp=25.0 freq=5.0][shake rate=10.0 level=20]radius is the radius of the circle that controls the offset, freq is how fast the text moves in a circle. A freq value of 0 will pause the animation, while negative freq will play the animation backwards.[/shake][/wave][/tornado]"
+fit_content = true
+scroll_active = false
+text_direction = 2
+
+[node name="RichTextLabel6" type="RichTextLabel" parent="VBoxContainer/desktop/message_window/MarginContainer/ScrollContainer/message_list"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+bbcode_enabled = true
+text = "Que penses-tu d'envoyer le GIGN chez [color=green][url=print]Mimi Mathy[/url][/color] ?"
+fit_content = true
+scroll_active = false
+text_direction = 1
+
+[node name="send_button" type="Button" parent="VBoxContainer/desktop/message_window/MarginContainer/ScrollContainer/message_list"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "SEND"
 
 [node name="events_window" type="Panel" parent="VBoxContainer/desktop"]
 layout_mode = 1
@@ -547,3 +574,36 @@ size_flags_vertical = 3
 text = "Il parait que ce texte est interessant et incomplet"
 label_settings = SubResource("LabelSettings_wukiv")
 text_overrun_behavior = 3
+
+[node name="answers_window" type="MarginContainer" parent="VBoxContainer/desktop"]
+layout_mode = 0
+offset_left = 271.0
+offset_top = 457.0
+offset_right = 1133.0
+offset_bottom = 570.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/desktop/answers_window"]
+layout_mode = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer/desktop/answers_window/HBoxContainer"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Mimi Mathy"
+
+[node name="Button2" type="Button" parent="VBoxContainer/desktop/answers_window/HBoxContainer"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Emmanuel Macron"
+
+[node name="Button3" type="Button" parent="VBoxContainer/desktop/answers_window/HBoxContainer"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Paul"
