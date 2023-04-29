@@ -1,6 +1,5 @@
-[gd_scene load_steps=5 format=3 uid="uid://7ed2g1714ltk"]
+[gd_scene load_steps=4 format=3 uid="uid://vdngrjb8yfk"]
 
-[ext_resource type="Theme" uid="uid://c7xtbcq7r2wol" path="res://themes/INFONEWS.tres" id="1_haqy7"]
 [ext_resource type="Script" path="res://scripts/info_news.gd" id="2_3n34s"]
 [ext_resource type="Texture2D" uid="uid://bsgj6ieqv2xme" path="res://sprites/close_delete_remove_cross_icon_149505.png" id="2_6dran"]
 
@@ -12,7 +11,6 @@ offset_left = 881.0
 offset_top = 16.0
 offset_right = 1067.0
 offset_bottom = 113.0
-theme = ExtResource("1_haqy7")
 script = ExtResource("2_3n34s")
 
 [node name="ColorRect" type="ColorRect" parent="."]
