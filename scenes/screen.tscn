@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cmfnyn8hqbf1j"]
+
+[node name="screen" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+offset_left = 239.0
+offset_top = 92.0
+offset_right = 410.0
+offset_bottom = 228.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "test text"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Control/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "test text"
