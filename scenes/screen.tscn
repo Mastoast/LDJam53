@@ -11,20 +11,18 @@ colors = PackedColorArray(0, 0, 0, 1, 0.203922, 0.203922, 0.203922, 0, 1, 1, 1, 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_vsxg5"]
 gradient = SubResource("Gradient_cgybt")
 
-[node name="screen" type="Node2D"]
-
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 theme = ExtResource("1_va2bg")
 
-[node name="Background" type="Sprite2D" parent="Control"]
+[node name="Background" type="Sprite2D" parent="."]
 position = Vector2(576, 324)
 texture = ExtResource("2_cw334")
 
-[node name="Button" type="Button" parent="Control"]
+[node name="Button" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
 offset_left = 1026.0
@@ -34,7 +32,7 @@ offset_bottom = 631.0
 grow_horizontal = 0
 text = "SEND"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -42,17 +40,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="head" type="Panel" parent="Control/VBoxContainer"]
+[node name="head" type="Panel" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Sprite2D" type="Sprite2D" parent="Control/VBoxContainer/head"]
+[node name="Sprite2D" type="Sprite2D" parent="VBoxContainer/head"]
 visible = false
 position = Vector2(576, 22)
 scale = Vector2(4.5, 44)
 texture = SubResource("GradientTexture1D_vsxg5")
 
-[node name="MarginContainer" type="MarginContainer" parent="Control/VBoxContainer/head"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/head"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -65,43 +63,43 @@ theme_override_constants/margin_top = 4
 theme_override_constants/margin_right = 4
 theme_override_constants/margin_bottom = 4
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer/head/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/head/MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 5
 
-[node name="logo" type="TextureRect" parent="Control/VBoxContainer/head/MarginContainer/HBoxContainer"]
+[node name="logo" type="TextureRect" parent="VBoxContainer/head/MarginContainer/HBoxContainer"]
 layout_mode = 2
 texture = ExtResource("3_khwec")
 expand_mode = 3
 
-[node name="company_name" type="Label" parent="Control/VBoxContainer/head/MarginContainer/HBoxContainer"]
+[node name="company_name" type="Label" parent="VBoxContainer/head/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "ACTIVE SURVEILLANCE"
 vertical_alignment = 1
 
-[node name="VSeparator2" type="VSeparator" parent="Control/VBoxContainer/head/MarginContainer/HBoxContainer"]
+[node name="VSeparator2" type="VSeparator" parent="VBoxContainer/head/MarginContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="logged_in" type="Label" parent="Control/VBoxContainer/head/MarginContainer/HBoxContainer"]
+[node name="logged_in" type="Label" parent="VBoxContainer/head/MarginContainer/HBoxContainer"]
 layout_mode = 2
 text = "Logged in as Malma"
 vertical_alignment = 1
 
-[node name="VSeparator" type="VSeparator" parent="Control/VBoxContainer/head/MarginContainer/HBoxContainer"]
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer/head/MarginContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="time" type="Label" parent="Control/VBoxContainer/head/MarginContainer/HBoxContainer"]
+[node name="time" type="Label" parent="VBoxContainer/head/MarginContainer/HBoxContainer"]
 layout_mode = 2
 text = "18:15"
 vertical_alignment = 1
 
-[node name="desktop" type="Panel" parent="Control/VBoxContainer"]
+[node name="desktop" type="Panel" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 12.0
 
-[node name="window3" type="Panel" parent="Control/VBoxContainer/desktop"]
+[node name="window3" type="Panel" parent="VBoxContainer/desktop"]
 layout_mode = 0
 offset_left = 261.0
 offset_top = 106.0
@@ -110,14 +108,14 @@ offset_bottom = 457.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 5.0
 
-[node name="Panel" type="Panel" parent="Control/VBoxContainer/desktop/window3"]
+[node name="Panel" type="Panel" parent="VBoxContainer/desktop/window3"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 32.0
 grow_horizontal = 2
 
-[node name="Label" type="Label" parent="Control/VBoxContainer/desktop/window3/Panel"]
+[node name="Label" type="Label" parent="VBoxContainer/desktop/window3/Panel"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -128,7 +126,7 @@ offset_bottom = 28.0
 grow_horizontal = 2
 text = "MESSAGE HISTORY"
 
-[node name="MarginContainer" type="MarginContainer" parent="Control/VBoxContainer/desktop/window3"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/desktop/window3"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -141,10 +139,10 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 10
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Control/VBoxContainer/desktop/window3/MarginContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/desktop/window3/MarginContainer"]
 layout_mode = 2
 
-[node name="TextEdit" type="TextEdit" parent="Control/VBoxContainer/desktop/window3/MarginContainer/ScrollContainer"]
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer/desktop/window3/MarginContainer/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -159,7 +157,7 @@ virtual_keyboard_enabled = false
 middle_mouse_paste_enabled = false
 wrap_mode = 1
 
-[node name="events_window" type="Panel" parent="Control/VBoxContainer/desktop"]
+[node name="events_window" type="Panel" parent="VBoxContainer/desktop"]
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
