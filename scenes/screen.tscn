@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://cmfnyn8hqbf1j"]
+[gd_scene load_steps=5 format=3 uid="uid://cmfnyn8hqbf1j"]
 
 [ext_resource type="Theme" uid="uid://lkbwdl03g4jg" path="res://themes/desktop.tres" id="1_va2bg"]
 [ext_resource type="Texture2D" uid="uid://cqvmpp3h52nth" path="res://sprites/background.png" id="2_cw334"]
+[ext_resource type="PackedScene" uid="uid://c4ay1gga3rwyx" path="res://scenes/window.tscn" id="3_ujufn"]
+[ext_resource type="Script" path="res://scripts/movableWindow.gd" id="3_ybnwe"]
 
 [node name="screen" type="Node2D"]
 
@@ -26,53 +28,12 @@ offset_bottom = 609.0
 grow_horizontal = 0
 text = "HACK"
 
-[node name="window" type="Panel" parent="Control"]
+[node name="window" parent="Control" instance=ExtResource("3_ujufn")]
 layout_mode = 0
-offset_left = 434.0
-offset_top = 392.0
-offset_right = 1056.0
-offset_bottom = 625.0
-
-[node name="Panel" type="Panel" parent="Control/window"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 32.0
-grow_horizontal = 2
-
-[node name="Label" type="Label" parent="Control/window/Panel"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_left = 2.0
-offset_top = 2.0
-offset_right = 2.0
-offset_bottom = 28.0
-grow_horizontal = 2
-text = "COMMAND CONSOLE"
-
-[node name="MarginContainer" type="MarginContainer" parent="Control/window"]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -199.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 10
-
-[node name="TextEdit" type="TextEdit" parent="Control/window/MarginContainer"]
-layout_mode = 2
-text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-editable = false
-context_menu_enabled = false
-selecting_enabled = false
-wrap_mode = 1
-scroll_smooth = true
+offset_left = 419.0
+offset_top = 378.0
+offset_right = 1041.0
+offset_bottom = 611.0
 
 [node name="window2" type="Panel" parent="Control"]
 layout_mode = 0
@@ -80,6 +41,7 @@ offset_left = 24.0
 offset_top = 32.0
 offset_right = 330.0
 offset_bottom = 617.0
+script = ExtResource("3_ybnwe")
 
 [node name="Panel" type="Panel" parent="Control/window2"]
 layout_mode = 1
@@ -120,3 +82,62 @@ context_menu_enabled = false
 selecting_enabled = false
 wrap_mode = 1
 scroll_smooth = true
+
+[node name="window3" type="Panel" parent="Control"]
+layout_mode = 0
+offset_left = 423.0
+offset_top = 35.0
+offset_right = 1040.0
+offset_bottom = 356.0
+script = ExtResource("3_ybnwe")
+
+[node name="Panel" type="Panel" parent="Control/window3"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 32.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="Control/window3/Panel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 2.0
+offset_bottom = 28.0
+grow_horizontal = 2
+text = "MESSAGE HISTORY"
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/window3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/window3/MarginContainer"]
+layout_mode = 2
+
+[node name="TextEdit" type="TextEdit" parent="Control/window3/MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "message 1message 1message 1message 1message 1message 1message 1message 1message 1message 1message 1message 1message 1"
+editable = false
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+wrap_mode = 1
+
+[connection signal="gui_input" from="Control/window2/Panel" to="Control/window2" method="_on_panel_gui_input"]
+[connection signal="gui_input" from="Control/window3/Panel" to="Control/window3" method="_on_panel_gui_input"]
