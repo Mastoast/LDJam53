@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://cmfnyn8hqbf1j"]
+[gd_scene load_steps=3 format=3 uid="uid://cmfnyn8hqbf1j"]
+
+[ext_resource type="Theme" uid="uid://lkbwdl03g4jg" path="res://themes/desktop.tres" id="1_va2bg"]
+[ext_resource type="Texture2D" uid="uid://cqvmpp3h52nth" path="res://sprites/background.png" id="2_cw334"]
 
 [node name="screen" type="Node2D"]
 
@@ -7,12 +10,18 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 1152.0
 offset_bottom = 648.0
+theme = ExtResource("1_va2bg")
+
+[node name="Background" type="Sprite2D" parent="Control"]
+position = Vector2(576, 324)
+texture = ExtResource("2_cw334")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+layout_mode = 0
 offset_left = 239.0
 offset_top = 92.0
-offset_right = 410.0
-offset_bottom = 228.0
+offset_right = 940.0
+offset_bottom = 354.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control/HBoxContainer"]
 layout_mode = 2
@@ -23,3 +32,24 @@ text = "test text"
 layout_mode = 2
 size_flags_horizontal = 3
 text = "test text"
+
+[node name="TextEdit" type="TextEdit" parent="Control/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+editable = false
+context_menu_enabled = false
+selecting_enabled = false
+drag_and_drop_selection_enabled = false
+wrap_mode = 1
+scroll_smooth = true
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 1071.0
+offset_top = 578.0
+offset_right = 1122.0
+offset_bottom = 609.0
+grow_horizontal = 0
+text = "HACK"

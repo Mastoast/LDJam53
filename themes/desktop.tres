@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://lkbwdl03g4jg"]
+
+[ext_resource type="FontFile" uid="uid://bbqsv3m0wu4mi" path="res://font/Ubuntu-Regular.ttf" id="1_sdf7p"]
+
+[resource]
+TextEdit/colors/background_color = Color(0, 0, 0, 0.717647)
+TextEdit/fonts/font = ExtResource("1_sdf7p")
