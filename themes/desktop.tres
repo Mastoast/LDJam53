@@ -3,5 +3,6 @@
 [ext_resource type="FontFile" uid="uid://bbqsv3m0wu4mi" path="res://font/Ubuntu-Regular.ttf" id="1_sdf7p"]
 
 [resource]
-TextEdit/colors/background_color = Color(0, 0, 0, 0.717647)
+LineEdit/colors/font_color = Color(1, 1, 1, 1)
+TextEdit/colors/background_color = Color(0.0509804, 0.0509804, 0.0509804, 1)
 TextEdit/fonts/font = ExtResource("1_sdf7p")
