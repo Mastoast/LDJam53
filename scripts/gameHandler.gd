@@ -23,6 +23,6 @@ func _process(delta):
 	$VBoxContainer/head/MarginContainer/HBoxContainer/time.text = current_time
 
 func create_event(sender, receiver, messages):
-	$VBoxContainer/desktop/events_window.create_com_event(sender, receiver, messages)
+	$VBoxContainer/desktop/window_preview.create_com_event(sender, receiver, messages)
 	
 	

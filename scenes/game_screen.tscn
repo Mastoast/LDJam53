@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cqvmpp3h52nth" path="res://sprites/background.png" id="3_28igv"]
 [ext_resource type="StyleBox" uid="uid://dsubttfxluprg" path="res://themes/background_panel_theme.tres" id="4_534s1"]
 [ext_resource type="Texture2D" uid="uid://xvlg1c042cst" path="res://sprites/logo_surveillance.png" id="5_u42x8"]
-[ext_resource type="PackedScene" uid="uid://c4s7dkavsj4pg" path="res://scenes/window_preview.tscn" id="6_aw6kj"]
+[ext_resource type="PackedScene" uid="uid://cnji1tuq3amos" path="res://scenes/window_preview.tscn" id="6_aw6kj"]
 [ext_resource type="PackedScene" uid="uid://bk8axa22nl23f" path="res://scenes/window_thread.tscn" id="7_v6uc8"]
 [ext_resource type="PackedScene" uid="uid://dmswrg3t4y0ih" path="res://scenes/window_answers.tscn" id="8_pyop8"]
 
@@ -98,7 +98,7 @@ size_flags_vertical = 3
 size_flags_stretch_ratio = 12.0
 theme_override_styles/panel = ExtResource("4_534s1")
 
-[node name="events_window" parent="VBoxContainer/desktop" instance=ExtResource("6_aw6kj")]
+[node name="window_preview" parent="VBoxContainer/desktop" instance=ExtResource("6_aw6kj")]
 layout_mode = 0
 anchors_preset = 0
 anchor_bottom = 0.0
@@ -108,16 +108,26 @@ offset_right = 245.0
 offset_bottom = 568.0
 grow_vertical = 1
 
-[node name="message_window" parent="VBoxContainer/desktop" instance=ExtResource("7_v6uc8")]
+[node name="window_thread" parent="VBoxContainer/desktop" instance=ExtResource("7_v6uc8")]
 layout_mode = 0
 offset_left = 270.0
 offset_top = 18.0
 offset_right = 1138.0
 offset_bottom = 431.0
 
-[node name="answers_window" parent="VBoxContainer/desktop" instance=ExtResource("8_pyop8")]
+[node name="window_answers" parent="VBoxContainer/desktop" instance=ExtResource("8_pyop8")]
 layout_mode = 0
 offset_left = 275.0
 offset_top = 459.0
 offset_right = 1137.0
 offset_bottom = 572.0
+
+[node name="send_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1057.0
+offset_top = 571.0
+offset_right = 1128.0
+offset_bottom = 598.0
+size_flags_horizontal = 8
+size_flags_vertical = 10
+text = "SEND >>"

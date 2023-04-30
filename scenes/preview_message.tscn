@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://82rjlv3yvqxh"]
+[gd_scene load_steps=3 format=3 uid="uid://buyid5p8ln7bt"]
+
+[ext_resource type="Script" path="res://scripts/preview_message.gd" id="1_rwtkb"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_sch8r"]
 font_size = 12
@@ -6,6 +8,7 @@ font_color = Color(0.580392, 0.580392, 0.580392, 1)
 
 [node name="preview_message" type="Button"]
 custom_minimum_size = Vector2(200, 50)
+script = ExtResource("1_rwtkb")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -28,3 +31,5 @@ size_flags_vertical = 3
 text = "Il parait que ce texte est interessant et incomplet"
 label_settings = SubResource("LabelSettings_sch8r")
 text_overrun_behavior = 3
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

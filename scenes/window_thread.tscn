@@ -1,10 +1,13 @@
-[gd_scene format=3 uid="uid://bk8axa22nl23f"]
+[gd_scene load_steps=2 format=3 uid="uid://bk8axa22nl23f"]
 
-[node name="message_window" type="Panel"]
+[ext_resource type="Script" path="res://scripts/window_thread.gd" id="1_jugw2"]
+
+[node name="window_thread" type="Panel" groups=["thread"]]
 offset_right = 868.0
 offset_bottom = 413.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 5.0
+script = ExtResource("1_jugw2")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -43,9 +46,3 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-
-[node name="send_button" type="Button" parent="MarginContainer/ScrollContainer/message_list"]
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 10
-text = "SEND >>"
