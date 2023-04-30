@@ -14,5 +14,7 @@ fit_content = true
 scroll_active = false
 autowrap_mode = 0
 shortcut_keys_enabled = false
+meta_underlined = false
+hint_underlined = false
 text_direction = 2
 script = ExtResource("2_d1k4v")
