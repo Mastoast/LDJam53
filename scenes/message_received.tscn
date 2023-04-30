@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://c13sp8qk4t1hp"]
+
+[ext_resource type="StyleBox" uid="uid://c5qo0bgf6xoa1" path="res://themes/message_received.tres" id="1_8wjtq"]
+
+[node name="message_received" type="RichTextLabel"]
+clip_contents = false
+custom_minimum_size = Vector2(0, 50)
+size_flags_horizontal = 0
+theme_override_styles/normal = ExtResource("1_8wjtq")
+bbcode_enabled = true
+text = "azeazeazeazeazeazeazetertzerzerzerzerzerzerzerzerzeerteeazeazeazeazeazeazeazeazeazeaazeazeazea
+azeazeazeazeazeazeazeazeazeazeazeahj4564
+"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+text_direction = 1

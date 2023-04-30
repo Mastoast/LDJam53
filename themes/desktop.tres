@@ -1,7 +1,17 @@
-[gd_resource type="Theme" load_steps=7 format=3 uid="uid://lkbwdl03g4jg"]
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://lkbwdl03g4jg"]
 
 [ext_resource type="StyleBox" uid="uid://d2y7jeuwoiqjr" path="res://themes/window_panel_theme.tres" id="1_1tooe"]
 [ext_resource type="FontFile" uid="uid://bbqsv3m0wu4mi" path="res://font/Ubuntu-Regular.ttf" id="1_sdf7p"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_htqha"]
+bg_color = Color(0.988235, 0, 0.901961, 1)
+border_width_left = 99
+border_color = Color(0, 0.8, 0.8, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ch0o"]
+bg_color = Color(0.92549, 0.4, 0.509804, 1)
+border_width_left = 55
+border_color = Color(0.8, 0, 0.8, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lr3mb"]
 content_margin_left = 2.0
@@ -19,6 +29,8 @@ bg_color = Color(0.721569, 0.721569, 0.721569, 1)
 
 [resource]
 default_font = ExtResource("1_sdf7p")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_htqha")
+HSlider/styles/slider = SubResource("StyleBoxFlat_1ch0o")
 LineEdit/colors/font_color = Color(1, 1, 1, 1)
 Panel/styles/panel = ExtResource("1_1tooe")
 ScrollContainer/styles/panel = SubResource("StyleBoxEmpty_lr3mb")

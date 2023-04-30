@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://lg4beu4k575g"]
+
+[node name="answers_window" type="MarginContainer"]
+offset_left = 271.0
+offset_top = 457.0
+offset_right = 1133.0
+offset_bottom = 570.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 15
+alignment = 1

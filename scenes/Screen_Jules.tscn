@@ -172,5 +172,7 @@ size_flags_horizontal = 3
 [node name="InfoNews" parent="VBoxContainer/desktop" instance=ExtResource("4_go67q")]
 layout_mode = 0
 offset_left = 931.0
+offset_top = 0.0
 offset_right = 1117.0
+offset_bottom = 97.0
 theme = null

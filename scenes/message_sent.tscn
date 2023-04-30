@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://cu57ftfl8h1ju"]
+
+[ext_resource type="StyleBox" uid="uid://dux41o3gl3vij" path="res://themes/message_sent.tres" id="1_l1sfn"]
+
+[node name="message_sent" type="RichTextLabel"]
+clip_contents = false
+custom_minimum_size = Vector2(0, 50)
+size_flags_horizontal = 8
+theme_override_styles/normal = ExtResource("1_l1sfn")
+bbcode_enabled = true
+text = "Que penses-tu d'envoyer le GIGN chez [color=green][url=print]Mimi Mathy[/url][/color]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+text_direction = 2
