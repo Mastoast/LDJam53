@@ -13,7 +13,8 @@ func _ready():
 	thread_window = get_tree().get_first_node_in_group("thread")
 	answer_window = get_tree().get_first_node_in_group("answers")
 	time_field = get_tree().get_first_node_in_group("time")
-	create_event(threads[0])
+	for thread in threads:
+		create_event(thread)
 
 
 func _process(delta):
