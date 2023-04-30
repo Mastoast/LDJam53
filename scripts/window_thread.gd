@@ -1,5 +1,8 @@
 extends Panel
 
+@export_color_no_alpha var text_color : Color
+@export_color_no_alpha var background_color : Color
+
 var window_answer
 var current_thread
 var received = load("res://scenes/message_received.tscn")
@@ -20,8 +23,22 @@ func fill_thread(thread):
 			new = sent.instantiate()
 		if message["type"] == "received":
 			new = received.instantiate()
-		new.text = message["text"] if typeof(message["text"]) == TYPE_STRING else message["text"][0]
-		new.meta_clicked.connect(keyword_clicked)
+		if typeof(message["text"]) == TYPE_STRING:
+			new.text = message["text"]
+		else:
+			# setup changeable text
+			new.clear()
+			new.add_text(message["text"][0].strip_edges() + ' ')
+			new.push_color(text_color)
+			new.push_bgcolor(background_color)
+			new.push_meta("test")
+			new.add_text(message["choices"][0])
+			new.pop()
+			new.pop()
+			new.pop()
+			new.add_text(' ' + message["text"][1].strip_edges())
+			new.meta_clicked.connect(keyword_clicked)
+			new.meta_underlined = false
 		$MarginContainer/ScrollContainer/message_list.add_child(new)
 
 func clear_thread():
@@ -34,7 +51,7 @@ func keyword_clicked(current_choice):
 	window_answer.refresh_answers(current_choice)
 
 func update_choice(choice):
-	current_thread["messages"][-1]["text"] += choice
+#	current_thread["messages"][-1]["text"] += choice
 	refresh()
 	window_answer.refresh_answers(choice)
 	

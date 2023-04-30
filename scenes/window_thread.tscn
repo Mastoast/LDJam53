@@ -8,6 +8,7 @@ offset_bottom = 413.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 5.0
 script = ExtResource("1_jugw2")
+background_color = Color(0.686275, 0.141176, 0.160784, 1)
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1

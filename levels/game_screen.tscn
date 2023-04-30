@@ -134,9 +134,4 @@ size_flags_vertical = 10
 text = "SEND >>"
 script = ExtResource("9_1pwv1")
 
-[node name="send_button2" type="Button" parent="."]
-size_flags_horizontal = 8
-size_flags_vertical = 10
-text = "SEND >>"
-
 [connection signal="pressed" from="send_button" to="." method="_on_send_button_pressed"]
