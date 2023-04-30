@@ -27,12 +27,14 @@ func fill_thread(thread):
 			new.text = message["text"]
 		else:
 			# setup changeable text
+			if !message.has("choice"):
+				message["choice"] = message["choices"][0]
 			new.clear()
 			new.add_text(message["text"][0].strip_edges() + ' ')
 			new.push_color(text_color)
 			new.push_bgcolor(background_color)
 			new.push_meta("test")
-			new.add_text(message["choices"][0])
+			new.add_text(message["choice"])
 			new.pop()
 			new.pop()
 			new.pop()
@@ -51,7 +53,7 @@ func keyword_clicked(current_choice):
 	window_answer.refresh_answers(current_choice)
 
 func update_choice(choice):
-#	current_thread["messages"][-1]["text"] += choice
+	current_thread["messages"][-1]["choice"] = choice
 	refresh()
 	window_answer.refresh_answers(choice)
 	
