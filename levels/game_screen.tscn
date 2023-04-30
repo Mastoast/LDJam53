@@ -1,14 +1,14 @@
 [gd_scene load_steps=12 format=3 uid="uid://b5f88qm5bt18o"]
 
-[ext_resource type="Theme" uid="uid://lkbwdl03g4jg" path="res://themes/desktop.tres" id="1_rm02y"]
-[ext_resource type="Script" path="res://scripts/gameHandler.gd" id="2_a5sjx"]
-[ext_resource type="Texture2D" uid="uid://cqvmpp3h52nth" path="res://sprites/background.png" id="3_28igv"]
-[ext_resource type="StyleBox" uid="uid://dsubttfxluprg" path="res://themes/background_panel_theme.tres" id="4_534s1"]
-[ext_resource type="Texture2D" uid="uid://xvlg1c042cst" path="res://sprites/logo_surveillance.png" id="5_u42x8"]
-[ext_resource type="PackedScene" uid="uid://d58j0ey643q" path="res://scenes/window_preview.tscn" id="6_aw6kj"]
-[ext_resource type="PackedScene" uid="uid://bk8axa22nl23f" path="res://scenes/window_thread.tscn" id="7_v6uc8"]
-[ext_resource type="PackedScene" uid="uid://dmswrg3t4y0ih" path="res://scenes/window_answers.tscn" id="8_pyop8"]
-[ext_resource type="Script" path="res://scripts/send_button.gd" id="9_dwii6"]
+[ext_resource type="Theme" uid="uid://lkbwdl03g4jg" path="res://themes/desktop.tres" id="1_rf31f"]
+[ext_resource type="Script" path="res://scripts/gameHandler.gd" id="2_mlnr7"]
+[ext_resource type="Texture2D" uid="uid://cqvmpp3h52nth" path="res://sprites/background.png" id="3_tqa2e"]
+[ext_resource type="StyleBox" uid="uid://dsubttfxluprg" path="res://themes/background_panel_theme.tres" id="4_u122v"]
+[ext_resource type="Texture2D" uid="uid://xvlg1c042cst" path="res://sprites/logo_surveillance.png" id="5_mivnp"]
+[ext_resource type="PackedScene" uid="uid://d58j0ey643q" path="res://scenes/window_preview.tscn" id="6_n7gpa"]
+[ext_resource type="PackedScene" uid="uid://bk8axa22nl23f" path="res://scenes/window_thread.tscn" id="7_vd488"]
+[ext_resource type="PackedScene" uid="uid://dmswrg3t4y0ih" path="res://scenes/window_answers.tscn" id="8_oco0f"]
+[ext_resource type="Script" path="res://scripts/send_button.gd" id="9_1pwv1"]
 
 [sub_resource type="Gradient" id="Gradient_cgybt"]
 offsets = PackedFloat32Array(0, 0.894977, 1)
@@ -22,8 +22,8 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 1152.0
 offset_bottom = 648.0
-theme = ExtResource("1_rm02y")
-script = ExtResource("2_a5sjx")
+theme = ExtResource("1_rf31f")
+script = ExtResource("2_mlnr7")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -36,12 +36,12 @@ grow_vertical = 2
 [node name="Background" type="Sprite2D" parent="VBoxContainer"]
 visible = false
 position = Vector2(576, 324)
-texture = ExtResource("3_28igv")
+texture = ExtResource("3_tqa2e")
 
 [node name="head" type="Panel" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_styles/panel = ExtResource("4_534s1")
+theme_override_styles/panel = ExtResource("4_u122v")
 
 [node name="Sprite2D" type="Sprite2D" parent="VBoxContainer/head"]
 visible = false
@@ -68,7 +68,7 @@ theme_override_constants/separation = 5
 
 [node name="logo" type="TextureRect" parent="VBoxContainer/head/MarginContainer/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("5_u42x8")
+texture = ExtResource("5_mivnp")
 expand_mode = 3
 
 [node name="company_name" type="Label" parent="VBoxContainer/head/MarginContainer/HBoxContainer"]
@@ -97,9 +97,9 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 12.0
-theme_override_styles/panel = ExtResource("4_534s1")
+theme_override_styles/panel = ExtResource("4_u122v")
 
-[node name="window_preview" parent="VBoxContainer/desktop" instance=ExtResource("6_aw6kj")]
+[node name="window_preview" parent="VBoxContainer/desktop" instance=ExtResource("6_n7gpa")]
 layout_mode = 0
 anchors_preset = 0
 anchor_bottom = 0.0
@@ -109,14 +109,14 @@ offset_right = 245.0
 offset_bottom = 568.0
 grow_vertical = 1
 
-[node name="window_thread" parent="VBoxContainer/desktop" instance=ExtResource("7_v6uc8")]
+[node name="window_thread" parent="VBoxContainer/desktop" instance=ExtResource("7_vd488")]
 layout_mode = 0
 offset_left = 270.0
 offset_top = 18.0
 offset_right = 1138.0
 offset_bottom = 431.0
 
-[node name="window_answers" parent="VBoxContainer/desktop" instance=ExtResource("8_pyop8")]
+[node name="window_answers" parent="VBoxContainer/desktop" instance=ExtResource("8_oco0f")]
 layout_mode = 0
 offset_left = 275.0
 offset_top = 459.0
@@ -132,6 +132,6 @@ offset_bottom = 598.0
 size_flags_horizontal = 8
 size_flags_vertical = 10
 text = "SEND >>"
-script = ExtResource("9_dwii6")
+script = ExtResource("9_1pwv1")
 
 [connection signal="pressed" from="send_button" to="." method="_on_send_button_pressed"]

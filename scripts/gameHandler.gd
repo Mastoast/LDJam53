@@ -6,7 +6,7 @@ var threads = [
 		"messages" = [
 			{"text": "Bonjour mairie comment ça va vous avez des sous ?",
 			"type" : "sent"},
-			{"text": "Non c'est la crise [url]Mimi Mathy[/url] tchaoh",
+			{"text": ["Non c'est la crise", "tchaoh"],
 			"choices" : ["Mimi Mathy", "non", "oui"],
 			"type" : "received"}
 		]

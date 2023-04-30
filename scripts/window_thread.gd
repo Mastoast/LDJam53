@@ -29,5 +29,16 @@ func clear_thread():
 		$MarginContainer/ScrollContainer/message_list.get_child(i).queue_free()
 	self.current_thread = null
 
-func keyword_clicked(test):
+func keyword_clicked(current_choice):
 	window_answer.add_answers(current_thread["messages"][-1]["choices"])
+	window_answer.refresh_answers(current_choice)
+
+func update_choice(choice):
+	current_thread["messages"][-1]["text"] += choice
+	refresh()
+	window_answer.refresh_answers(choice)
+	
+
+func refresh():
+	fill_thread(current_thread)
+
