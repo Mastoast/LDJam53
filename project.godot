@@ -15,6 +15,10 @@ run/main_scene="res://levels/game_screen.tscn"
 config/features=PackedStringArray("4.0", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+StaticData="*res://scripts/singletons/StaticData.gd"
+
 [display]
 
 window/size/resizable=false

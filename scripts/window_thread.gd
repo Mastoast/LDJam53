@@ -20,7 +20,7 @@ func fill_thread(thread):
 			new = sent.instantiate()
 		if message["type"] == "received":
 			new = received.instantiate()
-		new.text = message["text"]
+		new.text = message["text"] if typeof(message["text"]) == TYPE_STRING else message["text"][0]
 		new.meta_clicked.connect(keyword_clicked)
 		$MarginContainer/ScrollContainer/message_list.add_child(new)
 

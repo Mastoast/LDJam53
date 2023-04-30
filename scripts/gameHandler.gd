@@ -1,17 +1,6 @@
 extends Control
-var threads = [
-	{
-		"sender" = "huissier",
-		"receiver" = "Mairie",
-		"messages" = [
-			{"text": "Bonjour mairie comment ça va vous avez des sous ?",
-			"type" : "sent"},
-			{"text": ["Non c'est la crise", "tchaoh"],
-			"choices" : ["Mimi Mathy", "non", "oui"],
-			"type" : "received"}
-		]
-	}
-]
+
+var threads
 
 var preview_window
 var thread_window
@@ -19,6 +8,7 @@ var answer_window
 var time_field
 
 func _ready():
+	threads = StaticData.threads
 	preview_window = get_tree().get_first_node_in_group("preview")
 	thread_window = get_tree().get_first_node_in_group("thread")
 	answer_window = get_tree().get_first_node_in_group("answers")
@@ -38,4 +28,4 @@ func create_event(thread):
 func _on_send_button_pressed():
 	thread_window.clear_thread()
 	answer_window.clear()
-	
+
