@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://cnji1tuq3amos"]
+[gd_scene load_steps=2 format=3 uid="uid://d58j0ey643q"]
 
-[ext_resource type="Script" path="res://events_window.gd" id="1_8rjbb"]
+[ext_resource type="Script" path="res://scripts/window_preview.gd" id="1_w05fe"]
 
 [node name="window_preview" type="Panel" groups=["preview"]]
 custom_minimum_size = Vector2(232, 560)
@@ -11,7 +11,7 @@ offset_right = 232.0
 offset_bottom = -48.5
 grow_vertical = 2
 size_flags_horizontal = 3
-script = ExtResource("1_8rjbb")
+script = ExtResource("1_w05fe")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1

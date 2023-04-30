@@ -4,9 +4,10 @@ var threads = [
 		"sender" = "huissier",
 		"receiver" = "Mairie",
 		"messages" = [
-			{"text": "Bonjour mairie comment ça va vous avez des sous",
+			{"text": "Bonjour mairie comment ça va vous avez des sous ?",
 			"type" : "sent"},
-			{"text": "Non c'est la crise tchaoh",
+			{"text": "Non c'est la crise [mot]Mimi Mathy[/mot] tchaoh",
+			"choices" : ["non", "non", "oui"],
 			"type" : "received"}
 		]
 	}
@@ -14,15 +15,14 @@ var threads = [
 
 
 func _ready():
-	var thread = threads[0]
-	create_event(thread.sender, thread.receiver, thread.messages)
+	create_event(threads[0])
 
 
 func _process(delta):
 	var current_time = Time.get_time_string_from_system().substr(0, 5)
 	$VBoxContainer/head/MarginContainer/HBoxContainer/time.text = current_time
 
-func create_event(sender, receiver, messages):
-	$VBoxContainer/desktop/window_preview.create_com_event(sender, receiver, messages)
+func create_event(thread):
+	$VBoxContainer/desktop/window_preview.create_com_event(thread)
 	
 	
