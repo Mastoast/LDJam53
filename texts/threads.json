@@ -110,6 +110,7 @@
 	{
 		"sender": "Tourism bus driver",
 		"receiver": "Tourism Agency",
+		"version":"investigation",
 		"messages": [
 			{"text": "I just finished the budgets, you’ll get gas reimbursement before the end of the week..", "type": "sent"},
 			{"text": "Perfect.", "type": "received"},
@@ -117,7 +118,23 @@
 			{"text": "I will. But just so you know, they were nuns. The constant singing was a bit distracting.", "type": "received"},
 			{"text": "No worries. Don’t forget, tomorrow you gotta pick up the europeans at the airport at 6 AM. After that, it’s breakfast at the Coffee Corner, gift shop visit, and then the zoo.", "type": "sent"},
 			{"text": "Sure thing.", "type": "received"},
-			{"text": "Have you checked the news ? The zoo is closed, a tiger is on the loose. What should we do ?", "type": "received"},
+			{"text": "Have you checked the news ? The zoo is closed, there is an investigation apparently. What should we do ?", "type": "received"},
+			{"text": ["",""],
+			"choices": {"I don’t know… Take them to the casino, it’s always a safe bet":"driver_casino",  "Take them to the Old shoe Museum ! I’ve heard it’s really good !":"driver_museum"}, "type":"received"}
+			]
+	},
+		{
+		"sender": "Tourism bus driver",
+		"receiver": "Tourism Agency",
+		"version" : "zoo",
+		"messages": [
+			{"text": "I just finished the budgets, you’ll get gas reimbursement before the end of the week.", "type": "sent"},
+			{"text": "Perfect.", "type": "received"},
+			{"text": "By the way, can you be a bit more mindful about your driving ? The group of italian tourists complained last week.", "type": "sent"},
+			{"text": "I will. But just so you know, they were nuns. The constant singing was a bit distracting.", "type": "received"},
+			{"text": "No worries. Don’t forget, tomorrow you gotta pick up the europeans at the airport at 6 AM. After that, it’s breakfast at the Coffee Corner, gift shop visit, and then the zoo.", "type": "sent"},
+			{"text": "Sure thing.", "type": "received"},
+			{"text": "Have you checked the news ? The zoo is closed, a tiger is on the loose apparently. What should we do ?", "type": "received"},
 			{"text": ["",""],
 			"choices": {"I don’t know… Take them to the casino, it’s always a safe bet":"driver_casino",  "Take them to the Old shoe Museum ! I’ve heard it’s really good !":"driver_museum"}, "type":"received"}
 			]
