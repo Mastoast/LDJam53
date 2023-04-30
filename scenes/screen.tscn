@@ -1,9 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://cmfnyn8hqbf1j"]
+[gd_scene load_steps=11 format=3 uid="uid://cmfnyn8hqbf1j"]
 
 [ext_resource type="Theme" uid="uid://lkbwdl03g4jg" path="res://themes/desktop.tres" id="1_va2bg"]
 [ext_resource type="Script" path="res://scripts/gameHandler.gd" id="2_baaq8"]
 [ext_resource type="Texture2D" uid="uid://cqvmpp3h52nth" path="res://sprites/background.png" id="2_cw334"]
 [ext_resource type="Texture2D" uid="uid://xvlg1c042cst" path="res://sprites/logo_surveillance.png" id="4_u5c75"]
+[ext_resource type="StyleBox" uid="uid://dsubttfxluprg" path="res://themes/background_panel_theme.tres" id="5_nn67l"]
+[ext_resource type="PackedScene" uid="uid://82rjlv3yvqxh" path="res://scenes/communication_event.tscn" id="5_qsyan"]
+[ext_resource type="StyleBox" uid="uid://c5qo0bgf6xoa1" path="res://themes/message_received.tres" id="7_foobo"]
+[ext_resource type="StyleBox" uid="uid://dux41o3gl3vij" path="res://themes/message_sent.tres" id="8_y2fuy"]
 
 [sub_resource type="Gradient" id="Gradient_cgybt"]
 offsets = PackedFloat32Array(0, 0.894977, 1)
@@ -11,10 +15,6 @@ colors = PackedColorArray(0, 0, 0, 1, 0.203922, 0.203922, 0.203922, 0, 1, 1, 1, 
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_vsxg5"]
 gradient = SubResource("Gradient_cgybt")
-
-[sub_resource type="LabelSettings" id="LabelSettings_sch8r"]
-font_size = 12
-font_color = Color(0.580392, 0.580392, 0.580392, 1)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -25,6 +25,7 @@ theme = ExtResource("1_va2bg")
 script = ExtResource("2_baaq8")
 
 [node name="Background" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(576, 324)
 texture = ExtResource("2_cw334")
 
@@ -39,6 +40,7 @@ grow_vertical = 2
 [node name="head" type="Panel" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("5_nn67l")
 
 [node name="Sprite2D" type="Sprite2D" parent="VBoxContainer/head"]
 visible = false
@@ -94,6 +96,7 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 12.0
+theme_override_styles/panel = ExtResource("5_nn67l")
 
 [node name="events_window" type="Panel" parent="VBoxContainer/desktop"]
 layout_mode = 1
@@ -144,345 +147,17 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 7
 
-[node name="communication_event" type="Button" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list"]
-custom_minimum_size = Vector2(200, 50)
+[node name="communication_event" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list" instance=ExtResource("5_qsyan")]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list/communication_event"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="character_name" type="Label" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list/communication_event/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "Claude Pieplu"
-vertical_alignment = 2
-text_overrun_behavior = 3
-
-[node name="message_overview" type="Label" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list/communication_event/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "Il parait que ce texte est interessant et incomplet"
-label_settings = SubResource("LabelSettings_sch8r")
-text_overrun_behavior = 3
-
-[node name="communication_event2" type="Button" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list"]
-custom_minimum_size = Vector2(200, 50)
+[node name="communication_event2" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list" instance=ExtResource("5_qsyan")]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list/communication_event2"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="character_name" type="Label" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list/communication_event2/VBoxContainer"]
+[node name="communication_event3" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list" instance=ExtResource("5_qsyan")]
 layout_mode = 2
-size_flags_vertical = 3
-text = "Claude Pieplu"
-vertical_alignment = 2
-text_overrun_behavior = 3
-
-[node name="message_overview" type="Label" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list/communication_event2/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "Il parait que ce texte est interessant et incomplet"
-label_settings = SubResource("LabelSettings_sch8r")
-text_overrun_behavior = 3
-
-[node name="communication_event3" type="Button" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list"]
-custom_minimum_size = Vector2(200, 50)
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list/communication_event3"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="character_name" type="Label" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list/communication_event3/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "Claude Pieplu"
-vertical_alignment = 2
-text_overrun_behavior = 3
-
-[node name="message_overview" type="Label" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list/communication_event3/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "Il parait que ce texte est interessant et incomplet"
-label_settings = SubResource("LabelSettings_sch8r")
-text_overrun_behavior = 3
-
-[node name="communication_event4" type="Button" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list"]
-custom_minimum_size = Vector2(200, 50)
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list/communication_event4"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="character_name" type="Label" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list/communication_event4/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "Claude Pieplu"
-vertical_alignment = 2
-text_overrun_behavior = 3
-
-[node name="message_overview" type="Label" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list/communication_event4/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "Il parait que ce texte est interessant et incomplet"
-label_settings = SubResource("LabelSettings_sch8r")
-text_overrun_behavior = 3
-
-[node name="communication_event5" type="Button" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list"]
-custom_minimum_size = Vector2(200, 50)
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list/communication_event5"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="character_name" type="Label" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list/communication_event5/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "Claude Pieplu"
-vertical_alignment = 2
-text_overrun_behavior = 3
-
-[node name="message_overview" type="Label" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list/communication_event5/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "Il parait que ce texte est interessant et incomplet"
-label_settings = SubResource("LabelSettings_sch8r")
-text_overrun_behavior = 3
-
-[node name="communication_event6" type="Button" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list"]
-custom_minimum_size = Vector2(200, 50)
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list/communication_event6"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="character_name" type="Label" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list/communication_event6/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "Claude Pieplu"
-vertical_alignment = 2
-text_overrun_behavior = 3
-
-[node name="message_overview" type="Label" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list/communication_event6/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "Il parait que ce texte est interessant et incomplet"
-label_settings = SubResource("LabelSettings_sch8r")
-text_overrun_behavior = 3
-
-[node name="communication_event7" type="Button" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list"]
-custom_minimum_size = Vector2(200, 50)
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list/communication_event7"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="character_name" type="Label" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list/communication_event7/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "Claude Pieplu"
-vertical_alignment = 2
-text_overrun_behavior = 3
-
-[node name="message_overview" type="Label" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list/communication_event7/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "Il parait que ce texte est interessant et incomplet"
-label_settings = SubResource("LabelSettings_sch8r")
-text_overrun_behavior = 3
-
-[node name="communication_event8" type="Button" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list"]
-custom_minimum_size = Vector2(200, 50)
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list/communication_event8"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="character_name" type="Label" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list/communication_event8/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "Claude Pieplu"
-vertical_alignment = 2
-text_overrun_behavior = 3
-
-[node name="message_overview" type="Label" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list/communication_event8/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "Il parait que ce texte est interessant et incomplet"
-label_settings = SubResource("LabelSettings_sch8r")
-text_overrun_behavior = 3
-
-[node name="communication_event9" type="Button" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list"]
-custom_minimum_size = Vector2(200, 50)
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list/communication_event9"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="character_name" type="Label" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list/communication_event9/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "Claude Pieplu"
-vertical_alignment = 2
-text_overrun_behavior = 3
-
-[node name="message_overview" type="Label" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list/communication_event9/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "Il parait que ce texte est interessant et incomplet"
-label_settings = SubResource("LabelSettings_sch8r")
-text_overrun_behavior = 3
-
-[node name="communication_event10" type="Button" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list"]
-custom_minimum_size = Vector2(200, 50)
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list/communication_event10"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="character_name" type="Label" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list/communication_event10/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "Claude Pieplu"
-vertical_alignment = 2
-text_overrun_behavior = 3
-
-[node name="message_overview" type="Label" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list/communication_event10/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "Il parait que ce texte est interessant et incomplet"
-label_settings = SubResource("LabelSettings_sch8r")
-text_overrun_behavior = 3
-
-[node name="communication_event11" type="Button" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list"]
-custom_minimum_size = Vector2(200, 50)
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list/communication_event11"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="character_name" type="Label" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list/communication_event11/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "Claude Pieplu"
-vertical_alignment = 2
-text_overrun_behavior = 3
-
-[node name="message_overview" type="Label" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list/communication_event11/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "Il parait que ce texte est interessant et incomplet"
-label_settings = SubResource("LabelSettings_sch8r")
-text_overrun_behavior = 3
-
-[node name="communication_event12" type="Button" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list"]
-custom_minimum_size = Vector2(200, 50)
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list/communication_event12"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="character_name" type="Label" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list/communication_event12/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "Claude Pieplu"
-vertical_alignment = 2
-text_overrun_behavior = 3
-
-[node name="message_overview" type="Label" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list/communication_event12/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "Il parait que ce texte est interessant et incomplet"
-label_settings = SubResource("LabelSettings_sch8r")
-text_overrun_behavior = 3
-
-[node name="communication_event13" type="Button" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list"]
-custom_minimum_size = Vector2(200, 50)
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list/communication_event13"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="character_name" type="Label" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list/communication_event13/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "Claude Pieplu"
-vertical_alignment = 2
-text_overrun_behavior = 3
-
-[node name="message_overview" type="Label" parent="VBoxContainer/desktop/events_window/MarginContainer/VBoxContainer/ScrollContainer/event_list/communication_event13/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "Il parait que ce texte est interessant et incomplet"
-label_settings = SubResource("LabelSettings_sch8r")
-text_overrun_behavior = 3
 
 [node name="message_window" type="Panel" parent="VBoxContainer/desktop"]
+layout_mode = 0
 offset_left = 268.0
 offset_top = 23.0
 offset_right = 1136.0
@@ -531,7 +206,8 @@ size_flags_vertical = 3
 [node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/desktop/message_window/MarginContainer/ScrollContainer/message_list"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
-text = "Mon premier message"
+theme_override_styles/normal = ExtResource("7_foobo")
+text = "Mon premier messageMon premier messageMon premier messageMon premier messageMon premier messageMon premier messageMon premier message"
 fit_content = true
 scroll_active = false
 text_direction = 1
@@ -539,23 +215,17 @@ text_direction = 1
 [node name="RichTextLabel2" type="RichTextLabel" parent="VBoxContainer/desktop/message_window/MarginContainer/ScrollContainer/message_list"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
+theme_override_styles/normal = ExtResource("8_y2fuy")
 text = "La Réponse"
 fit_content = true
 scroll_active = false
 text_direction = 2
 
-[node name="RichTextLabel4" type="RichTextLabel" parent="VBoxContainer/desktop/message_window/MarginContainer/ScrollContainer/message_list"]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-text = "La Réponse"
-fit_content = true
-scroll_active = false
-text_direction = 1
-
 [node name="RichTextLabel5" type="RichTextLabel" parent="VBoxContainer/desktop/message_window/MarginContainer/ScrollContainer/message_list"]
 clip_contents = false
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
+theme_override_styles/normal = ExtResource("7_foobo")
 bbcode_enabled = true
 text = "[tornado radius=5.0 freq=4.0][wave amp=25.0 freq=5.0][shake rate=10.0 level=20]radius is the radius of the circle that controls the offset, freq is how fast the text moves in a circle. A freq value of 0 will pause the animation, while negative freq will play the animation backwards.[/shake][/wave][/tornado]"
 fit_content = true
@@ -565,18 +235,21 @@ text_direction = 2
 [node name="RichTextLabel6" type="RichTextLabel" parent="VBoxContainer/desktop/message_window/MarginContainer/ScrollContainer/message_list"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
+theme_override_styles/normal = ExtResource("8_y2fuy")
 bbcode_enabled = true
-text = "Que penses-tu d'envoyer le GIGN chez [color=green][url=print]Mimi Mathy[/url][/color] ?"
+text = "Que penses-tu d'envoyer le GIGN chez [color=green][url=print]Mimi Mathy[/url][/color]"
 fit_content = true
 scroll_active = false
-text_direction = 1
+text_direction = 2
 
 [node name="send_button" type="Button" parent="VBoxContainer/desktop/message_window/MarginContainer/ScrollContainer/message_list"]
 layout_mode = 2
 size_flags_horizontal = 8
-text = "SEND"
+size_flags_vertical = 10
+text = "SEND >>"
 
 [node name="answers_window" type="MarginContainer" parent="VBoxContainer/desktop"]
+layout_mode = 0
 offset_left = 271.0
 offset_top = 457.0
 offset_right = 1133.0
