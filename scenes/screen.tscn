@@ -204,12 +204,19 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/desktop/message_window/MarginContainer/ScrollContainer/message_list"]
+clip_contents = false
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
+size_flags_horizontal = 0
 theme_override_styles/normal = ExtResource("7_foobo")
-text = "Mon premier messageMon premier messageMon premier messageMon premier messageMon premier messageMon premier messageMon premier message"
+bbcode_enabled = true
+text = "azeazeazeazeazeazeazetertzerzerzerzerzerzerzerzerzeerteeazeazeazeazeazeazeazeazeazeaazeazeazea
+azeazeazeazeazeazeazeazeazeazeazeahj4564
+"
 fit_content = true
 scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
 text_direction = 1
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="VBoxContainer/desktop/message_window/MarginContainer/ScrollContainer/message_list"]
@@ -233,13 +240,17 @@ scroll_active = false
 text_direction = 2
 
 [node name="RichTextLabel6" type="RichTextLabel" parent="VBoxContainer/desktop/message_window/MarginContainer/ScrollContainer/message_list"]
+clip_contents = false
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
+size_flags_horizontal = 8
 theme_override_styles/normal = ExtResource("8_y2fuy")
 bbcode_enabled = true
 text = "Que penses-tu d'envoyer le GIGN chez [color=green][url=print]Mimi Mathy[/url][/color]"
 fit_content = true
 scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
 text_direction = 2
 
 [node name="send_button" type="Button" parent="VBoxContainer/desktop/message_window/MarginContainer/ScrollContainer/message_list"]
