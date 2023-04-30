@@ -21,7 +21,7 @@
 },
 {
 "text": ["In my great Principal wisdom, I thought long and hard about this important question. I came to the conclusion that it would be best for the happiness and growth of the children that you take them to ", "."],
-"choices": ["The Olden Shoe Museum", "The Swimming Pool", "A Skiing Trip in the Mountain"],
+"choices": {"The Olden Shoe Museum":"trip_museum", "The Swimming Pool":"trip_pool", "A Skiing Trip in the Mountain":"trip_ski"},
 "type": "received"
 }
 ]
@@ -36,7 +36,7 @@
 },
 {
 "text": ["", ""],
-"choices": ["I don’t know. I’ll check with my friend at the city hall", "Have you heard about the Olden Shoe Museum ? Is it any good ?"],
+"choices": {"I don’t know. I’ll check with my friend at the city hall":"embez_city_hall", "Have you heard about the Olden Shoe Museum ? Is it any good ?":"embez_museum"},
 "type": "received"
 }
 ]
@@ -52,7 +52,7 @@
 },
 {
 "text": ["Yes, no problem. ", "."],
-"choices": ["Sorry about last friday.", "You gotta admit though, it made for a nice show"],
+"choices": {"Sorry about last friday.":"zoo_sorry", "You gotta admit though, it made for a nice show":"zoo_show"},
 "type": "received"
 }
 ]
@@ -68,7 +68,7 @@
 },
 {
 "text": ["Heating up the grill as we speak. ", ""],
-"choices": ["Yes, cage 10 that’s right. Keep the lights off, we don’t want to startle them", "No, they changed it to cage 5. Be quick, I’m hungry !"],
+"choices": {"Cage 10 that’s right. Keep the lights off, we don’t want to startle them":"robber_10", "No, they changed it to cage 5. Be quick, I’m hungry !":"robber_5"},
 "type": "received"
 }
 ]
@@ -88,7 +88,7 @@
 },
 {
 "text": ["You don’t eve know my address ? Do you know who I am ? And you call yourself luxury… It’s ", "."],
-"choices": ["5 P.Hig Street", "30 Oak Street", "90 Friend street"],
+"choices": {"5 P.Hig Street":"oyster_land_robber", "30 Oak Street":"oyster_food_bank", "90 Friend street":"oyster_friend"},
 "type": "received"
 }
 ]
@@ -104,21 +104,7 @@
 {"text": "Take care.", "type": "sent"},
 {"text": "Are you the one who just ordered 4800 Oysters to the house ??", "type" : "sent"},
 {"text" : ["", ""],
-"choices": ["What ? How would I do that ?", "Santa Claus ?"], "type": "received"}
-]
-},
-
-{
-"sender": "Mom",
-"receiver": "Kid",
-"messages": [
-{"text": "Don’t forget to pull the turkey out of the fridge before I get home! Love you.", "type": "sent"},
-{"text": "Sure thing.", "type": "received"},
-{"text": "I won’t be here this evening, I’m skating with the O’llie family.", "type": "received"},
-{"text": "Take care.", "type": "sent"},
-{"text": "Are you the one who just ordered 4800 Oysters to the house ??", "type" : "sent"},
-{"text" : ["", ""],
-"choices": ["What ? How would I do that ?", "Santa Claus ?"], "type": "received"}
+"choices": {"What ? How would I do that ?":"mom_incomprehension", "Santa Claus ?":"mom_santa_claus"}, "type": "received"}
 ]
 },
 	{
@@ -133,7 +119,7 @@
 			{"text": "Sure thing.", "type": "received"},
 			{"text": "Have you checked the news ? The zoo is closed, a tiger is on the loose. What should we do ?", "type": "received"},
 			{"text": ["",""],
-			"choices": ["I don’t know… Take them to the casino, it’s always a safe bet",  "Take them to the Old shoe Museum ! I’ve heard it’s really good !"], "type":"received"}
+			"choices": {"I don’t know… Take them to the casino, it’s always a safe bet":"driver_casino",  "Take them to the Old shoe Museum ! I’ve heard it’s really good !":"driver_museum"}, "type":"received"}
 			]
 	},
 	
@@ -144,9 +130,9 @@
 {"text": "We heard report of a hacker intercepting communications and making quite a stir in the city. Patrol, go on and apprehend them.", "type": "sent"},
 {"text": "Received. Where are they operating ?", "type":"sent"},
 {"text": ["",""],
-"choices": ["How thick can you be ? From the Total TattleTale headquarters, where do you think ?",
-"Believe it or not, they are actually operating from the zoo, either from the tiger or the panda enclosure. Weird choice for a hacking station, I know",
-"Their location appear to be the Land Robber Headquarter. It might be a VPN, but I don’t think so, we’ve had our sight on this corporation for quite a while now. To be Frank, their name was quite the giveaway."],
+"choices": {"How thick can you be ? From the Total TattleTale headquarters, where do you think ?":"police_tattletale",
+"Believe it or not, they are actually operating from the zoo, either from the tiger or the panda enclosure. Weird choice for a hacking station, I know":"police_zoo",
+"Their location appear to be the Land Robber Headquarter. It might be a VPN, but I don’t think so, we’ve had our sight on this corporation for quite a while now. To be Frank, their name was quite the giveaway.":"police_land_robber"},
 "type": "received"
 }
 ]
