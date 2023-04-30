@@ -6,7 +6,7 @@
 		"messages": [
 {"text" : "Hello,following your recent eviction request, our agents are ready to intervene. Can you please give us the name of the correct establishment ?", "type" : "sent"},
 {"text" : ["Yes of course. At last, I won’t have to see their ugly face on my way to work. Please proceed to the eviction of ", "."],
-"choices" : ["The Ice Cream Shop", "The Land Robber Dealership", "The Pennypinch Casino Resort"],
+"choices" : {"The Ice Cream Shop" : "eviction_ice", "The Land Robber Dealership" : "eviction_land", "The Pennypinch Casino Resort" : "eviction_casino"},
 "type": "received"}
 ]
 },
