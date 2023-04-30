@@ -148,8 +148,8 @@
 {"text": "Received. Where are they operating ?", "type":"sent"},
 {"text": ["",""],
 "choices": {"How thick can you be ? From the Total TattleTale headquarters, where do you think ?":"police_tattletale",
-"Believe it or not, they are actually operating from the zoo, either from the tiger or the panda enclosure. Weird choice for a hacking station, I know":"police_zoo",
-"Their location appear to be the Land Robber Headquarter. It might be a VPN, but I don’t think so, we’ve had our sight on this corporation for quite a while now. To be Frank, their name was quite the giveaway.":"police_land_robber"},
+"Believe it or not, they are actually operating from the Zoo.":"police_zoo",
+"Their location appear to be the Land Robber Headquarter.":"police_land_robber"},
 "type": "received"
 }
 ]
