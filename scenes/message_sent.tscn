@@ -5,14 +5,15 @@
 
 [node name="message_sent" type="RichTextLabel"]
 clip_contents = false
-custom_minimum_size = Vector2(0, 50)
+custom_minimum_size = Vector2(500, 50)
+offset_right = 500.0
+offset_bottom = 50.0
 size_flags_horizontal = 8
 theme_override_styles/normal = ExtResource("1_l1sfn")
 bbcode_enabled = true
 text = "Que penses-tu d'envoyer le GIGN chez [color=green][url=print]Mimi Mathy[/url][/color]"
 fit_content = true
 scroll_active = false
-autowrap_mode = 0
 shortcut_keys_enabled = false
 meta_underlined = false
 hint_underlined = false
