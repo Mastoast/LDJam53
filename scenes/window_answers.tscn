@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dmswrg3t4y0ih"]
 
-[node name="answers_window" type="MarginContainer"]
+[node name="window_thread" type="MarginContainer"]
 offset_right = 862.0
 offset_bottom = 113.0
 

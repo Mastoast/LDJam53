@@ -1,6 +1,6 @@
 extends Panel
 
-var event = load("res://scenes/communication_event.tscn")
+var event = load("res://scenes/preview_message.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

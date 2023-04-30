@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/events_window.gd" id="1_4eqqw"]
 
-[node name="events_window" type="Panel"]
+[node name="window_preview" type="Panel"]
 custom_minimum_size = Vector2(232, 560)
 anchors_preset = 9
 anchor_bottom = 1.0

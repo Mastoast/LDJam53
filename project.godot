@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="LDJam53"
-run/main_scene="res://scenes/screen.tscn"
+run/main_scene="res://scenes/game_screen.tscn"
 config/features=PackedStringArray("4.0", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 window/size/resizable=false
 window/stretch/mode="viewport"
+
+[editor]
+
+movie_writer/movie_file="C:/Users/Hector/Videos/GodotMovies/movie.avi"
 
 [rendering]
 
