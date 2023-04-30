@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cu57ftfl8h1ju"]
+[gd_scene load_steps=3 format=3 uid="uid://cu57ftfl8h1ju"]
 
 [ext_resource type="StyleBox" uid="uid://dux41o3gl3vij" path="res://themes/message_sent.tres" id="1_l1sfn"]
+[ext_resource type="Script" path="res://scripts/message_sent.gd" id="2_d1k4v"]
 
 [node name="message_sent" type="RichTextLabel"]
 clip_contents = false
@@ -14,3 +15,4 @@ scroll_active = false
 autowrap_mode = 0
 shortcut_keys_enabled = false
 text_direction = 2
+script = ExtResource("2_d1k4v")

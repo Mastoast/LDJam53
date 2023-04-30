@@ -1,8 +1,11 @@
-[gd_scene format=3 uid="uid://dmswrg3t4y0ih"]
+[gd_scene load_steps=2 format=3 uid="uid://dmswrg3t4y0ih"]
 
-[node name="window_thread" type="MarginContainer" groups=["answers"]]
+[ext_resource type="Script" path="res://scripts/window_answers.gd" id="1_lmbse"]
+
+[node name="window_answer" type="MarginContainer" groups=["answers"]]
 offset_right = 862.0
 offset_bottom = 113.0
+script = ExtResource("1_lmbse")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 2

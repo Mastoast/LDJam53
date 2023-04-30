@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b5f88qm5bt18o"]
+[gd_scene load_steps=12 format=3 uid="uid://b5f88qm5bt18o"]
 
 [ext_resource type="Theme" uid="uid://lkbwdl03g4jg" path="res://themes/desktop.tres" id="1_rm02y"]
 [ext_resource type="Script" path="res://scripts/gameHandler.gd" id="2_a5sjx"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://d58j0ey643q" path="res://scenes/window_preview.tscn" id="6_aw6kj"]
 [ext_resource type="PackedScene" uid="uid://bk8axa22nl23f" path="res://scenes/window_thread.tscn" id="7_v6uc8"]
 [ext_resource type="PackedScene" uid="uid://dmswrg3t4y0ih" path="res://scenes/window_answers.tscn" id="8_pyop8"]
+[ext_resource type="Script" path="res://scripts/send_button.gd" id="9_dwii6"]
 
 [sub_resource type="Gradient" id="Gradient_cgybt"]
 offsets = PackedFloat32Array(0, 0.894977, 1)
@@ -87,7 +88,7 @@ vertical_alignment = 1
 [node name="VSeparator" type="VSeparator" parent="VBoxContainer/head/MarginContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="time" type="Label" parent="VBoxContainer/head/MarginContainer/HBoxContainer"]
+[node name="time" type="Label" parent="VBoxContainer/head/MarginContainer/HBoxContainer" groups=["time"]]
 layout_mode = 2
 text = "18:15"
 vertical_alignment = 1
@@ -131,3 +132,6 @@ offset_bottom = 598.0
 size_flags_horizontal = 8
 size_flags_vertical = 10
 text = "SEND >>"
+script = ExtResource("9_dwii6")
+
+[connection signal="pressed" from="send_button" to="." method="_on_send_button_pressed"]

@@ -1,17 +1,19 @@
 extends Panel
 
+var window_answer
+var current_thread
 var received = load("res://scenes/message_received.tscn")
 var sent = load("res://scenes/message_sent.tscn")
 
 func _ready():
-	pass
-
+	window_answer = get_tree().get_first_node_in_group("answers")
 
 func _process(delta):
-	pass
+	visible = current_thread != null
 
 func fill_thread(thread):
 	clear_thread()
+	current_thread = thread
 	for message in thread["messages"]:
 		var new
 		if message["type"] == "sent":
@@ -24,3 +26,4 @@ func fill_thread(thread):
 func clear_thread():
 	for i in range(0, $MarginContainer/ScrollContainer/message_list.get_child_count()):
 		$MarginContainer/ScrollContainer/message_list.get_child(i).queue_free()
+	self.current_thread = null
