@@ -1,7 +1,7 @@
 extends VBoxContainer
 var origin
 var distance = 500
-
+var popup = load("res://scenes/popup_info_news.tscn")
 
 func _ready():
 	$start_timer.start(1)
@@ -21,6 +21,8 @@ func _on_texture_button_pressed():
 	$end_timer.start(1)
 	origin = self.position
 	$start_timer.stop()
+
+
 
 
 func _on_end_timer_timeout():
