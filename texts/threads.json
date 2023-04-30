@@ -1,27 +1,6 @@
+
 [
 	{
-		"sender": "huissier",
-		"receiver": "Mairie",
-		"messages": [
-			{
-				"text": "Bonjour mairie comment ça va vous avez des sous ?",
-				"type": "sent"
-			},
-			{
-				"text": [
-					"Non c'est la crise",
-					"tchaoh"
-				],
-				"choices": [
-					"Mimi Mathy",
-					"non",
-					"oui"
-				],
-				"type": "received"
-			}
-		]
-	},
- {
 		"sender": "Eviction Team",
 		"receiver": "Mayor",
 		"messages": [
@@ -29,6 +8,147 @@
 {"text" : ["Yes of course. At last, I won’t have to see their ugly face on my way to work. Please proceed to the eviction of ", "."],
 "choices" : ["The Ice Cream Shop", "The Land Robber Dealership", "The Pennypinch Casino Resort"],
 "type": "received"}
+]
+},
+
+{
+"sender": "Professor",
+"receiver": "Principal",
+"messages": [
+{
+"text": "Hi Mrs Principal. Good news, the funding for this year’s class trip is finally secured ! I just bought the last ten lotto tickets, from Kevin who struggled a bit to sell his. Only one question left, have you decided where the class trip should be ?",
+"type": "sent"
+},
+{
+"text": ["In my great Principal wisdom, I thought long and hard about this important question. I came to the conclusion that it would be best for the happiness and growth of the children that you take them to ", "."],
+"choices": ["The Olden Shoe Museum", "The Swimming Pool", "A Skiing Trip in the Mountain"],
+"type": "received"
+}
+]
+},
+{
+"sender": "CEO Land Robber",
+"receiver": "CEO friend",
+"messages": [
+{
+"text": "I just had the cops come to the dealership with an eviction notice! Do you think it’s related to the embezzlement operation ?",
+"type": "sent"
+},
+{
+"text": ["", ""],
+"choices": ["I don’t know. I’ll check with my friend at the city hall", "Have you heard about the Olden Shoe Museum ? Is it any good ?"],
+"type": "received"
+}
+]
+},
+
+{
+"sender": "Chief caretaker",
+"receiver": "Employee",
+"messages": [
+{
+"text": "Don’t forget to switch the cages today. The Pandas need to go in cage 5 and the Tiger in cage 10. Don’t forget, you know how angry they get when they eat tiger food… We don’t want another day like last friday.",
+"type": "sent"
+},
+{
+"text": ["Yes, no problem. ", "."],
+"choices": ["Sorry about last friday.", "You gotta admit though, it made for a nice show"],
+"type": "received"
+}
+]
+},
+
+{
+"sender": "Robber",
+"receiver": "Boss",
+"messages": [
+{
+"text": "Everything is ready for the zoo robbery Boss. The disguises are on point and the key seems to work. I can’t believe we’ll finally get our own panda. I can’t wait to taste it, it will be perfect with a red wine. The panda are still in cage 10, right? ",
+"type": "sent"
+},
+{
+"text": ["Heating up the grill as we speak. ", ""],
+"choices": ["Yes, cage 10 that’s right. Keep the lights off, we don’t want to startle them", "No, they changed it to cage 5. Be quick, I’m hungry !"],
+"type": "received"
+}
+]
+},
+
+{
+"sender": "Luxury and Perjury",
+"receiver": "Land Robber CEO",
+"messages": [
+{
+	"text" :  "CEO of Land Robber here, I am opening a brand new dealership today, I want 400 cases of your best oysters to be delivered before this evening. Quickly, I am a busy man.",
+	"type" : "received"
+},
+{
+"text": "Yes of course. That will be $7.560. What is the delivery address?",
+"type": "sent"
+},
+{
+"text": ["You don’t eve know my address ? Do you know who I am ? And you call yourself luxury… It’s ", "."],
+"choices": ["5 P.Hig Street", "30 Oak Street", "90 Friend street"],
+"type": "received"
+}
+]
+},
+
+{
+"sender": "Mom",
+"receiver": "Kid",
+"messages": [
+{"text": "Don’t forget to pull the turkey out of the fridge before I get home! Love you.", "type": "sent"},
+{"text": "Sure thing.", "type": "received"},
+{"text": "I won’t be here this evening, I’m skating with the O’llie family.", "type": "received"},
+{"text": "Take care.", "type": "sent"},
+{"text": "Are you the one who just ordered 4800 Oysters to the house ??", "type" : "sent"},
+{"text" : ["", ""],
+"choices": ["What ? How would I do that ?", "Santa Claus ?"], "type": "received"}
+]
+},
+
+{
+"sender": "Mom",
+"receiver": "Kid",
+"messages": [
+{"text": "Don’t forget to pull the turkey out of the fridge before I get home! Love you.", "type": "sent"},
+{"text": "Sure thing.", "type": "received"},
+{"text": "I won’t be here this evening, I’m skating with the O’llie family.", "type": "received"},
+{"text": "Take care.", "type": "sent"},
+{"text": "Are you the one who just ordered 4800 Oysters to the house ??", "type" : "sent"},
+{"text" : ["", ""],
+"choices": ["What ? How would I do that ?", "Santa Claus ?"], "type": "received"}
+]
+},
+	{
+		"sender": "Tourism bus driver",
+		"receiver": "Tourism Agency",
+		"messages": [
+			{"text": "I just finished the budgets, you’ll get gas reimbursement before the end of the week..", "type": "sent"},
+			{"text": "Perfect.", "type": "received"},
+			{"text": "By the way, can you be a bit more mindful about your driving ? The group of italian tourists complained last week.", "type": "sent"},
+			{"text": "I will. But just so you know, they were nuns. The constant singing was a bit distracting.", "type": "received"},
+			{"text": "No worries. Don’t forget, tomorrow you gotta pick up the europeans at the airport at 6 AM. After that, it’s breakfast at the Coffee Corner, gift shop visit, and then the zoo.", "type": "sent"},
+			{"text": "Sure thing.", "type": "received"},
+			{"text": "Have you checked the news ? The zoo is closed, a tiger is on the loose. What should we do ?", "type": "received"},
+			{"text": ["",""],
+			"choices": ["I don’t know… Take them to the casino, it’s always a safe bet",  "Take them to the Old shoe Museum ! I’ve heard it’s really good !"], "type":"received"}
+			]
+	},
+	
+{
+"sender": "Police Dispatcher",
+"receiver": "Patrol",
+"messages": [
+{"text": "We heard report of a hacker intercepting communications and making quite a stir in the city. Patrol, go on and apprehend them.", "type": "sent"},
+{"text": "Received. Where are they operating ?", "type":"sent"},
+{"text": ["",""],
+"choices": ["How thick can you be ? From the Total TattleTale headquarters, where do you think ?",
+"Believe it or not, they are actually operating from the zoo, either from the tiger or the panda enclosure. Weird choice for a hacking station, I know",
+"Their location appear to be the Land Robber Headquarter. It might be a VPN, but I don’t think so, we’ve had our sight on this corporation for quite a while now. To be Frank, their name was quite the giveaway."],
+"type": "received"
+}
 ]
 }
 ]
