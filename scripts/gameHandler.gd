@@ -33,8 +33,6 @@ func _process(delta):
 
 func create_event(thread):
 	preview_window.create_com_event(thread)
-	
-	
 
 
 func _on_send_button_pressed():

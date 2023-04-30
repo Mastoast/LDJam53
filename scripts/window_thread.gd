@@ -21,9 +21,13 @@ func fill_thread(thread):
 		if message["type"] == "received":
 			new = received.instantiate()
 		new.text = message["text"]
+		new.meta_clicked.connect(keyword_clicked)
 		$MarginContainer/ScrollContainer/message_list.add_child(new)
 
 func clear_thread():
 	for i in range(0, $MarginContainer/ScrollContainer/message_list.get_child_count()):
 		$MarginContainer/ScrollContainer/message_list.get_child(i).queue_free()
 	self.current_thread = null
+
+func keyword_clicked(test):
+	window_answer.add_answers(current_thread["messages"][-1]["choices"])
