@@ -13,5 +13,5 @@ func _process(delta):
 
 func create_com_event():
 	var event = load("res://scenes/communication_event.tscn")
-	var new_event = event.instanciate()
-	$MarginContainer/VBoxContainer/ScrollContainer/event_list.addchild(new_event)
+	var test = event.instantiate()
+	$MarginContainer/VBoxContainer/ScrollContainer/event_list.add_child(test)

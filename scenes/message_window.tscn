@@ -1,10 +1,8 @@
-[gd_scene format=3 uid="uid://coyt1erfnnrgc"]
+[gd_scene format=3 uid="uid://bk8axa22nl23f"]
 
 [node name="message_window" type="Panel"]
-offset_left = 268.0
-offset_top = 23.0
-offset_right = 1136.0
-offset_bottom = 436.0
+offset_right = 868.0
+offset_bottom = 413.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 5.0
 

@@ -5,9 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://cqvmpp3h52nth" path="res://sprites/background.png" id="2_cw334"]
 [ext_resource type="Texture2D" uid="uid://xvlg1c042cst" path="res://sprites/logo_surveillance.png" id="4_u5c75"]
 [ext_resource type="StyleBox" uid="uid://dsubttfxluprg" path="res://themes/background_panel_theme.tres" id="5_nn67l"]
-[ext_resource type="PackedScene" uid="uid://bvbdrl2oyesw2" path="res://scenes/events_window.tscn" id="6_uy16a"]
-[ext_resource type="PackedScene" uid="uid://coyt1erfnnrgc" path="res://scenes/message_window.tscn" id="7_n1s8i"]
-[ext_resource type="PackedScene" uid="uid://lg4beu4k575g" path="res://scenes/answers_window.tscn" id="8_nhe44"]
+[ext_resource type="PackedScene" uid="uid://c4s7dkavsj4pg" path="res://scenes/events_window.tscn" id="6_uy16a"]
+[ext_resource type="PackedScene" uid="uid://bk8axa22nl23f" path="res://scenes/message_window.tscn" id="7_n1s8i"]
+[ext_resource type="PackedScene" uid="uid://dmswrg3t4y0ih" path="res://scenes/answers_window.tscn" id="8_nhe44"]
 
 [sub_resource type="Gradient" id="Gradient_cgybt"]
 offsets = PackedFloat32Array(0, 0.894977, 1)
@@ -24,11 +24,6 @@ offset_bottom = 648.0
 theme = ExtResource("1_va2bg")
 script = ExtResource("2_baaq8")
 
-[node name="Background" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(576, 324)
-texture = ExtResource("2_cw334")
-
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -36,6 +31,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Background" type="Sprite2D" parent="VBoxContainer"]
+visible = false
+position = Vector2(576, 324)
+texture = ExtResource("2_cw334")
 
 [node name="head" type="Panel" parent="VBoxContainer"]
 layout_mode = 2
@@ -102,22 +102,22 @@ theme_override_styles/panel = ExtResource("5_nn67l")
 layout_mode = 0
 anchors_preset = 0
 anchor_bottom = 0.0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 232.0
-offset_bottom = 0.0
+offset_left = 13.0
+offset_top = 8.0
+offset_right = 245.0
+offset_bottom = 568.0
 grow_vertical = 1
 
 [node name="message_window" parent="VBoxContainer/desktop" instance=ExtResource("7_n1s8i")]
 layout_mode = 0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 868.0
-offset_bottom = 413.0
+offset_left = 270.0
+offset_top = 18.0
+offset_right = 1138.0
+offset_bottom = 431.0
 
 [node name="answers_window" parent="VBoxContainer/desktop" instance=ExtResource("8_nhe44")]
 layout_mode = 0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 862.0
-offset_bottom = 113.0
+offset_left = 275.0
+offset_top = 459.0
+offset_right = 1137.0
+offset_bottom = 572.0
