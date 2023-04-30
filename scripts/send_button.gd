@@ -7,4 +7,4 @@ func _ready():
 
 
 func _process(delta):
-	pass
+	visible = thread_window.current_thread != null and !thread_window.current_thread["messages"][-1].has("sent")

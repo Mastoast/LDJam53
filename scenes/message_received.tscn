@@ -4,15 +4,15 @@
 
 [node name="message_received" type="RichTextLabel"]
 clip_contents = false
-custom_minimum_size = Vector2(0, 50)
+custom_minimum_size = Vector2(500, 50)
 size_flags_horizontal = 0
 theme_override_styles/normal = ExtResource("1_8wjtq")
 bbcode_enabled = true
-text = "azeazeazeazeazeazeazetertzerzerzerzerzerzerzerzerzeerteeazeazeazeazeazeazeazeazeazeaazeazeazea
-azeazeazeazeazeazeazeazeazeazeazeahj4564
+text = "azeazeazeazeazeazeazetertzerzerzerzerzerzerzerze rzeerteeazeazeazeazeazeazeazeazeazeaazeazeazea azeazeazeazeazeazeazeazeazeazeazeahj4564
 "
 fit_content = true
 scroll_active = false
-autowrap_mode = 0
 shortcut_keys_enabled = false
+meta_underlined = false
+hint_underlined = false
 text_direction = 1

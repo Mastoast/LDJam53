@@ -7,6 +7,8 @@ var thread_window
 var answer_window
 var time_field
 
+var decisions = []
+
 func _ready():
 	threads = StaticData.threads
 	preview_window = get_tree().get_first_node_in_group("preview")
@@ -27,6 +29,10 @@ func create_event(thread):
 
 
 func _on_send_button_pressed():
+	var new_choice = thread_window.get_current_choice()
+	thread_window.lock_choice()
+	decisions.append(new_choice)
 	thread_window.clear_thread()
 	answer_window.clear()
+	print(decisions)
 
