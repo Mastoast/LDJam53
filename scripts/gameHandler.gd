@@ -1,13 +1,17 @@
 extends Control
 
 var threads
+var article_list = StaticData.info_threads
 
 var preview_window
 var thread_window
 var answer_window
 var time_field
+var popup = load("res://scenes/popup_info_news.tscn")
 
 var decisions = []
+var news = []
+var press_article = {"title":"prout", "content":"patate"}
 
 func _ready():
 	threads = StaticData.threads
@@ -18,6 +22,7 @@ func _ready():
 #	for thread in threads:
 #		create_event(thread)
 	create_event(threads[0])
+	article_list = StaticData.info_threads
 
 
 func _process(delta):
@@ -40,6 +45,9 @@ func _on_send_button_pressed():
 
 func add_message(decisions):
 	var next_message
+	popup_check(decisions)
+
+	
 	while decisions.size() < threads.size():
 		next_message = threads[decisions.size()]
 		if next_message["sender"] == "CEO Land Robber":
@@ -70,5 +78,45 @@ func add_message(decisions):
 		else:
 			create_event(next_message)
 			return
-	
-	
+
+func popup_check(decisions):
+	if "eviction_ice" in decisions && !("eviction_ice" in news):
+			press_article = article_list[0]
+			news.append("eviction_ice")
+			create_popup(press_article, $arrive_popup.position)
+	if ("trip_pool" in decisions or "trip_ski" in decisions) && not("trip_museum" in news):
+			press_article = article_list[1]
+			news.append("trip_museum")
+			create_popup(press_article, $arrive_popup.position)
+	if "driver_museum" in decisions && !("driver_museum" in news):
+			press_article = article_list[2]
+			news.append("driver_museum")
+			create_popup(press_article, $arrive_popup.position)
+	if "driver_casino" in decisions && !("driver_casino" in news):
+			press_article = article_list[3]
+			news.append("driver_casino")
+			create_popup(press_article, $arrive_popup.position)
+	if "oyster_food_bank" in decisions && !("oyster_food_bank" in news):
+			press_article = article_list[4]
+			news.append("oyster_food_bank")
+			create_popup(press_article, $arrive_popup.position)
+	if "police_zoo" in decisions && !("police_zoo" in news):
+			press_article = article_list[5]
+			news.append("police_zoo")
+			create_popup(press_article, $arrive_popup.position)
+	if "robber_10" in decisions && !("robber_10" in news):
+			press_article = article_list[6]
+			news.append("robber_10")
+			create_popup(press_article, $arrive_popup.position)
+	if "police_land_robber" in decisions && !("police_land_robber" in news):
+			press_article = article_list[7]
+			news.append("police_land_robber")
+			create_popup(press_article, $arrive_popup.position)
+
+func create_popup(press_article, position):
+	var new_popup = popup.instantiate()
+	print('info news')
+	new_popup.global_position = position
+	new_popup.get_node('ColorRect/VBoxContainer/title').text = press_article["title"]
+	new_popup.get_node('ColorRect/VBoxContainer/content').text = press_article["content"]
+	self.add_child(new_popup)
