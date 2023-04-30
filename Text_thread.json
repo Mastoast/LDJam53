@@ -1,0 +1,92 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Apr 30 16:38:46 2023
+
+@author: jules
+"""
+
+var threads = 
+
+[
+    {
+        "sender": "Eviction Team",
+        "receiver": "Mayor",
+        "messages": [
+{"text" : "Hello,following your recent eviction request, our agents are ready to intervene. Can you please give us the name of the correct establishment ?", "type" : "sent"},
+{"text" : ["Yes of course. At last, I won’t have to see their ugly face on my way to work. Please proceed to the eviction of ", "."],
+"choices" : ["The Ice Cream Shop", "The Land Robber Dealership", "The Pennypinch Casino Resort"],
+"type": "received"}
+]
+}],
+
+[
+{
+"sender": "Professor",
+"receiver": "Principal",
+"messages": [
+{
+"text": "Hi Mrs Principal. Good news, the funding for this year’s class trip is finally secured ! I just bought the last ten lotto tickets, from Kevin who struggled a bit to sell his. Only one question left, have you decided where the class trip should be ?",
+"type": "sent"
+},
+{
+"text": ["In my great Principal wisdom, I thought long and hard about this important question. I came to the conclusion that it would be best for the happiness and growth of the children that you take them to ", ""],
+"choices": ["The Olden Shoe Museum", "The Swimming Pool", "A Skiing Trip in the Mountain"],
+"type": "received"
+}
+]
+}
+],
+
+[
+{
+"sender": "CEO Land Robber",
+"receiver": "CEO friend",
+"messages": [
+{
+"text": "I just had the cops come to the dealership with an eviction notice! Do you think it’s related to the embezzlement operation ?",
+"type": "sent"
+},
+{
+"text": ["", ""],
+"choices": ["I don’t know. I’ll check with my friend at the city hall", "Have you heard about the Olden Shoe Museum ? Is it any good ?"],
+"type": "received"
+}
+]
+}
+],
+
+[
+{
+"sender": "Chief caretaker",
+"receiver": "Employee",
+"messages": [
+{
+"text": "Don’t forget to switch the cages today. The Pandas need to go in cage 5 and the Tiger in cage 10. Don’t forget, you know how angry they get when they eat tiger food…We don’t want another day like last friday.",
+"type": "sent"
+},
+{
+"text": ["Yes no problem. ", "."],
+"choices": ["Sorry about last friday.", "You gotta admit though, it made for a nice show"],
+"type": "received"
+}
+]
+}
+],
+
+[
+{
+"sender": "Robber",
+"receiver": "Boss",
+"messages": [
+{
+"text": "Everything is ready for the zoo robbery Boss. The disguises are on point and the key seems to work. I can’t believe we’ll finally get our own panda. I can’t wait to taste it, it will be perfect with a red wine. The panda are still in cage 10, right? ",
+"type": "sent"
+},
+{
+"text": ["Yum, I am heating up the grill as we speak. ", ""],
+"choices": ["yes, cage 10 that’s right. we don’t want to startle them", "No, they changed it to cage 5. Be quick, I’m hungry !"],
+"type": "received"
+}
+]
+}
+],

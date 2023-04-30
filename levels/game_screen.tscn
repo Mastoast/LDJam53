@@ -2,9 +2,9 @@
 
 [ext_resource type="Theme" uid="uid://lkbwdl03g4jg" path="res://themes/desktop.tres" id="1_rf31f"]
 [ext_resource type="Script" path="res://scripts/gameHandler.gd" id="2_mlnr7"]
-[ext_resource type="Texture2D" uid="uid://cqvmpp3h52nth" path="res://sprites/background.png" id="3_tqa2e"]
 [ext_resource type="StyleBox" uid="uid://dsubttfxluprg" path="res://themes/background_panel_theme.tres" id="4_u122v"]
 [ext_resource type="Texture2D" uid="uid://xvlg1c042cst" path="res://sprites/logo_surveillance.png" id="5_mivnp"]
+[ext_resource type="Texture2D" uid="uid://dxejwmfggrxgy" path="res://sprites/wallpaper.png" id="5_rnhdx"]
 [ext_resource type="PackedScene" uid="uid://d58j0ey643q" path="res://scenes/window_preview.tscn" id="6_n7gpa"]
 [ext_resource type="PackedScene" uid="uid://bk8axa22nl23f" path="res://scenes/window_thread.tscn" id="7_vd488"]
 [ext_resource type="PackedScene" uid="uid://dmswrg3t4y0ih" path="res://scenes/window_answers.tscn" id="8_oco0f"]
@@ -32,11 +32,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="Background" type="Sprite2D" parent="VBoxContainer"]
-visible = false
-position = Vector2(576, 324)
-texture = ExtResource("3_tqa2e")
 
 [node name="head" type="Panel" parent="VBoxContainer"]
 layout_mode = 2
@@ -98,6 +93,11 @@ layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 12.0
 theme_override_styles/panel = ExtResource("4_u122v")
+
+[node name="Background" type="Sprite2D" parent="VBoxContainer/desktop"]
+position = Vector2(580.5, 320)
+scale = Vector2(1.12988, 1)
+texture = ExtResource("5_rnhdx")
 
 [node name="window_preview" parent="VBoxContainer/desktop" instance=ExtResource("6_n7gpa")]
 layout_mode = 0
