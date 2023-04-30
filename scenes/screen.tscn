@@ -101,9 +101,23 @@ theme_override_styles/panel = ExtResource("5_nn67l")
 [node name="events_window" parent="VBoxContainer/desktop" instance=ExtResource("6_uy16a")]
 layout_mode = 0
 anchors_preset = 0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 232.0
+offset_bottom = 0.0
+grow_vertical = 1
 
 [node name="message_window" parent="VBoxContainer/desktop" instance=ExtResource("7_n1s8i")]
 layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 868.0
+offset_bottom = 413.0
 
 [node name="answers_window" parent="VBoxContainer/desktop" instance=ExtResource("8_nhe44")]
 layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 862.0
+offset_bottom = 113.0
