@@ -10,7 +10,7 @@ var sent = load("res://scenes/message_sent.tscn")
 
 func _ready():
 	window_answer = get_tree().get_first_node_in_group("answers")
-#	fill_thread(StaticData.threads[0])
+#	fill_thread(StaticData.threads[4])
 
 func _process(delta):
 	visible = current_thread != null

@@ -14,7 +14,7 @@ func add_answers(choices):
 	clear()
 	for choice in choices:
 		var new = answer_button.instantiate()
-		new.text = choice
+		new.set_label(choice)
 		$HBoxContainer.add_child(new)
 
 func refresh_answers(current_choice):

@@ -10,4 +10,7 @@ func _process(delta):
 	pass
 
 func _on_pressed():
-	window_thread.update_choice(self.text)
+	window_thread.update_choice($Label.text)
+
+func set_label(text):
+	$Label.text = text

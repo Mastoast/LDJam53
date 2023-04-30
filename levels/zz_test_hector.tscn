@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://b8yym45k20io4"]
+[gd_scene load_steps=4 format=3 uid="uid://b8yym45k20io4"]
 
 [ext_resource type="Script" path="res://scripts/gameHandler.gd" id="1_na8b6"]
-[ext_resource type="PackedScene" uid="uid://d58j0ey643q" path="res://scenes/window_preview.tscn" id="2_tiyri"]
-[ext_resource type="PackedScene" uid="uid://bk8axa22nl23f" path="res://scenes/window_thread.tscn" id="3_e35sq"]
-[ext_resource type="PackedScene" uid="uid://dmswrg3t4y0ih" path="res://scenes/window_answers.tscn" id="4_m8pdw"]
+[ext_resource type="PackedScene" uid="uid://ccikpjmn4vxq0" path="res://scenes/answer_button.tscn" id="2_ryu1e"]
+[ext_resource type="Theme" uid="uid://lkbwdl03g4jg" path="res://themes/desktop.tres" id="3_a6ha0"]
 
 [node name="zz_test_hector" type="Control"]
 layout_mode = 3
@@ -14,23 +13,43 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_na8b6")
 
-[node name="window_preview" parent="." instance=ExtResource("2_tiyri")]
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 366.0
+offset_right = 847.0
+offset_bottom = 545.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
 layout_mode = 1
-offset_left = 12.0
-offset_top = 24.0
-offset_right = 244.0
-offset_bottom = -24.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="window_thread" parent="." instance=ExtResource("3_e35sq")]
-layout_mode = 0
-offset_left = 259.0
-offset_top = 51.0
-offset_right = 1127.0
-offset_bottom = 464.0
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+alignment = 1
 
-[node name="window_answer" parent="." instance=ExtResource("4_m8pdw")]
-layout_mode = 0
-offset_left = 253.0
-offset_top = 478.0
-offset_right = 1115.0
-offset_bottom = 591.0
+[node name="answer_button" parent="Panel/MarginContainer/HBoxContainer" instance=ExtResource("2_ryu1e")]
+layout_mode = 2
+text = "No, they changed it to cage 5. Be quick, I’m hungry !"
+
+[node name="answer_button2" parent="Panel/MarginContainer/HBoxContainer" instance=ExtResource("2_ryu1e")]
+layout_mode = 2
+text = "Cage 10 that’s right.
+ Keep the lights off, 
+we don’t want to startle them"
+
+[node name="answer_button3" parent="Panel/MarginContainer/HBoxContainer" instance=ExtResource("2_ryu1e")]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Panel/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("3_a6ha0")
+text = "No, they changed it to cage 5. Be quick, I’m hungry !"
