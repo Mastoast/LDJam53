@@ -16,20 +16,21 @@ var news = []
 var press_article = {"title":"prout", "content":"patate"}
 
 func _ready():
-	threads = StaticData.threads
 	preview_window = get_tree().get_first_node_in_group("preview")
 	thread_window = get_tree().get_first_node_in_group("thread")
 	answer_window = get_tree().get_first_node_in_group("answers")
 	time_field = get_tree().get_first_node_in_group("time")
-
-	create_event(threads[0])
-	article_list = StaticData.info_threads
-
+	#load_threads()
 
 func _process(delta):
 	var current_time = Time.get_time_string_from_system().substr(0, 5)
 	if time_field != null:
 		time_field.text = current_time
+
+func load_threads():
+	threads = StaticData.threads
+	create_event(threads[0])
+	article_list = StaticData.info_threads
 
 func create_event(thread):
 	preview_window.create_com_event(thread)
