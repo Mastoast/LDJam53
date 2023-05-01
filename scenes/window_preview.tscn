@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bvi2xwgl0tbhl"]
+[gd_scene load_steps=6 format=3 uid="uid://bvi2xwgl0tbhl"]
 
 [ext_resource type="StyleBox" uid="uid://cv0wvc6bxjm6k" path="res://themes/window_background.tres" id="1_8bhud"]
 [ext_resource type="Script" path="res://scripts/window_preview.gd" id="1_w05fe"]
 [ext_resource type="StyleBox" uid="uid://c1haftvkjic0v" path="res://themes/window_border.tres" id="2_8vgac"]
 [ext_resource type="StyleBox" uid="uid://d2y7jeuwoiqjr" path="res://themes/window_panel.tres" id="4_fdxn1"]
+[ext_resource type="StyleBox" uid="uid://wkdlrrcpiyq6" path="res://themes/window_title.tres" id="4_oscd6"]
 
 [node name="window_preview" type="Panel" groups=["preview"]]
 custom_minimum_size = Vector2(232, 0)
@@ -24,6 +25,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 0
 
 [node name="border" type="Panel" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 30)
@@ -43,6 +45,7 @@ theme_override_constants/margin_right = 0
 
 [node name="border_title" type="Label" parent="VBoxContainer/border/MarginContainer"]
 layout_mode = 2
+theme_override_styles/normal = ExtResource("4_oscd6")
 text = "intercepted coms"
 vertical_alignment = 1
 uppercase = true
