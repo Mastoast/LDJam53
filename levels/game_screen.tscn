@@ -1,12 +1,12 @@
 [gd_scene load_steps=12 format=3 uid="uid://b5f88qm5bt18o"]
 
-[ext_resource type="Theme" uid="uid://lkbwdl03g4jg" path="res://themes/desktop.tres" id="1_rf31f"]
+[ext_resource type="Theme" uid="uid://dt64wf3jwua3u" path="res://themes/desktop.tres" id="1_rf31f"]
 [ext_resource type="Script" path="res://scripts/gameHandler.gd" id="2_mlnr7"]
 [ext_resource type="StyleBox" uid="uid://dsubttfxluprg" path="res://themes/background_panel_theme.tres" id="4_u122v"]
 [ext_resource type="Texture2D" uid="uid://xvlg1c042cst" path="res://sprites/logo_surveillance.png" id="5_mivnp"]
 [ext_resource type="Texture2D" uid="uid://dxejwmfggrxgy" path="res://sprites/wallpaper.png" id="5_rnhdx"]
-[ext_resource type="PackedScene" uid="uid://d58j0ey643q" path="res://scenes/window_preview.tscn" id="6_n7gpa"]
-[ext_resource type="PackedScene" uid="uid://bk8axa22nl23f" path="res://scenes/window_thread.tscn" id="7_vd488"]
+[ext_resource type="PackedScene" path="res://scenes/window_preview.tscn" id="6_n7gpa"]
+[ext_resource type="PackedScene" path="res://scenes/window_thread.tscn" id="7_vd488"]
 [ext_resource type="PackedScene" uid="uid://dmswrg3t4y0ih" path="res://scenes/window_answers.tscn" id="8_oco0f"]
 [ext_resource type="Script" path="res://scripts/send_button.gd" id="9_1pwv1"]
 
@@ -36,7 +36,6 @@ grow_vertical = 2
 [node name="head" type="Panel" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_styles/panel = ExtResource("4_u122v")
 
 [node name="Sprite2D" type="Sprite2D" parent="VBoxContainer/head"]
 position = Vector2(576, 22)

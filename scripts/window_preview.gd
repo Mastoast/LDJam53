@@ -18,4 +18,4 @@ func create_com_event(thread):
 	new_event.init(thread)
 	new_event.get_node('VBoxContainer/character_name').text = thread["sender"]
 	new_event.get_node('VBoxContainer/message_overview').text = thread["messages"][0]["text"]
-	$MarginContainer/VBoxContainer/ScrollContainer/event_list.add_child(new_event)
+	$VBoxContainer/MarginContainer/ScrollContainer/event_list.add_child(new_event)
