@@ -120,6 +120,9 @@ func create_popup(press_article, position):
 	timer.wait_time = 1.0
 	timer.one_shot = true
 	timer.start()
+	# ERROR ICI
+	# Timer was not added to the SceneTree.
+	# Either add it or set autostart to true.
 	await get_tree().create_timer(5.0).timeout
 	self.add_child(new_popup)
 	#timer.connect("timeout", self._on_timer_timeout(new_popup))
