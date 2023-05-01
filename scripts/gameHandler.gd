@@ -1,5 +1,7 @@
 extends Control
 
+@export_range(0.0, 20.0, 0.1) var info_creation_delay : float = 5.0
+
 var threads
 var article_list = StaticData.info_threads
 
@@ -117,12 +119,5 @@ func create_popup(press_article, position):
 	new_popup.get_node('ColorRect/VBoxContainer/title').text = press_article["title"]
 	new_popup.get_node('ColorRect/VBoxContainer/content').text = press_article["content"]
 	
-	# ERROR ICI
-	# Timer was not added to the SceneTree.
-	# Either add it or set autostart to true.
-	await get_tree().create_timer(5.0).timeout
-	self.add_child(new_popup)
-	#timer.connect("timeout", self._on_timer_timeout(new_popup))
-
-func _on_timer_timeout(new_popup) -> void:
+	await get_tree().create_timer(info_creation_delay).timeout
 	self.add_child(new_popup)
