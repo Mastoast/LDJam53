@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://cw7oqcr1kgj0u"]
 
-[ext_resource type="Theme" uid="uid://lkbwdl03g4jg" path="res://themes/desktop.tres" id="1_04fpq"]
+[ext_resource type="Theme" uid="uid://dt64wf3jwua3u" path="res://themes/desktop.tres" id="1_04fpq"]
 [ext_resource type="Texture2D" uid="uid://dxejwmfggrxgy" path="res://sprites/wallpaper.png" id="1_m2pms"]
 [ext_resource type="Script" path="res://scripts/screen_login.gd" id="2_51cup"]
-[ext_resource type="StyleBox" path="res://themes/password_focus.tres" id="4_2f5aw"]
+[ext_resource type="StyleBox" uid="uid://ham4c4qis1qk" path="res://themes/password_focus.tres" id="4_2f5aw"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ywfri"]
 font_size = 128

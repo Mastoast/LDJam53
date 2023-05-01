@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cmbq5g85s6b4i"]
 
-[ext_resource type="StyleBox" uid="uid://end1q2k4qr0k" path="res://themes/send_button.tres" id="4_40ow8"]
-[ext_resource type="StyleBox" uid="uid://cecmgmlspoop1" path="res://themes/send_button_pressed.tres" id="5_66t7r"]
+[ext_resource type="PackedScene" uid="uid://byfxh8xs6hfec" path="res://levels/game_screen.tscn" id="1_2gkgw"]
+[ext_resource type="PackedScene" uid="uid://cw7oqcr1kgj0u" path="res://levels/screen_login.tscn" id="2_yur7n"]
 
 [node name="zz_test_hector" type="Control"]
 layout_mode = 3
@@ -11,17 +11,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="send_button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 1007.0
-offset_top = 541.0
-offset_right = 1138.0
-offset_bottom = 618.0
-size_flags_horizontal = 8
-size_flags_vertical = 10
-focus_mode = 0
-theme_override_styles/normal = ExtResource("4_40ow8")
-theme_override_styles/hover = ExtResource("4_40ow8")
-theme_override_styles/pressed = ExtResource("5_66t7r")
-theme_override_styles/focus = ExtResource("4_40ow8")
-text = "SEND MESSAGE"
+[node name="game_screen" parent="." instance=ExtResource("1_2gkgw")]
+
+[node name="screen_login" parent="." instance=ExtResource("2_yur7n")]
+layout_mode = 1
+animation_speed = 4.0

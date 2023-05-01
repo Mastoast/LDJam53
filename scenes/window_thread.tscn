@@ -1,15 +1,62 @@
-[gd_scene load_steps=5 format=3 uid="uid://t776op5xvn6b"]
+[gd_scene load_steps=8 format=3 uid="uid://t776op5xvn6b"]
 
+[ext_resource type="Theme" uid="uid://dt64wf3jwua3u" path="res://themes/desktop.tres" id="1_7ppw4"]
 [ext_resource type="Script" path="res://scripts/window_thread.gd" id="1_jugw2"]
 [ext_resource type="StyleBox" uid="uid://cv0wvc6bxjm6k" path="res://themes/window_background.tres" id="1_v12kp"]
 [ext_resource type="StyleBox" uid="uid://c1haftvkjic0v" path="res://themes/window_border.tres" id="3_vqyr0"]
 [ext_resource type="StyleBox" uid="uid://d2y7jeuwoiqjr" path="res://themes/window_panel.tres" id="4_4pauq"]
+
+[sub_resource type="Animation" id="Animation_8fnco"]
+resource_name = "load_thread"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ProgressBar:value")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(-0.406127, 1),
+"update": 0,
+"values": [0.0, 100.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ProgressBar:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MarginContainer/ScrollContainer/message_list:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6euko"]
+_data = {
+"load_thread": SubResource("Animation_8fnco")
+}
 
 [node name="window_thread" type="Panel" groups=["thread"]]
 offset_right = 868.0
 offset_bottom = 413.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 5.0
+theme = ExtResource("1_7ppw4")
 theme_override_styles/panel = ExtResource("1_v12kp")
 script = ExtResource("1_jugw2")
 background_color = Color(0.898039, 0.368627, 0, 1)
@@ -53,3 +100,20 @@ theme_override_styles/panel = ExtResource("4_4pauq")
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+visible = false
+layout_mode = 2
+offset_left = 30.0
+offset_top = 198.5
+offset_right = 838.0
+offset_bottom = 214.5
+grow_horizontal = 2
+grow_vertical = 2
+step = 1.0
+value = 100.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_6euko")
+}
