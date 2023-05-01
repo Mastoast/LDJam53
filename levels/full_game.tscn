@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cmbq5g85s6b4i"]
+[gd_scene load_steps=6 format=3 uid="uid://cmbq5g85s6b4i"]
 
 [ext_resource type="PackedScene" uid="uid://m6wxlbo0oiwm" path="res://levels/game_screen.tscn" id="1_2yxcs"]
 [ext_resource type="PackedScene" uid="uid://cw7oqcr1kgj0u" path="res://levels/screen_login.tscn" id="2_4beum"]
 [ext_resource type="Shader" path="res://shaders/crt_filter.gdshader" id="3_vlvw2"]
+[ext_resource type="Script" path="res://scripts/crt_filter.gd" id="4_epf6o"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_praob"]
 shader = ExtResource("3_vlvw2")
@@ -21,7 +22,7 @@ shader_parameter/noise_opacity = 0.04
 shader_parameter/noise_speed = 1.0
 shader_parameter/static_noise_intensity = 0.081
 shader_parameter/aberration = 0.00100005
-shader_parameter/brightness = 1.4
+shader_parameter/brightness = 1.5
 shader_parameter/discolor = true
 shader_parameter/warp_amount = 0.05
 shader_parameter/clip_warp = false
@@ -59,3 +60,4 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+script = ExtResource("4_epf6o")

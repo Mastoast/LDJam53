@@ -155,6 +155,7 @@ secret = true
 context_menu_enabled = false
 middle_mouse_paste_enabled = false
 deselect_on_focus_loss_enabled = false
+caret_blink = true
 
 [node name="validate" type="Button" parent="password"]
 layout_mode = 1
