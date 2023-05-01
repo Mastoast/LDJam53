@@ -115,6 +115,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_04fpq")
 script = ExtResource("2_51cup")
+animation_speed = 10.0
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -171,12 +172,10 @@ offset_right = 175.0
 offset_bottom = 140.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/selection_color = Color(0.678431, 0, 0, 1)
-theme_override_font_sizes/font_size = 29
+theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = ExtResource("4_2f5aw")
 max_length = 50
 secret = true
-secret_character = "*"
 context_menu_enabled = false
 middle_mouse_paste_enabled = false
 deselect_on_focus_loss_enabled = false

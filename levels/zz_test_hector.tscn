@@ -7,7 +7,7 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_praob"]
 shader = ExtResource("3_p2ghc")
 shader_parameter/overlay = true
-shader_parameter/scanlines_opacity = 0.214
+shader_parameter/scanlines_opacity = 0.306
 shader_parameter/scanlines_width = 0.25
 shader_parameter/grille_opacity = 0.043
 shader_parameter/resolution = Vector2(1920, 1080)
@@ -18,9 +18,9 @@ shader_parameter/roll_size = 5.266
 shader_parameter/roll_variation = 0.586
 shader_parameter/distort_intensity = 0.073
 shader_parameter/noise_opacity = 0.09
-shader_parameter/noise_speed = 5.0
-shader_parameter/static_noise_intensity = 0.06
-shader_parameter/aberration = -0.00499995
+shader_parameter/noise_speed = 2.0
+shader_parameter/static_noise_intensity = 0.052
+shader_parameter/aberration = -0.00299995
 shader_parameter/brightness = 1.4
 shader_parameter/discolor = true
 shader_parameter/warp_amount = 0.16
