@@ -288,20 +288,20 @@
 		]
 	},
 	{
-		"sender": "The devellopers",
+		"sender": "The developpers",
 		"receiver": "You",
 		"messages": [
 			{
 				"text": "The End.",
-				"type": "sent"
+				"type": "received"
 			},
 			{
 				"text": "Thanks for playing !",
-				"type": "sent"
+				"type": "received"
 			},
 			{
-				"text": "(Now please, would you be so kind to close this unauthorized access ?)",
-				"type": "sent"
+				"text": "(Now please, would you be so kind as to close this unauthorized access ?)",
+				"type": "received"
 			},
 			{
 				"text": [
@@ -313,7 +313,7 @@
 					"Do you have the opening times of the Olden Shoe Museum ?": "answer_bis",
 					"How can I unlock the secret ending ?": "police_land_robber"
 				},
-				"type": "received"
+				"type": "sent"
 			}
 		]
 	}
