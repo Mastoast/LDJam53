@@ -42,6 +42,14 @@ mouse_filter = 2
 [node name="screen_login" parent="." instance=ExtResource("2_yur7n")]
 layout_mode = 1
 
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 741.0
+offset_top = 143.0
+offset_right = 741.0
+offset_bottom = 143.0
+color = Color(0.184314, 0.215686, 0.419608, 1)
+
 [node name="crt_filter" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_praob")
 layout_mode = 1
