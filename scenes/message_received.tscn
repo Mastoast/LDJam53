@@ -9,7 +9,7 @@ size_flags_horizontal = 0
 theme_override_constants/line_separation = 5
 theme_override_styles/normal = ExtResource("1_8wjtq")
 bbcode_enabled = true
-text = "azeazeazeazeazeazeazetertzerzerzerzerzerzerzerze rzeerteeazeazeazeazeazeazeazeazeazeaazeazeazea azeazeazeazeazeazeazeazeazeazeazeahj4564
+text = "azeazeazeazeazeazeazetertzerzerzerzerzerzerzerze rzeerteeazeazeazeazeazeazeazeazeazeaazeazeazea azeazeazeazeazeazeazeazeazeazeazeahj4 ?? 564
 "
 fit_content = true
 scroll_active = false
@@ -17,3 +17,4 @@ shortcut_keys_enabled = false
 meta_underlined = false
 hint_underlined = false
 text_direction = 1
+structured_text_bidi_override = 3

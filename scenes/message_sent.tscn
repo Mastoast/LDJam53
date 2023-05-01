@@ -12,11 +12,12 @@ size_flags_horizontal = 8
 theme_override_constants/line_separation = 5
 theme_override_styles/normal = ExtResource("1_l1sfn")
 bbcode_enabled = true
-text = "Que penses-tu d'envoyer le GIGN chez [color=green][url=print]Mimi Mathy[/url][/color]Que penses-tu d'envoyer le GIGN chez [color=green][url=print]Mimi Mathy[/url][/color]Que penses-tu d'envoyer le GIGN chez [color=green][url=print]Mimi Mathy[/url][/color]Que penses-tu d'envoyer le GIGN chez [color=green][url=print]Mimi Mathy[/url][/color]Que penses-tu d'envoyer le GIGN chez [color=green][url=print]Mimi Mathy[/url][/color]Que penses-tu d'envoyer le GIGN chez [color=green][url=print]Mimi Mathy[/url][/color]"
+text = "Que penses-tu d'envoyer le GIGN chez [color=green][url=print]Mimi Mathy[/url][/color]Que penses-tu d'envoyer le GIGN chez [color=green][url=print]Mimi Mathy[/url][/color]Que penses-tu **d'envoyer le GIGN ?"
 fit_content = true
 scroll_active = false
 shortcut_keys_enabled = false
 meta_underlined = false
 hint_underlined = false
 text_direction = 2
+structured_text_bidi_override = 3
 script = ExtResource("2_d1k4v")
