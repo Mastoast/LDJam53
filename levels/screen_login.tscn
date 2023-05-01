@@ -180,6 +180,20 @@ context_menu_enabled = false
 middle_mouse_paste_enabled = false
 deselect_on_focus_loss_enabled = false
 
+[node name="validate" type="Button" parent="password"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 378.0
+offset_top = -108.0
+offset_right = 435.0
+offset_bottom = 18.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 88
+text = "↲"
+flat = true
+
 [node name="warning" type="Label" parent="."]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 1
@@ -226,4 +240,5 @@ text = "ENG"
 flat = true
 
 [connection signal="text_submitted" from="password" to="." method="_on_password_text_submitted"]
+[connection signal="pressed" from="password/validate" to="." method="_on_validate_pressed"]
 [connection signal="pressed" from="language_button" to="." method="_on_button_pressed"]

@@ -44,3 +44,7 @@ func screen_unlocked():
 func _on_button_pressed():
 	language_index = (language_index + 1) % 2
 	$language_button.text = languages[language_index]
+
+
+func _on_validate_pressed():
+	_on_password_text_submitted("osef")
