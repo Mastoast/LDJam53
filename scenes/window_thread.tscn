@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=5 format=3 uid="uid://t776op5xvn6b"]
 
 [ext_resource type="Script" path="res://scripts/window_thread.gd" id="1_jugw2"]
 [ext_resource type="StyleBox" uid="uid://cv0wvc6bxjm6k" path="res://themes/window_background.tres" id="1_v12kp"]

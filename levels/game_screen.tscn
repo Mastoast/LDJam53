@@ -1,12 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://b5f88qm5bt18o"]
+[gd_scene load_steps=11 format=3 uid="uid://b5f88qm5bt18o"]
 
 [ext_resource type="Theme" uid="uid://dt64wf3jwua3u" path="res://themes/desktop.tres" id="1_rf31f"]
 [ext_resource type="Script" path="res://scripts/gameHandler.gd" id="2_mlnr7"]
-[ext_resource type="StyleBox" uid="uid://dsubttfxluprg" path="res://themes/background_panel_theme.tres" id="4_u122v"]
 [ext_resource type="Texture2D" uid="uid://xvlg1c042cst" path="res://sprites/logo_surveillance.png" id="5_mivnp"]
 [ext_resource type="Texture2D" uid="uid://dxejwmfggrxgy" path="res://sprites/wallpaper.png" id="5_rnhdx"]
 [ext_resource type="PackedScene" path="res://scenes/window_preview.tscn" id="6_n7gpa"]
-[ext_resource type="PackedScene" path="res://scenes/window_thread.tscn" id="7_vd488"]
+[ext_resource type="PackedScene" uid="uid://t776op5xvn6b" path="res://scenes/window_thread.tscn" id="7_vd488"]
 [ext_resource type="PackedScene" uid="uid://dmswrg3t4y0ih" path="res://scenes/window_answers.tscn" id="8_oco0f"]
 [ext_resource type="Script" path="res://scripts/send_button.gd" id="9_1pwv1"]
 
@@ -90,12 +89,16 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 12.0
-theme_override_styles/panel = ExtResource("4_u122v")
 
-[node name="Background" type="Sprite2D" parent="VBoxContainer/desktop"]
-position = Vector2(580.5, 320)
-scale = Vector2(1.12988, 1)
+[node name="wallpaper" type="TextureRect" parent="VBoxContainer/desktop"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("5_rnhdx")
+expand_mode = 1
 
 [node name="window_preview" parent="VBoxContainer/desktop" instance=ExtResource("6_n7gpa")]
 layout_mode = 0
@@ -116,17 +119,17 @@ offset_bottom = 431.0
 
 [node name="window_answers" parent="VBoxContainer/desktop" instance=ExtResource("8_oco0f")]
 layout_mode = 0
-offset_left = 275.0
-offset_top = 459.0
-offset_right = 1137.0
-offset_bottom = 572.0
+offset_left = 273.0
+offset_top = 457.0
+offset_right = 1006.0
+offset_bottom = 570.0
 
 [node name="send_button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1019.0
-offset_top = 556.0
-offset_right = 1142.0
-offset_bottom = 633.0
+offset_left = 1015.0
+offset_top = 535.0
+offset_right = 1138.0
+offset_bottom = 612.0
 size_flags_horizontal = 8
 size_flags_vertical = 10
 text = "SEND MESSAGE"
