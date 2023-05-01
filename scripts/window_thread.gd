@@ -45,7 +45,7 @@ func fill_thread(thread):
 			new.meta_clicked.connect(keyword_clicked)
 			new.meta_underlined = false
 		$MarginContainer/ScrollContainer/message_list.add_child(new)
-	$AnimationPlayer.play("load_thread")
+	#$AnimationPlayer.play("load_thread")
 
 func clear_thread():
 	for i in range(0, $MarginContainer/ScrollContainer/message_list.get_child_count()):
