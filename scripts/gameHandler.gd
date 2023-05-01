@@ -116,4 +116,13 @@ func create_popup(press_article, position):
 	new_popup.global_position = position
 	new_popup.get_node('ColorRect/VBoxContainer/title').text = press_article["title"]
 	new_popup.get_node('ColorRect/VBoxContainer/content').text = press_article["content"]
+	var timer = Timer.new()
+	timer.wait_time = 1.0
+	timer.one_shot = true
+	timer.start()
+	await get_tree().create_timer(5.0).timeout
+	self.add_child(new_popup)
+	#timer.connect("timeout", self._on_timer_timeout(new_popup))
+
+func _on_timer_timeout(new_popup) -> void:
 	self.add_child(new_popup)
