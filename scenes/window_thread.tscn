@@ -92,16 +92,16 @@ text = "MESSAGE HISTORY"
 vertical_alignment = 1
 
 [node name="TextureButton" type="TextureButton" parent="VBoxContainer/border"]
-visible = false
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -27.0
-offset_top = 7.0
-offset_right = -6.0
-offset_bottom = 28.0
+offset_left = -21.9999
+offset_top = 6.0
+offset_right = -0.999939
+offset_bottom = 27.0
 grow_horizontal = 0
+scale = Vector2(0.8, 0.8)
 texture_normal = ExtResource("6_5d0af")
 stretch_mode = 0
 

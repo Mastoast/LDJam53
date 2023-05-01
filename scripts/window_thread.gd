@@ -37,7 +37,7 @@ func fill_thread(thread):
 			new.push_color(text_color)
 			new.push_bgcolor(background_color)
 			if !message.has("sent"):
-				new.push_meta("test")
+				new.push_meta(message["choice"])
 			new.add_text(message["choice"])
 			new.pop()
 			new.pop()

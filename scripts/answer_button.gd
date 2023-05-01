@@ -12,5 +12,12 @@ func _process(delta):
 func _on_pressed():
 	window_thread.update_choice($Label.text)
 
+func get_label():
+	return $Label.text
+
 func set_label(text):
 	$Label.text = text
+
+
+func _on_focus_entered():
+	pass

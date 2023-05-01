@@ -18,8 +18,10 @@ func add_answers(choices):
 		$HBoxContainer.add_child(new)
 
 func refresh_answers(current_choice):
+	print("choice : " + current_choice)
 	for choice in $HBoxContainer.get_children():
-		choice.disabled = choice.text == current_choice
+		print(choice.get_label())
+		choice.disabled = choice.get_label() == current_choice
 
 func clear():
 	for i in range(0, $HBoxContainer.get_child_count()):

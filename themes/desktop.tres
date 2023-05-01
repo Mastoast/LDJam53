@@ -1,6 +1,30 @@
-[gd_resource type="Theme" load_steps=10 format=3 uid="uid://dt64wf3jwua3u"]
+[gd_resource type="Theme" load_steps=12 format=3 uid="uid://dt64wf3jwua3u"]
 
 [ext_resource type="FontFile" uid="uid://bbqsv3m0wu4mi" path="res://font/Ubuntu-Regular.ttf" id="1_sdf7p"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t8c0y"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.225, 0.225, 0.225, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v01ch"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.225, 0.225, 0.225, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_htqha"]
 bg_color = Color(0.988235, 0, 0.901961, 1)
@@ -47,6 +71,8 @@ bg_color = Color(0.721569, 0.721569, 0.721569, 1)
 
 [resource]
 default_font = ExtResource("1_sdf7p")
+Button/styles/focus = SubResource("StyleBoxFlat_t8c0y")
+Button/styles/normal = SubResource("StyleBoxFlat_v01ch")
 HSlider/styles/grabber_area = SubResource("StyleBoxFlat_htqha")
 HSlider/styles/slider = SubResource("StyleBoxFlat_1ch0o")
 LineEdit/colors/font_color = Color(1, 1, 1, 1)

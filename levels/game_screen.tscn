@@ -1,8 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://byfxh8xs6hfec"]
+[gd_scene load_steps=13 format=3 uid="uid://m6wxlbo0oiwm"]
 
 [ext_resource type="Theme" uid="uid://dt64wf3jwua3u" path="res://themes/desktop.tres" id="1_rf31f"]
 [ext_resource type="Script" path="res://scripts/gameHandler.gd" id="2_mlnr7"]
-[ext_resource type="Texture2D" uid="uid://xvlg1c042cst" path="res://sprites/logo_surveillance.png" id="5_mivnp"]
+[ext_resource type="Texture2D" uid="uid://pe84yybir1a" path="res://sprites/logo_petit.png" id="3_qyist"]
 [ext_resource type="Texture2D" uid="uid://dxejwmfggrxgy" path="res://sprites/wallpaper.png" id="5_rnhdx"]
 [ext_resource type="PackedScene" uid="uid://bvi2xwgl0tbhl" path="res://scenes/window_preview.tscn" id="6_n7gpa"]
 [ext_resource type="PackedScene" uid="uid://t776op5xvn6b" path="res://scenes/window_thread.tscn" id="7_vd488"]
@@ -62,7 +62,7 @@ theme_override_constants/separation = 5
 
 [node name="logo" type="TextureRect" parent="VBoxContainer/head/MarginContainer/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("5_mivnp")
+texture = ExtResource("3_qyist")
 expand_mode = 3
 
 [node name="company_name" type="Label" parent="VBoxContainer/head/MarginContainer/HBoxContainer"]
@@ -122,9 +122,9 @@ offset_bottom = 433.0
 
 [node name="window_answers" parent="VBoxContainer/desktop" instance=ExtResource("8_oco0f")]
 layout_mode = 0
-offset_left = 273.0
+offset_left = 271.0
 offset_top = 457.0
-offset_right = 1006.0
+offset_right = 1139.0
 offset_bottom = 570.0
 
 [node name="send_button" type="Button" parent="."]
