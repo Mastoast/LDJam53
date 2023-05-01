@@ -6,10 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://dxejwmfggrxgy" path="res://sprites/wallpaper.png" id="5_rnhdx"]
 [ext_resource type="PackedScene" uid="uid://bvi2xwgl0tbhl" path="res://scenes/window_preview.tscn" id="6_n7gpa"]
 [ext_resource type="PackedScene" uid="uid://t776op5xvn6b" path="res://scenes/window_thread.tscn" id="7_vd488"]
-[ext_resource type="StyleBox" uid="uid://end1q2k4qr0k" path="res://themes/send_button.tres" id="8_ehk77"]
+[ext_resource type="StyleBox" uid="uid://end1q2k4qr0k" path="res://themes/send_button.tres" id="8_08qw3"]
 [ext_resource type="PackedScene" uid="uid://dmswrg3t4y0ih" path="res://scenes/window_answers.tscn" id="8_oco0f"]
 [ext_resource type="Script" path="res://scripts/send_button.gd" id="9_1pwv1"]
-[ext_resource type="StyleBox" uid="uid://cecmgmlspoop1" path="res://themes/send_button_pressed.tres" id="9_x0hcb"]
+[ext_resource type="StyleBox" uid="uid://cecmgmlspoop1" path="res://themes/send_button_pressed.tres" id="9_35q5p"]
 
 [sub_resource type="Gradient" id="Gradient_cgybt"]
 offsets = PackedFloat32Array(0, 0.894977, 1)
@@ -106,18 +106,18 @@ expand_mode = 1
 layout_mode = 0
 anchors_preset = 0
 anchor_bottom = 0.0
-offset_left = 13.0
-offset_top = 8.0
-offset_right = 245.0
-offset_bottom = 568.0
+offset_left = 17.0
+offset_top = 20.0
+offset_right = 249.0
+offset_bottom = 580.0
 grow_vertical = 1
 
 [node name="window_thread" parent="VBoxContainer/desktop" instance=ExtResource("7_vd488")]
 layout_mode = 0
 offset_left = 270.0
-offset_top = 18.0
+offset_top = 20.0
 offset_right = 1138.0
-offset_bottom = 431.0
+offset_bottom = 433.0
 
 [node name="window_answers" parent="VBoxContainer/desktop" instance=ExtResource("8_oco0f")]
 layout_mode = 0
@@ -135,10 +135,10 @@ offset_bottom = 618.0
 size_flags_horizontal = 8
 size_flags_vertical = 10
 focus_mode = 0
-theme_override_styles/normal = ExtResource("8_ehk77")
-theme_override_styles/hover = ExtResource("8_ehk77")
-theme_override_styles/pressed = ExtResource("9_x0hcb")
-theme_override_styles/focus = ExtResource("8_ehk77")
+theme_override_styles/normal = ExtResource("8_08qw3")
+theme_override_styles/hover = ExtResource("8_08qw3")
+theme_override_styles/pressed = ExtResource("9_35q5p")
+theme_override_styles/focus = ExtResource("8_08qw3")
 text = "SEND MESSAGE"
 script = ExtResource("9_1pwv1")
 
