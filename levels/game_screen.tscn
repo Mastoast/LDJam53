@@ -20,7 +20,7 @@ colors = PackedColorArray(0, 0, 0, 1, 0.203922, 0.203922, 0.203922, 0, 1, 1, 1, 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_vsxg5"]
 gradient = SubResource("Gradient_cgybt")
 
-[node name="game_screen" type="Control"]
+[node name="game_screen" type="Control" groups=["game"]]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1152.0
