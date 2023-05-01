@@ -119,6 +119,7 @@ offset_left = 270.0
 offset_top = 20.0
 offset_right = 1138.0
 offset_bottom = 433.0
+background_color = Color(0.898039, 0.368627, 0, 1)
 
 [node name="window_answers" parent="VBoxContainer/desktop" instance=ExtResource("8_oco0f")]
 layout_mode = 0
@@ -144,7 +145,7 @@ text = "SEND MESSAGE"
 script = ExtResource("9_1pwv1")
 
 [node name="arrive_popup" type="Marker2D" parent="."]
-position = Vector2(758, 213)
+position = Vector2(661, 84)
 
 [node name="depart_popup" type="Marker2D" parent="."]
 position = Vector2(1086, 141)
