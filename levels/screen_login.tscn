@@ -155,7 +155,7 @@ offset_bottom = 10.5
 grow_horizontal = 2
 grow_vertical = 2
 bbcode_enabled = true
-text = "[font_size=82][center]Paul Dubois[/center][/font_size]"
+text = "[font_size=82][color=#becece][center]Paul Dubois[/center][/color][/font_size]"
 
 [node name="password" type="LineEdit" parent="."]
 custom_minimum_size = Vector2(350, 75)

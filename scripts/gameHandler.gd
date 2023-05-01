@@ -35,6 +35,10 @@ func create_event(thread):
 	preview_window.create_com_event(thread)
 
 func _on_send_button_pressed():
+	var tuto1 = get_tree().current_scene.find_child("tuto1")
+	tuto1.visible = false
+	var tuto2 = get_tree().current_scene.find_child("tuto2")
+	tuto2.visible = false
 	var new_choice = thread_window.get_current_choice()
 	thread_window.lock_choice()
 	decisions.append(new_choice)
