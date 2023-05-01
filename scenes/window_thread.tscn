@@ -124,9 +124,11 @@ theme_override_constants/separation = 10
 
 [node name="message_received" parent="VBoxContainer/MarginContainer/ScrollContainer/message_list" instance=ExtResource("8_3vg5b")]
 layout_mode = 2
+text = "Hello, following your recent eviction request, our agents are ready to intervene. Can you please give us the name of the correct establishment ?"
 
 [node name="message_sent" parent="VBoxContainer/MarginContainer/ScrollContainer/message_list" instance=ExtResource("9_qmvel")]
 layout_mode = 2
+text = "Yes of course. At last, I won’t have to see their ugly face on my way to work. Please proceed to the eviction of "
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 visible = false

@@ -18,6 +18,11 @@ func _process(delta):
 	visible = current_thread != null
 
 func fill_thread(thread):
+	# tuto
+	if thread["receiver"] == "Mayor" and !thread["messages"][-1].has("sent"):
+			var tuto1 = get_tree().current_scene.find_child("tuto1")
+			tuto1.visible = true
+	
 	clear_thread()
 	current_thread = thread
 	for message in thread["messages"]:
@@ -57,6 +62,11 @@ func clear_thread():
 	self.current_thread = null
 
 func keyword_clicked(new_choice):
+	# tuto
+	if current_thread["receiver"] == "Mayor" and !current_thread["messages"][-1].has("sent"):
+		var tuto2 = get_tree().current_scene.find_child("tuto2")
+		tuto2.visible = true
+	#
 	window_answer.add_answers(current_thread["messages"][-1]["choices"])
 	window_answer.refresh_answers(new_choice)
 
@@ -75,5 +85,9 @@ func lock_choice():
 	current_thread["messages"][-1]["sent"] = true
 
 func _on_close_window_button_pressed():
+	var tuto1 = get_tree().current_scene.find_child("tuto1")
+	tuto1.visible = false
+	var tuto2 = get_tree().current_scene.find_child("tuto2")
+	tuto2.visible = false
 	clear_thread()
 	window_answer.clear()

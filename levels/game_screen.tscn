@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://m6wxlbo0oiwm"]
+[gd_scene load_steps=15 format=3 uid="uid://m6wxlbo0oiwm"]
 
 [ext_resource type="Theme" uid="uid://dt64wf3jwua3u" path="res://themes/desktop.tres" id="1_rf31f"]
 [ext_resource type="Script" path="res://scripts/gameHandler.gd" id="2_mlnr7"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://dmswrg3t4y0ih" path="res://scenes/window_answers.tscn" id="8_oco0f"]
 [ext_resource type="Script" path="res://scripts/send_button.gd" id="9_1pwv1"]
 [ext_resource type="StyleBox" uid="uid://cecmgmlspoop1" path="res://themes/send_button_pressed.tres" id="9_35q5p"]
+[ext_resource type="PackedScene" uid="uid://cxnpltx0u1ijs" path="res://scenes/window_tuto.tscn" id="11_57302"]
+[ext_resource type="PackedScene" uid="uid://brt40gu65q3xk" path="res://scenes/window_tuto2.tscn" id="12_budjc"]
 
 [sub_resource type="Gradient" id="Gradient_cgybt"]
 offsets = PackedFloat32Array(0, 0.894977, 1)
@@ -144,9 +146,43 @@ text = "SEND MESSAGE"
 script = ExtResource("9_1pwv1")
 
 [node name="arrive_popup" type="Marker2D" parent="."]
-position = Vector2(327, 129)
+position = Vector2(661, 84)
 
 [node name="depart_popup" type="Marker2D" parent="."]
 position = Vector2(1086, 141)
+
+[node name="tuto1" parent="." instance=ExtResource("11_57302")]
+visible = false
+layout_mode = 1
+offset_left = 209.0
+offset_top = 225.0
+offset_right = 441.0
+offset_bottom = -312.0
+
+[node name="Line2D" type="Line2D" parent="tuto1"]
+position = Vector2(233, 55)
+points = PackedVector2Array(-10, 8, 200, 8)
+width = 8.0
+default_color = Color(0.898039, 0.368627, 0, 1)
+
+[node name="tuto2" parent="." instance=ExtResource("12_budjc")]
+visible = false
+layout_mode = 1
+offset_left = 546.0
+offset_top = 376.0
+offset_right = 778.0
+offset_bottom = -161.0
+
+[node name="Line2D2" type="Line2D" parent="tuto2"]
+position = Vector2(125, 97)
+points = PackedVector2Array(-10, 8, -10, 38)
+width = 8.0
+default_color = Color(0.898039, 0.368627, 0, 1)
+
+[node name="Line2D" type="Line2D" parent="tuto2"]
+position = Vector2(236, 60)
+points = PackedVector2Array(-10, 8, 200, 8)
+width = 8.0
+default_color = Color(0.898039, 0.368627, 0, 1)
 
 [connection signal="pressed" from="send_button" to="." method="_on_send_button_pressed"]
