@@ -1,0 +1,320 @@
+[
+	{
+		"sender": "Eviction Team",
+		"receiver": "Mayor",
+		"messages": [
+			{
+				"text": "Bonjour, suite à votre récente demande d'expulsion, nos agents sont prêts à intervenir. Pouvez-vous nous donner le nom de l'établissement concerné?",
+				"type": "received"
+			},
+			{
+				"text": [
+					"Oui bien sûr. C'en est enfin fini de voir chaque jour leurs sale tête. Expulser ",
+					" au plus vite."
+				],
+				"choices": {
+					"le glacier": "eviction_ice",
+					"le Concessionaire Land Robber": "eviction_land",
+					"le Casino Pennypincher": "eviction_casino"
+				},
+				"type": "sent"
+			}
+		]
+	},
+	{
+		"sender": "Professor",
+		"receiver": "Principal",
+		"messages": [
+			{
+				"text": "Bonjour Mme la Directrice. Bonne nouvelle, le financement du voyage de classe de cette année est enfin assuré ! J'ai acheté les dix derniers billets de tombola de Kevin qui a eu un peu de mal à les écouler. Il ne reste qu'une question, avez-vous décidé où le voyage de classe devra se dérouler ?",
+				"type": "received"
+			},
+			{
+				"text": [
+					"Dans ma grande sagesse de Directrice, j'ai longuement réfléchi à cette question importante. J'en suis venue à la conclusion qu'il serait préférable pour le bonheur et la croissance des enfants que vous les emmeniez ",
+					"."
+				],
+				"choices": {
+					"au Musée de la Chaussure": "trip_museum",
+					"à la Piscine": "trip_pool",
+					"au Ski": "trip_ski"
+				},
+				"type": "sent"
+			}
+		]
+	},
+	{
+		"sender": "CEO Land Robber",
+		"receiver": "CEO friend",
+		"messages": [
+			{
+				"text": "Je viens d'avoir les flics au concessionaire ! Avec un avis d'expulsion ! Tu crois que c'est à cause du détournement de fonds ?",
+				"type": "received"
+			},
+			{
+				"text": [
+					"",
+					""
+				],
+				"choices": {
+					"Je ne sais pas. Je vais vérifier avec mon ami à la mairie": "embez_city_hall",
+					"Tu as déja entendu parlé du musée de la chaussure ? C'est bien ?": "embez_museum"
+				},
+				"type": "sent"
+			}
+		]
+	},
+	{
+		"sender": "Chief caretaker",
+		"receiver": "Employee",
+		"messages": [
+			{
+				"text": "Oubllies pas le changement des cages aujourd'hui. LEs Pandas doivent aller dans la cage 5 et les Tigres dans la cage 10. N'oublies pas. Tu sais comment sont les Pandas quand ils mangent de la nourriture pour tigre... Vendredi dernier, c'était déja trop.",
+				"type": "received"
+			},
+			{
+				"text": [
+					"PAs de probleme. ",
+					"."
+				],
+				"choices": {
+					"Désolé pour la dernière fois.": "zoo_sorry",
+					"Mais avoues, c'était un sacré spectacle": "zoo_show"
+				},
+				"type": "sent"
+			}
+		]
+	},
+	{
+		"sender": "Robber",
+		"receiver": "Boss",
+		"messages": [
+			{
+				"text": "Tout est prêt pour le cambriolage due zoo Boss. Les déguisements sont parfait. La clef à l'air de marcher. J'arrive pas à croire qu'on va enfin avoir nos propres pandas. Avec un bon vin rouge, ce sera parfait. C'est otujours la cage 10, c'est ça ?",
+				"type": "received"
+			},
+			{
+				"text": [
+					"",
+					"Je préchauffe le four."
+				],
+				"choices": {
+					"Cage 10 c'est ça. Garde bien la lumière éteinte, le stress ça tend la viande": "robber_10",
+					"Non, ils ont changé. Cage 5. Dépêches toi, j'ai faim !": "robber_5"
+				},
+				"type": "sent"
+			}
+		]
+	},
+	{
+		"sender": "Luxury and Perjury",
+		"receiver": "Land Robber CEO",
+		"messages": [
+			{
+				"text": "Ici le PDG de Land Robber. J'ouvre un nouveau concessionaire, je veux 400 caisses de vos meilleures huitres, avant ce soir. Vite, je suis quelqu'un d'occupé",
+				"type": "sent"
+			},
+			{
+				"text": "Tout sera fait selon votre désir. Nous envoyons la facture. Quelle est l'adresse de livraison?",
+				"type": "received"
+			},
+			{
+				"text": [
+					"Vous ne connaissez même pas mon adresse  ? Vous savez qui je suis ? LE luxe, c'est n'est plus ce que c'était...",
+					"."
+				],
+				"choices": {
+					"5 P.Hig Street": "oyster_land_robber",
+					"30 Oak Street": "oyster_food_bank",
+					"90 Friend street": "oyster_friend"
+				},
+				"type": "sent"
+			}
+		]
+	},
+	{
+		"sender": "Mom",
+		"receiver": "Kid",
+		"messages": [
+			{
+				"text": "N'oublies pas de sortir la volaille du frigo! Bises.",
+				"type": "received"
+			},
+			{
+				"text": "Yep.",
+				"type": "sent"
+			},
+			{
+				"text": "Je serais pas là ce soir. Je vais faire du skate avec les O'llie",
+				"type": "sent"
+			},
+			{
+				"text": "Ok.",
+				"type": "received"
+			},
+			{
+				"text": "C'est toi qui a commandé 4800 huitres ??",
+				"type": "received"
+			},
+			{
+				"text": [
+					"",
+					""
+				],
+				"choices": {
+					"De quoi ? Pourquoi est ce que je ferai ça ?": "mom_incomprehension",
+					"Ce serait pas le père Noël ?": "mom_santa_claus"
+				},
+				"type": "sent"
+			}
+		]
+	},
+	{
+		"sender": "Tourism bus driver",
+		"receiver": "Tourism Agency",
+		"version": "investigation",
+		"messages": [
+			{
+				"text": "Je viens de finir les budgets, tu recevras le remboursement d'essencce avant la fin de la semaine",
+				"type": "received"
+			},
+			{
+				"text": "Nickel.",
+				"type": "sent"
+			},
+			{
+				"text": "Au fait, tu pourrais faire un peu gaffe à ta conduite ? Les italiens ce sont pleins la semaine dernière.",
+				"type": "received"
+			},
+			{
+				"text": "Yes. Mais pour info, c'était des nonnes. Les chants religieux ça à tendance à me déconcentrer.",
+				"type": "sent"
+			},
+			{
+				"text": "Pas de soucis. N'oublie pas que demain tu dois récupérer les Européens à l'aéroport à 6 heures du matin. Ensuite, petit déjeuner au Coffee Corner, visite de la boutique de souvenirs, puis le zoo.",
+				"type": "received"
+			},
+			{
+				"text": "Nickel.",
+				"type": "sent"
+			},
+			{
+				"text": "Tu as vu ? Le zoo est fermé, il y a une enquête apparement. Je fais quoi ?",
+				"type": "sent"
+			},
+			{
+				"text": [
+					"",
+					""
+				],
+				"choices": {
+					"Je sais pas... Amène les au casino, ça plait toujours.": "driver_casino",
+					"Amène les au Musée de la Chaussure ! J'en ai entendu beaucoup de bien !": "driver_museum"
+				},
+				"type": "sent"
+			}
+		]
+	},
+	{
+		"sender": "Tourism bus driver",
+		"receiver": "Tourism Agency",
+		"version": "zoo",
+		"messages": [
+			{
+				"text": "Je viens de finir les budgets, tu recevras le remboursement d'essencce avant la fin de la semaine",
+				"type": "received"
+			},
+			{
+				"text": "Nickel.",
+				"type": "sent"
+			},
+			{
+				"text": "Au fait, tu pourrais faire un peu gaffe à ta conduite ? Les italiens ce sont pleins la semaine dernière.",
+				"type": "received"
+			},
+			{
+				"text": "Yes. Mais pour info, c'était des nonnes. Les chants religieux ça à tendance à me déconcentrer.",
+				"type": "sent"
+			},
+			{
+				"text": "Pas de soucis. N'oublie pas que demain tu dois récupérer les Européens à l'aéroport à 6 heures du matin. Ensuite, petit déjeuner au Coffee Corner, visite de la boutique de souvenirs, puis le zoo.",
+				"type": "received"
+			},
+			{
+				"text": "Nickel.",
+				"type": "sent"
+			},
+			{
+				"text": "Tu as vu ? Le zoo est fermé, apparement un tigre c'est échapé... Je fais quoi ?",
+				"type": "sent"
+			},
+			{
+				"text": [
+					"",
+					""
+				],
+				"choices": {
+					"Je sais pas... Amène les au casino, ça plait toujours.": "driver_casino",
+					"Amène les au Musée de la Chaussure ! J'en ai entendu beaucoup de bien !": "driver_museum"
+				},
+				"type": "sent"
+			}
+		]
+	},
+	{
+		"sender": "Police Dispatcher",
+		"receiver": "Patrol",
+		"messages": [
+			{
+				"text": "Nous avons entendu des rapports faisant état de pirates informatiques qui intercepte des communications. Patrouille, allez l'appréhender.",
+				"type": "sent"
+			},
+			{
+				"text": "Reçu. D'où opèrent-ils ?",
+				"type": "received"
+			},
+			{
+				"text": [
+					"",
+					""
+				],
+				"choices": {
+					"Vous êtes con ou quoi ? Des bureaux de Total TattleTale où autre ?": "police_tattletale",
+					"Aussi surprenant que cela puisse paraitre, ils semble agir depuis le zoo. Cage 5 ou 10..": "police_zoo",
+					"Ils semblent être installé chez le concessionaire Land Robber.": "police_land_robber"
+				},
+				"type": "sent"
+			}
+		]
+	},
+	{
+		"sender": "The developpers",
+		"receiver": "You",
+		"messages": [
+			{
+				"text": "Fin.",
+				"type": "received"
+			},
+			{
+				"text": "Merci d'avoir joué !",
+				"type": "received"
+			},
+			{
+				"text": "(Maintenant, auriez-vous l'amabilité de bien vouloi fermer cet accés non autorisé ?)",
+				"type": "received"
+			},
+			{
+				"text": [
+					"Merci pour le jeu.",
+					""
+				],
+				"choices": {
+					"Bye !" : "answer",
+					"Vous avez les horaires d'ouverture du musée de la chaussure ?": "answer_bis",
+					"Comment est ce que l'on débloque la fin secrète ?": "police_land_robber"
+				},
+				"type": "sent"
+			}
+		]
+	}
+]
