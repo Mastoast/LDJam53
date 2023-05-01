@@ -43,7 +43,8 @@ theme_override_constants/margin_right = 0
 
 [node name="border_title" type="Label" parent="VBoxContainer/border/MarginContainer"]
 layout_mode = 2
-text = "INCOMING CALLS"
+text = "intercepted coms"
+uppercase = true
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
 layout_mode = 2

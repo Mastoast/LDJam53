@@ -46,6 +46,8 @@ func fill_thread(thread):
 			new.meta_underlined = false
 		$MarginContainer/ScrollContainer/message_list.add_child(new)
 	#$AnimationPlayer.play("load_thread")
+	var title = 'Conversation between "{0}" and "{1}"'.format([thread.receiver, thread.sender])
+	$border/window_title.text = title
 
 func clear_thread():
 	for i in range(0, $MarginContainer/ScrollContainer/message_list.get_child_count()):
@@ -70,3 +72,6 @@ func get_current_choice():
 func lock_choice():
 	current_thread["messages"][-1]["sent"] = true
 
+func _on_close_window_button_pressed():
+	clear_thread()
+	window_answer.clear()
