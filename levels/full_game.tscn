@@ -1,11 +1,11 @@
 [gd_scene load_steps=5 format=3 uid="uid://cmbq5g85s6b4i"]
 
-[ext_resource type="PackedScene" uid="uid://m6wxlbo0oiwm" path="res://levels/game_screen.tscn" id="1_2gkgw"]
-[ext_resource type="PackedScene" uid="uid://cw7oqcr1kgj0u" path="res://levels/screen_login.tscn" id="2_yur7n"]
-[ext_resource type="Shader" path="res://shaders/crt_filter.gdshader" id="3_p2ghc"]
+[ext_resource type="PackedScene" uid="uid://m6wxlbo0oiwm" path="res://levels/game_screen.tscn" id="1_2yxcs"]
+[ext_resource type="PackedScene" uid="uid://cw7oqcr1kgj0u" path="res://levels/screen_login.tscn" id="2_4beum"]
+[ext_resource type="Shader" path="res://shaders/crt_filter.gdshader" id="3_vlvw2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_praob"]
-shader = ExtResource("3_p2ghc")
+shader = ExtResource("3_vlvw2")
 shader_parameter/overlay = true
 shader_parameter/scanlines_opacity = 0.306
 shader_parameter/scanlines_width = 0.25
@@ -37,9 +37,9 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="game_screen" parent="." instance=ExtResource("1_2gkgw")]
+[node name="game_screen" parent="." instance=ExtResource("1_2yxcs")]
 
-[node name="screen_login" parent="." instance=ExtResource("2_yur7n")]
+[node name="screen_login" parent="." instance=ExtResource("2_4beum")]
 layout_mode = 1
 
 [node name="ColorRect" type="ColorRect" parent="."]

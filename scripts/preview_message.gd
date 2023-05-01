@@ -9,7 +9,11 @@ func _ready():
 	answers_window = get_tree().get_first_node_in_group("answers")
 
 func _process(delta):
-	pass
+	if thread and self.has_theme_stylebox_override("normal") and thread["messages"][-1].has("sent"):
+		self.remove_theme_stylebox_override("normal")
+		self.remove_theme_stylebox_override("focus")
+		self.remove_theme_stylebox_override("hover")
+		self.remove_theme_stylebox_override("pressed")
 
 func init(thread):
 	self.thread = thread
