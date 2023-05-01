@@ -20,7 +20,7 @@ shader_parameter/distort_intensity = 0.05
 shader_parameter/noise_opacity = 0.04
 shader_parameter/noise_speed = 1.0
 shader_parameter/static_noise_intensity = 0.081
-shader_parameter/aberration = 0.03
+shader_parameter/aberration = 0.00100005
 shader_parameter/brightness = 1.4
 shader_parameter/discolor = true
 shader_parameter/warp_amount = 0.05
@@ -43,7 +43,6 @@ mouse_filter = 2
 layout_mode = 1
 
 [node name="crt_filter" type="ColorRect" parent="."]
-visible = false
 material = SubResource("ShaderMaterial_praob")
 layout_mode = 1
 anchors_preset = 15
