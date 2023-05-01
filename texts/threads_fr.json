@@ -69,12 +69,12 @@
 		"receiver": "Employee",
 		"messages": [
 			{
-				"text": "Oubllies pas le changement des cages aujourd'hui. LEs Pandas doivent aller dans la cage 5 et les Tigres dans la cage 10. N'oublies pas. Tu sais comment sont les Pandas quand ils mangent de la nourriture pour tigre... Vendredi dernier, c'était déja trop.",
+				"text": "Oublies pas le changement des cages aujourd'hui. Les Pandas doivent aller dans la cage 5 et les Tigres dans la cage 10. N'oublies pas. Tu sais comment sont les Pandas quand ils mangent de la nourriture pour tigre... Vendredi dernier, c'était déja trop.",
 				"type": "received"
 			},
 			{
 				"text": [
-					"PAs de probleme. ",
+					"Pas de probleme. ",
 					"."
 				],
 				"choices": {
@@ -90,7 +90,7 @@
 		"receiver": "Boss",
 		"messages": [
 			{
-				"text": "Tout est prêt pour le cambriolage due zoo Boss. Les déguisements sont parfait. La clef à l'air de marcher. J'arrive pas à croire qu'on va enfin avoir nos propres pandas. Avec un bon vin rouge, ce sera parfait. C'est otujours la cage 10, c'est ça ?",
+				"text": "Tout est prêt pour le cambriolage du zoo Boss. Les déguisements sont parfait. La clef à l'air de marcher. J'arrive pas à croire qu'on va enfin avoir nos propres pandas. Avec un bon vin rouge, ce sera parfait. C'est toujours la cage 10, c'est ça ?",
 				"type": "received"
 			},
 			{
@@ -120,7 +120,7 @@
 			},
 			{
 				"text": [
-					"Vous ne connaissez même pas mon adresse  ? Vous savez qui je suis ? LE luxe, c'est n'est plus ce que c'était...",
+					"Vous ne connaissez même pas mon adresse  ? Vous savez qui je suis ? Le luxe, ce n'est plus ce que c'était...",
 					"."
 				],
 				"choices": {
@@ -175,7 +175,7 @@
 		"version": "investigation",
 		"messages": [
 			{
-				"text": "Je viens de finir les budgets, tu recevras le remboursement d'essencce avant la fin de la semaine",
+				"text": "Je viens de finir les budgets, tu recevras le remboursement d'essence avant la fin de la semaine",
 				"type": "received"
 			},
 			{
@@ -183,7 +183,7 @@
 				"type": "sent"
 			},
 			{
-				"text": "Au fait, tu pourrais faire un peu gaffe à ta conduite ? Les italiens ce sont pleins la semaine dernière.",
+				"text": "Au fait, tu pourrais faire un peu gaffe à ta conduite ? Les italiens ce sont plaints la semaine dernière.",
 				"type": "received"
 			},
 			{
@@ -191,7 +191,7 @@
 				"type": "sent"
 			},
 			{
-				"text": "Pas de soucis. N'oublie pas que demain tu dois récupérer les Européens à l'aéroport à 6 heures du matin. Ensuite, petit déjeuner au Coffee Corner, visite de la boutique de souvenirs, puis le zoo.",
+				"text": "Pas de soucis. N'oublie pas que demain tu dois récupérer les Allemands à l'aéroport à 6 heures du matin. Ensuite, petit déjeuner au Coffee Corner, visite de la boutique de souvenirs, puis le zoo.",
 				"type": "received"
 			},
 			{
@@ -237,7 +237,7 @@
 				"type": "sent"
 			},
 			{
-				"text": "Pas de soucis. N'oublie pas que demain tu dois récupérer les Européens à l'aéroport à 6 heures du matin. Ensuite, petit déjeuner au Coffee Corner, visite de la boutique de souvenirs, puis le zoo.",
+				"text": "Pas de soucis. N'oublie pas que demain tu dois récupérer les Allemands à l'aéroport à 6 heures du matin. Ensuite, petit déjeuner au Coffee Corner, visite de la boutique de souvenirs, puis le zoo.",
 				"type": "received"
 			},
 			{
@@ -266,7 +266,7 @@
 		"receiver": "Patrol",
 		"messages": [
 			{
-				"text": "Nous avons entendu des rapports faisant état de pirates informatiques qui intercepte des communications. Patrouille, allez l'appréhender.",
+				"text": "Nous avons entendu des rapports faisant état de pirates informatiques interceptant des communications. Patrouille, allez l'appréhender.",
 				"type": "sent"
 			},
 			{
@@ -279,7 +279,7 @@
 					""
 				],
 				"choices": {
-					"Vous êtes con ou quoi ? Des bureaux de Total TattleTale où autre ?": "police_tattletale",
+					"Vous êtes con ou quoi ? Des bureaux de Total TattleTale, où autre ?": "police_tattletale",
 					"Aussi surprenant que cela puisse paraitre, ils semble agir depuis le zoo. Cage 5 ou 10..": "police_zoo",
 					"Ils semblent être installé chez le concessionaire Land Robber.": "police_land_robber"
 				},
@@ -300,7 +300,7 @@
 				"type": "received"
 			},
 			{
-				"text": "(Maintenant, auriez-vous l'amabilité de bien vouloi fermer cet accés non autorisé ?)",
+				"text": "(Auriez-vous l'amabilité de bien vouloi fermer cet accés non autorisé ?)",
 				"type": "received"
 			},
 			{
