@@ -12,9 +12,9 @@ func _ready():
 
 func _process(delta):
 	if !$end_timer.is_stopped():
-		self.position.x = origin.x + 500 * (1 - $end_timer.time_left)
+		self.position.x = origin.x + 1000 * (1 - $end_timer.time_left)
 	if !$start_timer.is_stopped() && self.position.x > origin.x:
-		self.position.x = self.position.x - 500 * (1 - $start_timer.time_left)
+		self.position.x = self.position.x - 1000 * (1 - $start_timer.time_left)
 
 
 func _on_texture_button_pressed():
