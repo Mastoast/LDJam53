@@ -124,13 +124,13 @@ offset_bottom = 572.0
 
 [node name="send_button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1057.0
-offset_top = 571.0
-offset_right = 1128.0
-offset_bottom = 598.0
+offset_left = 1019.0
+offset_top = 556.0
+offset_right = 1142.0
+offset_bottom = 633.0
 size_flags_horizontal = 8
 size_flags_vertical = 10
-text = "SEND >>"
+text = "SEND MESSAGE"
 script = ExtResource("9_1pwv1")
 
 [node name="arrive_popup" type="Marker2D" parent="."]
