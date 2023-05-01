@@ -267,7 +267,7 @@
 		"messages": [
 			{
 				"text": "We heard report of a hacker intercepting communications and making quite a stir in the city. Patrol, go on and apprehend them.",
-				"type": "received"
+				"type": "sent"
 			},
 			{
 				"text": "Received. Where are they operating ?",
@@ -284,6 +284,36 @@
 					"Their location appear to be the Land Robber Headquarter.": "police_land_robber"
 				},
 				"type": "sent"
+			}
+		]
+	},
+	{
+		"sender": "The devellopers",
+		"receiver": "You",
+		"messages": [
+			{
+				"text": "The End.",
+				"type": "sent"
+			},
+			{
+				"text": "Thanks for playing !",
+				"type": "sent"
+			},
+			{
+				"text": "(Now please, would you be so kind to close this unauthorized access ?)",
+				"type": "sent"
+			},
+			{
+				"text": [
+					"Thanks for the game.",
+					""
+				],
+				"choices": {
+					"Bye !" : "answer",
+					"Do you have the opening times of the Olden Shoe Museum ?": "answer_bis",
+					"How can I unlock the secret ending ?": "police_land_robber"
+				},
+				"type": "received"
 			}
 		]
 	}
