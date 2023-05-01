@@ -20,8 +20,8 @@ shader_parameter/distort_intensity = 0.05
 shader_parameter/noise_opacity = 0.04
 shader_parameter/noise_speed = 1.0
 shader_parameter/static_noise_intensity = 0.081
-shader_parameter/aberration = -0.00299995
-shader_parameter/brightness = 1.6
+shader_parameter/aberration = 0.03
+shader_parameter/brightness = 1.4
 shader_parameter/discolor = true
 shader_parameter/warp_amount = 0.05
 shader_parameter/clip_warp = false
@@ -35,6 +35,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="game_screen" parent="." instance=ExtResource("1_2gkgw")]
 
@@ -42,6 +43,7 @@ grow_vertical = 2
 layout_mode = 1
 
 [node name="crt_filter" type="ColorRect" parent="."]
+visible = false
 material = SubResource("ShaderMaterial_praob")
 layout_mode = 1
 anchors_preset = 15

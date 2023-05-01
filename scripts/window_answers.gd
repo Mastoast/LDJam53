@@ -18,9 +18,7 @@ func add_answers(choices):
 		$HBoxContainer.add_child(new)
 
 func refresh_answers(current_choice):
-	print("choice : " + current_choice)
 	for choice in $HBoxContainer.get_children():
-		print(choice.get_label())
 		choice.disabled = choice.get_label() == current_choice
 
 func clear():

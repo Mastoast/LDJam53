@@ -18,6 +18,3 @@ func get_label():
 func set_label(text):
 	$Label.text = text
 
-
-func _on_focus_entered():
-	pass

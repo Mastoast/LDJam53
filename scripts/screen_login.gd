@@ -12,7 +12,8 @@ func _ready():
 
 func _process(delta):
 	$time.text =  Time.get_time_string_from_system().substr(0, 5)
-	$password.grab_focus()
+	if self.visible:
+		$password.grab_focus()
 
 
 func _on_password_text_submitted(new_text):
@@ -30,3 +31,7 @@ func _on_password_text_submitted(new_text):
 		tween.set_ease(Tween.EASE_IN_OUT)
 		tween.set_trans(Tween.TRANS_EXPO)
 		tween.tween_property(self, "position", Vector2(0, -self.size.y), 2.0 / animation_speed)
+		tween.tween_callback(screen_unlocked)
+
+func screen_unlocked():
+	self.visible = false
