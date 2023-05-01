@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b5f88qm5bt18o"]
+[gd_scene load_steps=13 format=3 uid="uid://byfxh8xs6hfec"]
 
 [ext_resource type="Theme" uid="uid://dt64wf3jwua3u" path="res://themes/desktop.tres" id="1_rf31f"]
 [ext_resource type="Script" path="res://scripts/gameHandler.gd" id="2_mlnr7"]
@@ -6,8 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://dxejwmfggrxgy" path="res://sprites/wallpaper.png" id="5_rnhdx"]
 [ext_resource type="PackedScene" path="res://scenes/window_preview.tscn" id="6_n7gpa"]
 [ext_resource type="PackedScene" uid="uid://t776op5xvn6b" path="res://scenes/window_thread.tscn" id="7_vd488"]
+[ext_resource type="StyleBox" uid="uid://end1q2k4qr0k" path="res://themes/send_button.tres" id="8_ehk77"]
 [ext_resource type="PackedScene" uid="uid://dmswrg3t4y0ih" path="res://scenes/window_answers.tscn" id="8_oco0f"]
 [ext_resource type="Script" path="res://scripts/send_button.gd" id="9_1pwv1"]
+[ext_resource type="StyleBox" uid="uid://cecmgmlspoop1" path="res://themes/send_button_pressed.tres" id="9_x0hcb"]
 
 [sub_resource type="Gradient" id="Gradient_cgybt"]
 offsets = PackedFloat32Array(0, 0.894977, 1)
@@ -126,12 +128,17 @@ offset_bottom = 570.0
 
 [node name="send_button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1015.0
-offset_top = 535.0
+offset_left = 1007.0
+offset_top = 541.0
 offset_right = 1138.0
-offset_bottom = 612.0
+offset_bottom = 618.0
 size_flags_horizontal = 8
 size_flags_vertical = 10
+focus_mode = 0
+theme_override_styles/normal = ExtResource("8_ehk77")
+theme_override_styles/hover = ExtResource("8_ehk77")
+theme_override_styles/pressed = ExtResource("9_x0hcb")
+theme_override_styles/focus = ExtResource("8_ehk77")
 text = "SEND MESSAGE"
 script = ExtResource("9_1pwv1")
 

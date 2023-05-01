@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://b8yym45k20io4"]
+[gd_scene load_steps=3 format=3 uid="uid://cmbq5g85s6b4i"]
 
-[ext_resource type="Script" path="res://scripts/gameHandler.gd" id="1_na8b6"]
-[ext_resource type="PackedScene" uid="uid://ccikpjmn4vxq0" path="res://scenes/answer_button.tscn" id="2_ryu1e"]
-[ext_resource type="Theme" uid="uid://lkbwdl03g4jg" path="res://themes/desktop.tres" id="3_a6ha0"]
+[ext_resource type="StyleBox" uid="uid://end1q2k4qr0k" path="res://themes/send_button.tres" id="4_40ow8"]
+[ext_resource type="StyleBox" uid="uid://cecmgmlspoop1" path="res://themes/send_button_pressed.tres" id="5_66t7r"]
 
 [node name="zz_test_hector" type="Control"]
 layout_mode = 3
@@ -11,45 +10,18 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_na8b6")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="send_button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 43.0
-offset_top = 366.0
-offset_right = 847.0
-offset_bottom = 545.0
-
-[node name="MarginContainer" type="MarginContainer" parent="Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer"]
-layout_mode = 2
-theme_override_constants/separation = 15
-alignment = 1
-
-[node name="answer_button" parent="Panel/MarginContainer/HBoxContainer" instance=ExtResource("2_ryu1e")]
-layout_mode = 2
-text = "No, they changed it to cage 5. Be quick, I’m hungry !"
-
-[node name="answer_button2" parent="Panel/MarginContainer/HBoxContainer" instance=ExtResource("2_ryu1e")]
-layout_mode = 2
-text = "Cage 10 that’s right.
- Keep the lights off, 
-we don’t want to startle them"
-
-[node name="answer_button3" parent="Panel/MarginContainer/HBoxContainer" instance=ExtResource("2_ryu1e")]
-layout_mode = 2
-
-[node name="Button" type="Button" parent="Panel/MarginContainer/HBoxContainer"]
-custom_minimum_size = Vector2(200, 100)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme = ExtResource("3_a6ha0")
-text = "No, they changed it to cage 5. Be quick, I’m hungry !"
+offset_left = 1007.0
+offset_top = 541.0
+offset_right = 1138.0
+offset_bottom = 618.0
+size_flags_horizontal = 8
+size_flags_vertical = 10
+focus_mode = 0
+theme_override_styles/normal = ExtResource("4_40ow8")
+theme_override_styles/hover = ExtResource("4_40ow8")
+theme_override_styles/pressed = ExtResource("5_66t7r")
+theme_override_styles/focus = ExtResource("4_40ow8")
+text = "SEND MESSAGE"
