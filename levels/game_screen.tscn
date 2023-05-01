@@ -129,10 +129,10 @@ offset_bottom = 570.0
 
 [node name="send_button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1007.0
-offset_top = 541.0
-offset_right = 1138.0
-offset_bottom = 618.0
+offset_left = 990.0
+offset_top = 553.0
+offset_right = 1121.0
+offset_bottom = 614.0
 size_flags_horizontal = 8
 size_flags_vertical = 10
 focus_mode = 0

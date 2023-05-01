@@ -7,9 +7,11 @@ var window_answer
 var current_thread
 var received = load("res://scenes/message_received.tscn")
 var sent = load("res://scenes/message_sent.tscn")
+var message_list
 
 func _ready():
 	window_answer = get_tree().get_first_node_in_group("answers")
+	message_list = $VBoxContainer/MarginContainer/ScrollContainer/message_list
 #	fill_thread(StaticData.threads[4])
 
 func _process(delta):
@@ -44,14 +46,14 @@ func fill_thread(thread):
 			new.add_text(' ' + message["text"][1].strip_edges())
 			new.meta_clicked.connect(keyword_clicked)
 			new.meta_underlined = false
-		$MarginContainer/ScrollContainer/message_list.add_child(new)
+		message_list.add_child(new)
 	#$AnimationPlayer.play("load_thread")
 	var title = 'Conversation between "{0}" and "{1}"'.format([thread.receiver, thread.sender])
-	$border/window_title.text = title
+	$VBoxContainer/border/window_title.text = title
 
 func clear_thread():
-	for i in range(0, $MarginContainer/ScrollContainer/message_list.get_child_count()):
-		$MarginContainer/ScrollContainer/message_list.get_child(i).queue_free()
+	for i in range(0, message_list.get_child_count()):
+		message_list.get_child(i).queue_free()
 	self.current_thread = null
 
 func keyword_clicked(new_choice):
