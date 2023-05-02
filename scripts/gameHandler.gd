@@ -40,6 +40,8 @@ func _on_send_button_pressed():
 	tuto1.visible = false
 	var tuto2 = get_tree().current_scene.find_child("tuto2")
 	tuto2.visible = false
+	#
+	StaticData.play_sfx(StaticData.success_sfx, randf_range(0.90, 0.95), 0.55)
 	var new_choice = thread_window.get_current_choice()
 	thread_window.lock_choice()
 	decisions.append(new_choice)

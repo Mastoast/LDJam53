@@ -5,9 +5,12 @@ var popup = load("res://scenes/popup_info_news.tscn")
 
 func _ready():
 	$start_timer.start(1)
+#	$start_timer.connect("timeout", news_arrived())
 	origin = self.position
 	self.position.x = self.position.x+500
 
+func news_arrived():
+	StaticData.play_sfx(StaticData.news_sfx, 1.0)
 
 
 func _process(delta):
@@ -18,6 +21,7 @@ func _process(delta):
 
 
 func _on_texture_button_pressed():
+	StaticData.play_sfx(StaticData.click3_sfx, randf_range(0.9, 1.1))
 	$end_timer.start(1)
 	origin = self.position
 	$start_timer.stop()

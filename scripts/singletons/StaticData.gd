@@ -13,6 +13,8 @@ var error_sfx = load("res://audio/error.mp3")
 var success_sfx = load("res://audio/success.mp3")
 var click1_sfx = load("res://audio/click1.mp3")
 var click2_sfx = load("res://audio/click2.mp3")
+var click3_sfx = load("res://audio/click3.mp3")
+var news_sfx = load("res://audio/news.mp3")
 
 var players = []
 
@@ -26,11 +28,12 @@ func _process(delta):
 		if !player.playing:
 			player.queue_free()
 
-func play_oneshot(stream):
+func play_sfx(stream, pitch = 1.0, position = 0.0):
 	var player = AudioStreamPlayer.new()
 	player.stream = stream
-	player.autoplay = true
+	player.pitch_scale = pitch
 	get_tree().current_scene.add_child(player)
+	player.play(position)
 
 func load_language():
 	if language == "ENG":

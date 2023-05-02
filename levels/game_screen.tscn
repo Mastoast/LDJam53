@@ -13,12 +13,12 @@
 [ext_resource type="PackedScene" uid="uid://cxnpltx0u1ijs" path="res://scenes/window_tuto.tscn" id="11_57302"]
 [ext_resource type="PackedScene" uid="uid://brt40gu65q3xk" path="res://scenes/window_tuto2.tscn" id="12_budjc"]
 
-[sub_resource type="Gradient" id="Gradient_cgybt"]
+[sub_resource type="Gradient" id="Gradient_4bhrp"]
 offsets = PackedFloat32Array(0, 0.894977, 1)
 colors = PackedColorArray(0, 0, 0, 1, 0.203922, 0.203922, 0.203922, 0, 1, 1, 1, 0)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_vsxg5"]
-gradient = SubResource("Gradient_cgybt")
+gradient = SubResource("Gradient_4bhrp")
 
 [node name="game_screen" type="Control" groups=["game"]]
 layout_mode = 3
