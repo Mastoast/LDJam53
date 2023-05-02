@@ -110,8 +110,8 @@ func create_news(name, press_article):
 func create_popup(press_article):
 	var new_popup = popup.instantiate()
 	print('info news')
-	new_popup.get_node('ColorRect/VBoxContainer/title').text = press_article["title"]
-	new_popup.get_node('ColorRect/VBoxContainer/content').text = press_article["content"]
+	new_popup.find_child("title").text = press_article["title"]
+	new_popup.find_child("content").text = press_article["content"]
 	new_popup.global_position = $depart_popup.position
 	new_popup.destination = Vector2($depart_popup.position.x - new_popup.size.x, new_popup.position.y) 
 	
