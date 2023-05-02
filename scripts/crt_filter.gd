@@ -5,9 +5,13 @@ var shader
 
 func _ready():
 	shader = self.material
+	get_window().size_changed.connect(size_changed)
 
 func _process(delta):
 	pass
+	
+func size_changed():
+	shader.set_shader_parameter("resolution", get_window().size)
 
 func _input(event):
 	if event.is_action_pressed("ui_right", true):

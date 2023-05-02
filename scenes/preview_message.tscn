@@ -1,8 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://buyid5p8ln7bt"]
+[gd_scene load_steps=7 format=3 uid="uid://buyid5p8ln7bt"]
 
 [ext_resource type="Script" path="res://scripts/preview_message.gd" id="1_rwtkb"]
 [ext_resource type="StyleBox" uid="uid://c5jb737s5fxi3" path="res://themes/button_preview_normal.tres" id="1_t0fl5"]
 [ext_resource type="StyleBox" uid="uid://bkm08pe6v30mt" path="res://themes/button_preview_hover.tres" id="2_o27s0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pvcc4"]
+content_margin_left = 4.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f7eie"]
+content_margin_left = 4.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="LabelSettings" id="LabelSettings_sch8r"]
 font_size = 12
@@ -10,6 +18,7 @@ font_color = Color(0.580392, 0.580392, 0.580392, 1)
 
 [node name="preview_message" type="Button"]
 custom_minimum_size = Vector2(200, 50)
+mouse_default_cursor_shape = 2
 theme_override_styles/normal = ExtResource("1_t0fl5")
 theme_override_styles/hover = ExtResource("2_o27s0")
 theme_override_styles/pressed = ExtResource("1_t0fl5")
@@ -27,6 +36,7 @@ grow_vertical = 2
 [node name="character_name" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_pvcc4")
 text = "Claude Pieplu"
 vertical_alignment = 2
 text_overrun_behavior = 3
@@ -34,6 +44,7 @@ text_overrun_behavior = 3
 [node name="message_overview" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_f7eie")
 text = "Il parait que ce texte est interessant et incomplet"
 label_settings = SubResource("LabelSettings_sch8r")
 text_overrun_behavior = 3

@@ -20,8 +20,9 @@ func move_and_callback(destination, callback = null):
 		tween.tween_callback(callback)
 
 func _on_texture_button_pressed():
-	StaticSfx.play_sfx(StaticSfx.click3_sfx, randf_range(0.9, 1.1))
+	StaticSfx.play_sfx(StaticSfx.click31_sfx, 0.8)
 	move_and_callback(origin, self.queue_free)
+	$VBoxContainer/header/TextureButton.disabled = true
 
 
 

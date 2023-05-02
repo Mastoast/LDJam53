@@ -5,6 +5,8 @@ var success_sfx = load("res://audio/success.mp3")
 var click1_sfx = load("res://audio/click1.mp3")
 var click2_sfx = load("res://audio/click2.mp3")
 var click3_sfx = load("res://audio/click3.mp3")
+var click31_sfx = load("res://audio/click_31.mp3")
+var click32_sfx = load("res://audio/click_32.mp3")
 var news_sfx = load("res://audio/news.mp3")
 
 var audio_players = []
