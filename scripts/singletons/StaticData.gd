@@ -9,8 +9,28 @@ var info_threads_file_fra = "res://texts/threads_info_fr.json"
 
 var language
 
+var error_sfx = load("res://audio/error.mp3")
+var success_sfx = load("res://audio/success.mp3")
+var click1_sfx = load("res://audio/click1.mp3")
+var click2_sfx = load("res://audio/click2.mp3")
+
+var players = []
+
 func _ready():
 	language = "ENG"
+	print(get_tree())
+	print(get_tree().current_scene)
+
+func _process(delta):
+	for player in players:
+		if !player.playing:
+			player.queue_free()
+
+func play_oneshot(stream):
+	var player = AudioStreamPlayer.new()
+	player.stream = stream
+	player.autoplay = true
+	get_tree().current_scene.add_child(player)
 
 func load_language():
 	if language == "ENG":

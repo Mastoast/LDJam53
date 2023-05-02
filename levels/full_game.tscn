@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cmbq5g85s6b4i"]
+[gd_scene load_steps=7 format=3 uid="uid://cmbq5g85s6b4i"]
 
 [ext_resource type="PackedScene" uid="uid://m6wxlbo0oiwm" path="res://levels/game_screen.tscn" id="1_2yxcs"]
 [ext_resource type="PackedScene" uid="uid://cw7oqcr1kgj0u" path="res://levels/screen_login.tscn" id="2_4beum"]
@@ -29,7 +29,26 @@ shader_parameter/clip_warp = false
 shader_parameter/vignette_intensity = 0.4
 shader_parameter/vignette_opacity = 0.5
 
-[node name="zz_test_hector" type="Control"]
+[sub_resource type="GDScript" id="GDScript_4tcy6"]
+script/source = "extends AudioStreamPlayer
+
+var background = load(\"res://audio/background_noiset.mp3\")
+var start = load(\"res://audio/crt_start.mp3\")
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	self.stream = start
+	self.play(0.5)
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	if !self.playing:
+		self.stream = background
+		self.play()
+"
+
+[node name="full_game" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -61,3 +80,6 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("4_epf6o")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+script = SubResource("GDScript_4tcy6")
