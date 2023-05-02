@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 StaticData="*res://scripts/singletons/StaticData.gd"
+StaticSfx="*res://scripts/singletons/StaticSfx.gd"
 
 [display]
 

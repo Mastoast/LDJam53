@@ -10,7 +10,7 @@ func _process(delta):
 	pass
 
 func _on_pressed():
-	StaticData.play_sfx(StaticData.click3_sfx, randf_range(0.9, 1.1))
+	StaticSfx.play_sfx(StaticSfx.click3_sfx, randf_range(0.9, 1.1))
 	window_thread.update_choice($Label.text)
 
 func get_label():

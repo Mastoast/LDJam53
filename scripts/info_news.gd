@@ -5,7 +5,7 @@ var destination = Vector2()
 
 func _ready():
 	origin = self.position
-	StaticData.play_sfx(StaticData.news_sfx, randf_range(0.9, 1.1))
+	StaticSfx.play_sfx(StaticSfx.news_sfx, randf_range(0.9, 1.1))
 	move_and_callback(destination)
 
 func _process(delta):
@@ -20,7 +20,7 @@ func move_and_callback(destination, callback = null):
 		tween.tween_callback(callback)
 
 func _on_texture_button_pressed():
-	StaticData.play_sfx(StaticData.click3_sfx, randf_range(0.9, 1.1))
+	StaticSfx.play_sfx(StaticSfx.click3_sfx, randf_range(0.9, 1.1))
 	move_and_callback(origin, self.queue_free)
 
 

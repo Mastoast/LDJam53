@@ -24,7 +24,7 @@ func _on_password_text_submitted(new_text):
 		$password.text = ""
 		$AnimationPlayer.play("authentification_failed", -1, animation_speed)
 		$warning.text = "Wrong Password, {0} attempts left".format([max_attempt - password_try_count])
-		StaticData.play_sfx(StaticData.error_sfx)
+		StaticSfx.play_sfx(StaticSfx.error_sfx)
 	else:
 		StaticData.language = languages[language_index]
 		StaticData.load_language()
@@ -36,7 +36,7 @@ func _on_password_text_submitted(new_text):
 		tween.set_trans(Tween.TRANS_EXPO)
 		tween.tween_property(self, "position", Vector2(0, -self.size.y), 2.0 / animation_speed)
 		tween.tween_callback(screen_unlocked)
-		StaticData.play_sfx(StaticData.success_sfx)
+		StaticSfx.play_sfx(StaticSfx.success_sfx)
 
 func screen_unlocked():
 	self.visible = false

@@ -22,4 +22,4 @@ func _on_pressed():
 	if thread_window.current_thread != thread:
 		answers_window.clear()
 		thread_window.fill_thread(thread)
-		StaticData.play_sfx(StaticData.click2_sfx, randf_range(0.9, 1.1))
+		StaticSfx.play_sfx(StaticSfx.click2_sfx, randf_range(0.9, 1.1))

@@ -68,7 +68,7 @@ func keyword_clicked(new_choice):
 		tuto2.visible = true
 	#
 	if !window_answer.has_choices():
-		StaticData.play_sfx(StaticData.click3_sfx, randf_range(0.9, 1.1))
+		StaticSfx.play_sfx(StaticSfx.click3_sfx, randf_range(0.9, 1.1))
 		window_answer.add_answers(current_thread["messages"][-1]["choices"])
 		window_answer.refresh_answers(new_choice)
 
@@ -87,7 +87,7 @@ func lock_choice():
 	current_thread["messages"][-1]["sent"] = true
 
 func _on_close_window_button_pressed():
-	StaticData.play_sfx(StaticData.click3_sfx, randf_range(0.9, 1.1))
+	StaticSfx.play_sfx(StaticSfx.click3_sfx, randf_range(0.9, 1.1))
 	var tuto1 = get_tree().current_scene.find_child("tuto1")
 	tuto1.visible = false
 	var tuto2 = get_tree().current_scene.find_child("tuto2")
