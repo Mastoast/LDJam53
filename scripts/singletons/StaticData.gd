@@ -20,8 +20,6 @@ var players = []
 
 func _ready():
 	language = "ENG"
-	print(get_tree())
-	print(get_tree().current_scene)
 
 func _process(delta):
 	for player in players:

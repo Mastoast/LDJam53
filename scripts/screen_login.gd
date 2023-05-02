@@ -20,7 +20,6 @@ func _on_password_text_submitted(new_text):
 	if $AnimationPlayer.is_playing() or tween and tween.is_running:
 		return
 	password_try_count += 1
-	print("try " + str(password_try_count))
 	if password_try_count < max_attempt:
 		$password.text = ""
 		$AnimationPlayer.play("authentification_failed", -1, animation_speed)
