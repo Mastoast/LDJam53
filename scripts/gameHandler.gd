@@ -20,7 +20,6 @@ func _ready():
 	thread_window = get_tree().get_first_node_in_group("thread")
 	answer_window = get_tree().get_first_node_in_group("answers")
 	time_field = get_tree().get_first_node_in_group("time")
-	#load_threads()
 
 func _process(delta):
 	var current_time = Time.get_time_string_from_system().substr(0, 5)
@@ -44,15 +43,16 @@ func _on_send_button_pressed():
 	StaticData.play_sfx(StaticData.success_sfx, randf_range(0.90, 0.95), 0.55)
 	var new_choice = thread_window.get_current_choice()
 	thread_window.lock_choice()
-	decisions.append(new_choice)
 	thread_window.clear_thread()
 	answer_window.clear()
-	add_message(decisions)
+	decisions.append(new_choice)
 	print(decisions)
+	#
+	popup_check(new_choice)
+	add_message(decisions)
 
 func add_message(decisions):
 	var next_message
-	popup_check(decisions)
 
 	while decisions.size() < threads.size():
 		next_message = threads[decisions.size()]
@@ -85,39 +85,27 @@ func add_message(decisions):
 			create_event(next_message)
 			return
 
-func popup_check(decisions):
-	if "eviction_ice" in decisions && !("eviction_ice" in news):
-			press_article = article_list[0]
-			news.append("eviction_ice")
-			create_popup(press_article)
-	if ("trip_pool" in decisions or "trip_ski" in decisions) && not("trip_museum" in news):
-			press_article = article_list[1]
-			news.append("trip_museum")
-			create_popup(press_article)
-	if "driver_museum" in decisions && !("driver_museum" in news):
-			press_article = article_list[2]
-			news.append("driver_museum")
-			create_popup(press_article)
-	if "driver_casino" in decisions && !("driver_casino" in news):
-			press_article = article_list[3]
-			news.append("driver_casino")
-			create_popup(press_article)
-	if "oyster_food_bank" in decisions && !("oyster_food_bank" in news):
-			press_article = article_list[4]
-			news.append("oyster_food_bank")
-			create_popup(press_article)
-	if "police_zoo" in decisions && !("police_zoo" in news):
-			press_article = article_list[5]
-			news.append("police_zoo")
-			create_popup(press_article)
-	if "robber_10" in decisions && !("robber_10" in news):
-			press_article = article_list[6]
-			news.append("robber_10")
-			create_popup(press_article)
-	if "police_land_robber" in decisions && !("police_land_robber" in news):
-			press_article = article_list[7]
-			news.append("police_land_robber")
-			create_popup(press_article)
+func popup_check(choice):
+	if choice == "eviction_ice" and "eviction_ice" in decisions:
+		create_news("eviction_ice", article_list[0])
+	if choice == "trip_museum" && ("trip_pool" in decisions or "trip_ski" in decisions):
+		create_news("trip_museum", article_list[1])
+	if choice == "driver_museum":
+		create_news("driver_museum", article_list[2])
+	if choice == "driver_casino":
+		create_news("driver_casino", article_list[3])
+	if choice == "oyster_food_bank":
+		create_news("oyster_food_bank", article_list[4])
+	if choice == "police_zoo":
+		create_news("police_zoo", article_list[5])
+	if choice == "robber_10":
+		create_news("robber_10", article_list[6])
+	if choice == "police_land_robber":
+		create_news("police_land_robber", article_list[7])
+
+func create_news(name, press_article):
+	news.append(name)
+	create_popup(press_article)
 
 func create_popup(press_article):
 	var new_popup = popup.instantiate()
