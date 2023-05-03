@@ -8,25 +8,30 @@ var window_answer
 var current_thread
 var received = load("res://scenes/message_received.tscn")
 var sent = load("res://scenes/message_sent.tscn")
+var window_tuto = load("res://scenes/window_tuto.tscn")
 var message_list
+
+var opened_windows = []
 
 func _ready():
 	window_answer = get_tree().get_first_node_in_group("answers")
 	message_list = $VBoxContainer/MarginContainer/ScrollContainer/message_list
-#	fill_thread(StaticData.threads[4])
 
 func _process(delta):
 	visible = current_thread != null
 
 func fill_thread(thread):
-	# tuto
-	if thread["receiver"] == "Mayor" and !thread["messages"][-1].has("validated"):
-			var tuto1 = get_tree().current_scene.find_child("tuto1")
-			tuto1.visible = true
-	
-	clear_thread()
+	clear()
+	if StaticData.is_tutorial_on:
+		create_tutorial_window(TranslationServer.translate("TUTO_CLICK_ORIGINAL"), $position_tuto1.position)
 	current_thread = thread
-	for message in thread["messages"]:
+	fill_messages()
+	#$AnimationPlayer.play("load_thread")
+	var title = TranslationServer.translate("CONVERSATION_BETWEEN").format([thread.receiver, thread.sender])
+	$VBoxContainer/border/window_title.text = title
+
+func fill_messages():
+	for message in current_thread["messages"]:
 		var validated = message.has("validated") and message.has("validated") == true
 		var new
 		if message["type"] == "sent":
@@ -54,20 +59,22 @@ func fill_thread(thread):
 			new.meta_clicked.connect(keyword_clicked)
 			new.meta_underlined = false
 		message_list.add_child(new)
-	#$AnimationPlayer.play("load_thread")
-	var title = 'Conversation between "{0}" and "{1}"'.format([thread.receiver, thread.sender])
-	$VBoxContainer/border/window_title.text = title
 
-func clear_thread():
+func clear():
+	clear_message_list()
+	for i in opened_windows:
+		i.queue_free()
+	opened_windows = []
+	self.current_thread = null
+
+func clear_message_list():
 	for i in range(0, message_list.get_child_count()):
 		message_list.get_child(i).queue_free()
-	self.current_thread = null
 
 func keyword_clicked(new_choice):
 	# tuto
-	if current_thread["receiver"] == "Mayor" and !current_thread["messages"][-1].has("validated"):
-		var tuto2 = get_tree().current_scene.find_child("tuto2")
-		tuto2.visible = true
+	if StaticData.is_tutorial_on:
+		create_tutorial_window(TranslationServer.translate("TUTO_CLICK_CHOICE"), $position_tuto2.position)
 	#
 	if !window_answer.has_choices():
 		StaticSfx.play_sfx(StaticSfx.click32_sfx, randf_range(0.9, 1.1))
@@ -75,11 +82,16 @@ func keyword_clicked(new_choice):
 		window_answer.refresh_answers(new_choice)
 
 func update_choice(choice):
+	if StaticData.is_tutorial_on:
+		create_tutorial_window(TranslationServer.translate("TUTO_CLICK_SEND"), $position_tuto3.position)
 	current_thread["messages"][-1]["choice"] = choice
-	refresh()
+	# refresh only messages
+	clear_message_list()
+	fill_messages()
 	window_answer.refresh_answers(choice)
 
 func refresh():
+	clear_message_list()
 	fill_thread(current_thread)
 
 func get_current_choice():
@@ -88,11 +100,17 @@ func get_current_choice():
 func lock_choice():
 	current_thread["messages"][-1]["validated"] = true
 
+func create_tutorial_window(text : String, position : Vector2):
+	for i in opened_windows:
+		if i.get_text() == text:
+			return
+	var tuto = window_tuto.instantiate()
+	tuto.position = position
+	opened_windows.append(tuto)
+	self.add_sibling(tuto)
+	tuto.open(text)
+
 func _on_close_window_button_pressed():
 	StaticSfx.play_sfx(StaticSfx.click31_sfx, 0.8)
-	var tuto1 = get_tree().current_scene.find_child("tuto1")
-	tuto1.visible = false
-	var tuto2 = get_tree().current_scene.find_child("tuto2")
-	tuto2.visible = false
-	clear_thread()
+	clear()
 	window_answer.clear()

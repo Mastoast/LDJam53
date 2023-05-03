@@ -7,6 +7,7 @@ var info_threads = {}
 var info_threads_file = "res://texts/threads_info.json"
 var info_threads_file_fra = "res://texts/threads_info_fr.json"
 
+var is_tutorial_on = true
 var language
 
 func _ready():

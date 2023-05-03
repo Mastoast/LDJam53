@@ -15,3 +15,5 @@
 
 ## 1.3.0
  - Fixed texts
+ - Reworker tutorial
+ - UI french translation

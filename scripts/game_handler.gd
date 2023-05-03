@@ -35,15 +35,11 @@ func create_event(thread):
 	preview_window.create_com_event(thread)
 
 func _on_send_button_pressed():
-	var tuto1 = get_tree().current_scene.find_child("tuto1")
-	tuto1.visible = false
-	var tuto2 = get_tree().current_scene.find_child("tuto2")
-	tuto2.visible = false
-	#
+	StaticData.is_tutorial_on = false
 	StaticSfx.play_sfx(StaticSfx.success_sfx, randf_range(0.90, 0.95), 0.55)
 	var new_choice = thread_window.get_current_choice()
 	thread_window.lock_choice()
-	thread_window.clear_thread()
+	thread_window.clear()
 	answer_window.clear()
 	decisions.append(new_choice)
 	print(decisions)

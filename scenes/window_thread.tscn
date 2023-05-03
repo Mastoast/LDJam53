@@ -147,4 +147,16 @@ libraries = {
 "": SubResource("AnimationLibrary_6euko")
 }
 
+[node name="position_tuto1" type="Marker2D" parent="."]
+position = Vector2(32, 74)
+gizmo_extents = 20.0
+
+[node name="position_tuto2" type="Marker2D" parent="."]
+position = Vector2(32, 320)
+gizmo_extents = 20.0
+
+[node name="position_tuto3" type="Marker2D" parent="."]
+position = Vector2(821, 196)
+gizmo_extents = 20.0
+
 [connection signal="pressed" from="VBoxContainer/border/TextureButton" to="." method="_on_close_window_button_pressed"]

@@ -2,3 +2,8 @@ key,en,fr
 BUTTON_SEND,SEND MESSAGE,ENVOYER
 LOGGED_IN_AS,Logged in as Paul Dubois,Paul Dubois
 USER_GUIDE,USER GUIDE,GUIDE
+TITLE_INTERCEPTED_COMS,Intercepted coms,msg interceptés
+CONVERSATION_BETWEEN,Conversation between {0} and {1},Conversation entre {0} et {1}
+TUTO_CLICK_ORIGINAL,Click on the colored box to change the intercepted text,Cliquez sur l'élément colorée pour modifier le texte intercepté
+TUTO_CLICK_CHOICE,Click on what you want the new content to be,Cliquez sur les propositions pour remplacer le contenu du message (ou faire le choix de laisser le message comme il était au départ)
+TUTO_CLICK_SEND,"Once your choice is made, hit the SEND button to forward the message to the original addressee","Une fois votre choix effectué, appuyez sur le bouton ENVOYER pour transférer le message au destinataire initial."
