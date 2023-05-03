@@ -9,8 +9,8 @@
 			},
 			{
 				"text": [
-					"Oui bien sûr. S'en est enfin fini de voir chaque jour leurs sale tête. Expulsez ",
-					" au plus vite."
+					"Oui bien sûr. S'en est enfin fini de voir chaque jour sa sale tête. Expulsez",
+					"au plus vite."
 				],
 				"choices": {
 					"le glacier": "eviction_ice",
@@ -99,8 +99,8 @@
 					"Je préchauffe le four."
 				],
 				"choices": {
-					"Cage 10 c'est ça. Garde bien la lumière éteinte, le stress ça tend la viande.": "robber_10",
-					"Non, ils ont changé. Cage 5. Dépêches toi, j'ai faim !": "robber_5"
+					"Non, ils ont changé. Cage 5. Dépêches toi, j'ai faim !": "robber_5",
+					"Cage 10 c'est ça. Garde bien la lumière éteinte, le stress ça tend la viande.": "robber_10"
 				},
 				"type": "sent"
 			}
@@ -176,31 +176,31 @@
 		"messages": [
 			{
 				"text": "Je viens de finir les budgets, tu recevras le remboursement d'essence avant la fin de la semaine",
-				"type": "received"
+				"type": "sent"
 			},
 			{
 				"text": "Nickel.",
-				"type": "sent"
+				"type": "received"
 			},
 			{
 				"text": "Au fait, tu pourrais faire un peu gaffe à ta conduite ? Les italiens ce sont plaints la semaine dernière.",
-				"type": "received"
+				"type": "sent"
 			},
 			{
 				"text": "Yes. Mais pour info, c'était des nonnes. Les chants religieux ça à tendance à me déconcentrer.",
-				"type": "sent"
-			},
-			{
-				"text": "Pas de soucis. N'oublie pas que demain tu dois récupérer les Allemands à l'aéroport à 6 heures du matin. Ensuite, petit déjeuner au Coffee Corner, visite de la boutique de souvenirs, puis le zoo.",
 				"type": "received"
 			},
 			{
-				"text": "Nickel.",
+				"text": "Pas de soucis. N'oublie pas que demain tu dois récupérer les Allemands à l'aéroport à 6 heures du matin. Ensuite, petit déjeuner au Coffee Corner, visite de la boutique de souvenirs, puis le zoo.",
 				"type": "sent"
 			},
 			{
+				"text": "Nickel.",
+				"type": "received"
+			},
+			{
 				"text": "Tu as vu ? Le zoo est fermé, il y a une enquête apparemment. Je fais quoi ?",
-				"type": "sent"
+				"type": "received"
 			},
 			{
 				"text": [
@@ -279,7 +279,7 @@
 					""
 				],
 				"choices": {
-					"Vous êtes con ou quoi ? Des bureaux de Total TattleTale, où autre ?": "police_tattletale",
+					"Vous êtes con ou quoi ? Des bureaux de Total TattleTale, évidemment ?": "police_tattletale",
 					"Aussi surprenant que cela puisse paraitre, il semble agir depuis le zoo. Cage 5 ou 10 ...": "police_zoo",
 					"Ils semblent être installé chez le concessionaire Land Robber.": "police_land_robber"
 				},

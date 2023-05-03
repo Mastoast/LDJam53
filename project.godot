@@ -28,6 +28,11 @@ window/stretch/mode="canvas_items"
 
 movie_writer/movie_file="C:/Users/Hector/Videos/GodotMovies/movie.avi"
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://texts/texts.en.translation", "res://texts/texts.fr.translation")
+pseudolocalization/double_vowels=true
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

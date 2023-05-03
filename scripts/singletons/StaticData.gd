@@ -17,9 +17,11 @@ func _process(delta):
 
 func load_language():
 	if language == "ENG":
+		TranslationServer.set_locale("en")
 		threads = load_json_file(threads_file)
 		info_threads = load_json_file(info_threads_file)
 	elif language == "FRA":
+		TranslationServer.set_locale("fr")
 		threads = load_json_file(threads_file_fra)
 		info_threads = load_json_file(info_threads_file_fra)
 

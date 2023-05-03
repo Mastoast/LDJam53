@@ -99,8 +99,8 @@
 					""
 				],
 				"choices": {
-					"Cage 10 that’s right. Keep the lights off, we don’t want to startle them.": "robber_10",
-					"No, they changed it to cage 5. Be quick, I’m hungry !": "robber_5"
+					"No, they changed it to cage 5. Be quick, I’m hungry !": "robber_5",
+					"Cage 10 that’s right. Keep the lights off, we don’t want to startle them.": "robber_10"
 				},
 				"type": "sent"
 			}
@@ -120,7 +120,7 @@
 			},
 			{
 				"text": [
-					"You don’t eve know my address ? Do you know who I am ? And you call yourself luxury… It’s ",
+					"You don’t even know my address ? Do you know who I am ? And you call yourself luxury… It’s ",
 					"."
 				],
 				"choices": {
@@ -176,27 +176,27 @@
 		"messages": [
 			{
 				"text": "I just finished the budgets, you’ll get gas reimbursement before the end of the week..",
-				"type": "received"
+				"type": "sent"
 			},
 			{
 				"text": "Perfect.",
-				"type": "sent"
+				"type": "received"
 			},
 			{
 				"text": "By the way, can you be a bit more mindful about your driving ? The group of italian tourists complained last week.",
-				"type": "received"
+				"type": "sent"
 			},
 			{
 				"text": "I will. But just so you know, they were nuns. The constant singing was a bit distracting.",
-				"type": "sent"
-			},
-			{
-				"text": "No worries. Don’t forget, tomorrow you gotta pick up the europeans at the airport at 6 AM. After that, it’s breakfast at the Coffee Corner, gift shop visit, and then the zoo.",
 				"type": "received"
 			},
 			{
-				"text": "Sure thing.",
+				"text": "No worries. Don’t forget, tomorrow you gotta pick up the europeans at the airport at 6 AM. After that, it’s breakfast at the Coffee Corner, gift shop visit, and then the zoo.",
 				"type": "sent"
+			},
+			{
+				"text": "Sure thing.",
+				"type": "received"
 			},
 			{
 				"text": "Have you checked the news ? The zoo is closed, there is an investigation apparently. What should we do ?",
