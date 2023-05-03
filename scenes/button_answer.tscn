@@ -1,14 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://ccikpjmn4vxq0"]
+[gd_scene load_steps=2 format=3 uid="uid://c4lnx5nk8rfem"]
 
-[ext_resource type="Script" path="res://scripts/answer_button.gd" id="1_3d148"]
+[ext_resource type="Script" path="res://scripts/button_answer.gd" id="1_i4ybw"]
 
-[node name="answer_button" type="Button"]
+[node name="button_answer" type="Button"]
 custom_minimum_size = Vector2(250, 100)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 focus_mode = 0
 mouse_default_cursor_shape = 2
-script = ExtResource("1_3d148")
+script = ExtResource("1_i4ybw")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1

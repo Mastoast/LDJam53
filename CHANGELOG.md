@@ -5,5 +5,10 @@
 
 ## 1.1.0 - 02/05/2023
  - Added sfx for news popup
- - Fix news popup animations
+ - Fixed news popup animations
 
+## 1.2.0 - 03-05-2023
+ - Fine-tuned filter noise
+ - Reworked some SFX
+ - Fixed news popup animations
+ - Minor interface tweaks

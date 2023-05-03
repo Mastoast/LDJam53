@@ -1,8 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://buyid5p8ln7bt"]
+[gd_scene load_steps=7 format=3 uid="uid://c08x4dlmo0co1"]
 
 [ext_resource type="StyleBox" uid="uid://c5jb737s5fxi3" path="res://themes/button_preview_normal.tres" id="1_cgt1k"]
 [ext_resource type="StyleBox" uid="uid://bkm08pe6v30mt" path="res://themes/button_preview_hover.tres" id="2_jgiqm"]
-[ext_resource type="Script" path="res://scripts/preview_message.gd" id="3_mjuca"]
+[ext_resource type="Script" path="res://scripts/message_preview.gd" id="3_hqu44"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pvcc4"]
 content_margin_left = 4.0
@@ -23,7 +23,7 @@ theme_override_styles/normal = ExtResource("1_cgt1k")
 theme_override_styles/hover = ExtResource("2_jgiqm")
 theme_override_styles/pressed = ExtResource("1_cgt1k")
 theme_override_styles/focus = ExtResource("1_cgt1k")
-script = ExtResource("3_mjuca")
+script = ExtResource("3_hqu44")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1

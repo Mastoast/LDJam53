@@ -1,7 +1,8 @@
 extends Panel
 
 @export_color_no_alpha var text_color : Color
-@export_color_no_alpha var background_color : Color
+@export_color_no_alpha var background_color_editable : Color
+@export_color_no_alpha var background_color_validated : Color
 
 var window_answer
 var current_thread
@@ -19,13 +20,14 @@ func _process(delta):
 
 func fill_thread(thread):
 	# tuto
-	if thread["receiver"] == "Mayor" and !thread["messages"][-1].has("sent"):
+	if thread["receiver"] == "Mayor" and !thread["messages"][-1].has("validated"):
 			var tuto1 = get_tree().current_scene.find_child("tuto1")
 			tuto1.visible = true
 	
 	clear_thread()
 	current_thread = thread
 	for message in thread["messages"]:
+		var validated = message.has("validated") and message.has("validated") == true
 		var new
 		if message["type"] == "sent":
 			new = sent.instantiate()
@@ -34,19 +36,19 @@ func fill_thread(thread):
 		if typeof(message["text"]) == TYPE_STRING:
 			new.text = message["text"]
 		else:
-			# setup changeable text
+			# setup editable text
 			if !message.has("choice"):
 				message["choice"] = message["choices"].keys()[0]
 			new.clear()
 			new.add_text(message["text"][0].strip_edges() + ' ')
 			new.push_color(text_color)
-			new.push_bgcolor(background_color)
-			if !message.has("sent"):
+			new.push_bgcolor(background_color_validated if validated else background_color_editable)
+			if !validated:
 				new.push_meta(message["choice"])
 			new.add_text(message["choice"])
 			new.pop()
 			new.pop()
-			if !message.has("sent"):
+			if !validated:
 				new.pop()
 			new.add_text(' ' + message["text"][1].strip_edges())
 			new.meta_clicked.connect(keyword_clicked)
@@ -63,7 +65,7 @@ func clear_thread():
 
 func keyword_clicked(new_choice):
 	# tuto
-	if current_thread["receiver"] == "Mayor" and !current_thread["messages"][-1].has("sent"):
+	if current_thread["receiver"] == "Mayor" and !current_thread["messages"][-1].has("validated"):
 		var tuto2 = get_tree().current_scene.find_child("tuto2")
 		tuto2.visible = true
 	#
@@ -84,7 +86,7 @@ func get_current_choice():
 	return current_thread["messages"][-1]["choices"][current_thread["messages"][-1]["choice"]]
 
 func lock_choice():
-	current_thread["messages"][-1]["sent"] = true
+	current_thread["messages"][-1]["validated"] = true
 
 func _on_close_window_button_pressed():
 	StaticSfx.play_sfx(StaticSfx.click31_sfx, 0.8)
