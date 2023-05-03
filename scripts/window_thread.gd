@@ -23,7 +23,7 @@ func _process(delta):
 func fill_thread(thread):
 	clear()
 	if StaticData.is_tutorial_on:
-		create_tutorial_window(TranslationServer.translate("TUTO_CLICK_ORIGINAL"), $position_tuto1.position)
+		create_tutorial_window("TUTO_CLICK_ORIGINAL", $position_tuto1.position)
 	current_thread = thread
 	fill_messages()
 	#$AnimationPlayer.play("load_thread")
@@ -74,7 +74,7 @@ func clear_message_list():
 func keyword_clicked(new_choice):
 	# tuto
 	if StaticData.is_tutorial_on:
-		create_tutorial_window(TranslationServer.translate("TUTO_CLICK_CHOICE"), $position_tuto2.position)
+		create_tutorial_window("TUTO_CLICK_CHOICE", $position_tuto2.position)
 	#
 	if !window_answer.has_choices():
 		StaticSfx.play_sfx(StaticSfx.click32_sfx, randf_range(0.9, 1.1))
@@ -83,7 +83,7 @@ func keyword_clicked(new_choice):
 
 func update_choice(choice):
 	if StaticData.is_tutorial_on:
-		create_tutorial_window(TranslationServer.translate("TUTO_CLICK_SEND"), $position_tuto3.position)
+		create_tutorial_window("TUTO_CLICK_SEND", $position_tuto3.position)
 	current_thread["messages"][-1]["choice"] = choice
 	# refresh only messages
 	clear_message_list()

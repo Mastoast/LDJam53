@@ -13,7 +13,7 @@
  - Fixed news popup animations
  - Minor interface tweaks
 
-## 1.3.0
+## 1.3.0 - 03/05/2023
  - Fixed texts
- - Reworker tutorial
- - UI french translation
+ - Reworked tutorials
+ - Add complete UI french translation
