@@ -1,7 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://pkywkq4be0nh"]
+[gd_scene load_steps=15 format=3 uid="uid://bxpkfnj1qyhp1"]
 
 [ext_resource type="Theme" uid="uid://dt64wf3jwua3u" path="res://themes/desktop.tres" id="1_rf31f"]
-[ext_resource type="Script" path="res://scripts/gameHandler.gd" id="2_mlnr7"]
+[ext_resource type="Script" path="res://scripts/game_handler.gd" id="2_63i6i"]
 [ext_resource type="Texture2D" uid="uid://pe84yybir1a" path="res://sprites/logo_petit.png" id="3_qyist"]
 [ext_resource type="Texture2D" uid="uid://dxejwmfggrxgy" path="res://sprites/wallpaper.png" id="5_rnhdx"]
 [ext_resource type="PackedScene" uid="uid://bvi2xwgl0tbhl" path="res://scenes/window_preview.tscn" id="6_n7gpa"]
@@ -26,7 +26,7 @@ anchors_preset = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 theme = ExtResource("1_rf31f")
-script = ExtResource("2_mlnr7")
+script = ExtResource("2_63i6i")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -78,6 +78,7 @@ uppercase = true
 layout_mode = 2
 
 [node name="button_volume" type="Button" parent="VBoxContainer/head/MarginContainer/HBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 mouse_default_cursor_shape = 2
@@ -85,6 +86,7 @@ text = "VOL"
 flat = true
 
 [node name="VSeparator3" type="VSeparator" parent="VBoxContainer/head/MarginContainer/HBoxContainer"]
+visible = false
 layout_mode = 2
 
 [node name="logged_in" type="Label" parent="VBoxContainer/head/MarginContainer/HBoxContainer"]
