@@ -27,9 +27,13 @@ bg_color = Color(0.0235294, 0.133333, 0.282353, 1)
 font_size = 17
 
 [node name="popup_news" type="Control"]
-custom_minimum_size = Vector2(510, 300)
+custom_minimum_size = Vector2(510, 0)
 layout_mode = 3
 anchors_preset = 0
+offset_right = 510.0
+offset_bottom = 188.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
 theme = ExtResource("1_c3j3w")
 script = ExtResource("2_q2upk")
 
@@ -46,7 +50,7 @@ color = Color(0.0235294, 0.133333, 0.282353, 1)
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 697.0
+offset_bottom = 191.0
 grow_horizontal = 2
 
 [node name="header" type="HBoxContainer" parent="VBoxContainer"]
@@ -78,7 +82,7 @@ custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 size_flags_vertical = 1
 theme_override_styles/normal = SubResource("StyleBoxFlat_fjlgv")
-text = "qksjddh iqufy ihdf ooqsdof jhskdjfh osdikjhflqsdiufh lkisqdjhf lkjsdhf lkjh"
+text = "qksjddh iqufy ihdf ooqsdof jhskdjfh osdikjhflqsdiufh lkisqdjh"
 label_settings = SubResource("LabelSettings_e7ocw")
 autowrap_mode = 3
 
@@ -86,7 +90,7 @@ autowrap_mode = 3
 layout_mode = 2
 size_flags_vertical = 1
 theme_override_styles/normal = SubResource("StyleBoxFlat_wvroo")
-text = "qksjddh iqufy ihdf ooqsdof jhskdjfh osdikjhflqsdiufh lkisqdjhf  lkisqdjhf lkjsdhf lkjhqksjddh iqufy ihdf ooqsdof jhskdjfh osdikjhflqsdiufh lkisqdjhf lkjsdhf lkjhqksjddh iqufy ihdf ooqsdof jhskdjfh osdikjhflqsdiufh lkisqdjhf lkjsdhf lkjhqksjddh iqufy ihdf ooqsdof jhskdjfh osdikjhflqsdiufh lkisqdjhf lkjsdhf lkjhqksjddh iqufy ihdf ooqsdof jhskdjfh osdikjhflqsdiufh lkisqdjhf lkjsdhf lkjhqksjddh iqufy ihdf ooqsdof jhskdjfh osdikjhflqsdiufh lkisqdjhf lkjsdhf lkjhqksjddh iqufy ihdf ooqsdof jhskdjfh osdikjhflqsdiufh lkisqdjhf lkjsdhf lkjh"
+text = "qkjf hqkdjfh lqkdjjhflqj hlqkdjhf lkqjdhfl kqdjh lqkdjhfl kqjdhlfkjqhld kjqhldkfhlq"
 label_settings = SubResource("LabelSettings_m7cif")
 autowrap_mode = 3
 
