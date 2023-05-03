@@ -1,6 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://cmbq5g85s6b4i"]
+[gd_scene load_steps=7 format=3 uid="uid://djtawl4vgg1eb"]
 
-[ext_resource type="PackedScene" uid="uid://m6wxlbo0oiwm" path="res://levels/game_screen.tscn" id="1_2yxcs"]
+[ext_resource type="PackedScene" uid="uid://m6wxlbo0oiwm" path="res://levels/screen_desktop.tscn" id="1_2yxcs"]
 [ext_resource type="PackedScene" uid="uid://cw7oqcr1kgj0u" path="res://levels/screen_login.tscn" id="2_4beum"]
 [ext_resource type="Shader" path="res://shaders/crt_filter.gdshader" id="3_vlvw2"]
 [ext_resource type="Script" path="res://scripts/crt_filter.gd" id="4_epf6o"]

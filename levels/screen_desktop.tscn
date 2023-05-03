@@ -77,6 +77,16 @@ uppercase = true
 [node name="VSeparator2" type="VSeparator" parent="VBoxContainer/head/MarginContainer/HBoxContainer"]
 layout_mode = 2
 
+[node name="button_volume" type="Button" parent="VBoxContainer/head/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "VOL"
+flat = true
+
+[node name="VSeparator3" type="VSeparator" parent="VBoxContainer/head/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
 [node name="logged_in" type="Label" parent="VBoxContainer/head/MarginContainer/HBoxContainer"]
 layout_mode = 2
 text = "Logged in as Paul Dubois"

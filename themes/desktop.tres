@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=11 format=3 uid="uid://dt64wf3jwua3u"]
+[gd_resource type="Theme" load_steps=15 format=3 uid="uid://dt64wf3jwua3u"]
 
 [ext_resource type="FontFile" uid="uid://bbqsv3m0wu4mi" path="res://font/Ubuntu-Regular.ttf" id="1_sdf7p"]
 
@@ -14,15 +14,10 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_htqha"]
-bg_color = Color(0.988235, 0, 0.901961, 1)
-border_width_left = 99
-border_color = Color(0, 0.8, 0.8, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kjodb"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ch0o"]
-bg_color = Color(0.92549, 0.4, 0.509804, 1)
-border_width_left = 55
-border_color = Color(0.8, 0, 0.8, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ltm1g"]
+bg_color = Color(0.721569, 0.721569, 0.721569, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1nr6j"]
 bg_color = Color(0.0901961, 0.0901961, 0.0901961, 1)
@@ -32,7 +27,7 @@ corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5qagv"]
-bg_color = Color(0.0745098, 0.545098, 0.0745098, 1)
+bg_color = Color(0.309804, 0.309804, 0.537255, 1)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
@@ -57,12 +52,21 @@ bg_color = Color(0.721569, 0.721569, 0.721569, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t4o3n"]
 bg_color = Color(0.721569, 0.721569, 0.721569, 1)
 
+[sub_resource type="ImageTexture" id="ImageTexture_6ahrf"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_qjmcr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qccs6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s3xgp"]
+
 [resource]
 default_font = ExtResource("1_sdf7p")
 Button/styles/focus = SubResource("StyleBoxFlat_t8c0y")
 Button/styles/normal = SubResource("StyleBoxFlat_t8c0y")
-HSlider/styles/grabber_area = SubResource("StyleBoxFlat_htqha")
-HSlider/styles/slider = SubResource("StyleBoxFlat_1ch0o")
+HScrollBar/styles/grabber = SubResource("StyleBoxFlat_kjodb")
+HScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_ltm1g")
+HScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_ltm1g")
 LineEdit/colors/font_color = Color(1, 1, 1, 1)
 ProgressBar/font_sizes/font_size = 13
 ProgressBar/styles/background = SubResource("StyleBoxFlat_1nr6j")
@@ -74,3 +78,7 @@ VScrollBar/styles/grabber = SubResource("StyleBoxFlat_srd0y")
 VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_hqkm6")
 VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_t4o3n")
 VSeparator/constants/separation = 10
+VSlider/icons/grabber = SubResource("ImageTexture_6ahrf")
+VSlider/icons/grabber_highlight = SubResource("ImageTexture_qjmcr")
+VSlider/styles/grabber_area = SubResource("StyleBoxFlat_qccs6")
+VSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_s3xgp")

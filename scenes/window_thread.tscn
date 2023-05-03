@@ -130,16 +130,15 @@ text = "Hello, following your recent eviction request, our agents are ready to i
 [node name="message_sent" parent="VBoxContainer/MarginContainer/ScrollContainer/message_list" instance=ExtResource("9_qmvel")]
 layout_mode = 2
 text = "Yes of course. At last, I won’t have to see their ugly face on my way to work. Please proceed to the eviction of "
+script = null
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 visible = false
-layout_mode = 2
-offset_left = 30.0
-offset_top = 198.5
-offset_right = 838.0
-offset_bottom = 214.5
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 0
+offset_left = 29.0
+offset_top = 246.0
+offset_right = 837.0
+offset_bottom = 262.0
 step = 1.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

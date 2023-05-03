@@ -1,7 +1,7 @@
 extends MarginContainer
 
 var window_thread
-var answer_button = load("res://scenes/answer_button.tscn")
+var button_answer = load("res://scenes/button_answer.tscn")
 
 func _ready():
 	window_thread = get_tree().get_first_node_in_group("thread")
@@ -13,7 +13,7 @@ func _process(delta):
 func add_answers(choices):
 	clear()
 	for choice in choices:
-		var new = answer_button.instantiate()
+		var new = button_answer.instantiate()
 		new.set_label(choice)
 		$HBoxContainer.add_child(new)
 
