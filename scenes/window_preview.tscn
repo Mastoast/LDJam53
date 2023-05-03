@@ -46,7 +46,7 @@ theme_override_constants/margin_right = 0
 [node name="border_title" type="Label" parent="VBoxContainer/border/MarginContainer"]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("4_oscd6")
-text = "intercepted coms"
+text = "INTERCEPTED_COMS"
 vertical_alignment = 1
 clip_text = true
 uppercase = true
