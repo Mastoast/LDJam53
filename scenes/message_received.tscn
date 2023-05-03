@@ -5,7 +5,7 @@
 [node name="message_received" type="RichTextLabel"]
 clip_contents = false
 custom_minimum_size = Vector2(500, 0)
-size_flags_horizontal = 0
+size_flags_horizontal = 8
 theme_override_constants/line_separation = 5
 theme_override_styles/normal = ExtResource("1_8wjtq")
 bbcode_enabled = true
