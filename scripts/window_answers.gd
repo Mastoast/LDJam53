@@ -12,10 +12,13 @@ func _process(delta):
 
 func add_answers(choices):
 	clear()
+	var tween = create_tween().set_parallel(true).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_EXPO)
 	for choice in choices:
 		var new = button_answer.instantiate()
 		new.set_label(choice)
 		$HBoxContainer.add_child(new)
+		tween.tween_property(new, "custom_minimum_size", new.custom_minimum_size, 0.05)
+		new.custom_minimum_size = new.custom_minimum_size * 0.85
 
 func has_choices():
 	return $HBoxContainer.get_child_count() > 0

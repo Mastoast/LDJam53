@@ -1,9 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://t776op5xvn6b"]
+[gd_scene load_steps=11 format=3 uid="uid://t776op5xvn6b"]
 
 [ext_resource type="Theme" uid="uid://dt64wf3jwua3u" path="res://themes/desktop.tres" id="1_7ppw4"]
 [ext_resource type="Script" path="res://scripts/window_thread.gd" id="1_jugw2"]
 [ext_resource type="StyleBox" uid="uid://cv0wvc6bxjm6k" path="res://themes/window_background.tres" id="1_v12kp"]
-[ext_resource type="StyleBox" uid="uid://c1haftvkjic0v" path="res://themes/window_border.tres" id="3_vqyr0"]
 [ext_resource type="StyleBox" uid="uid://d2y7jeuwoiqjr" path="res://themes/window_panel.tres" id="4_4pauq"]
 [ext_resource type="StyleBox" uid="uid://wkdlrrcpiyq6" path="res://themes/window_title.tres" id="5_1ot8r"]
 [ext_resource type="Texture2D" uid="uid://ena4ahxeq5k" path="res://sprites/crossP.png" id="6_5d0af"]
@@ -75,37 +74,29 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 0
 
-[node name="border" type="Panel" parent="VBoxContainer"]
+[node name="border" type="HBoxContainer" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
-theme_override_styles/panel = ExtResource("3_vqyr0")
 
 [node name="window_title" type="Label" parent="VBoxContainer/border"]
 custom_minimum_size = Vector2(0, 20)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 2
+size_flags_horizontal = 3
 theme_override_styles/normal = ExtResource("5_1ot8r")
 text = "MESSAGE HISTORY"
 vertical_alignment = 1
 
 [node name="TextureButton" type="TextureButton" parent="VBoxContainer/border"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -21.9999
-offset_top = 6.0
-offset_right = -0.999939
-offset_bottom = 27.0
-grow_horizontal = 0
-scale = Vector2(0.8, 0.8)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("6_5d0af")
 stretch_mode = 0
+
+[node name="Control" type="Control" parent="VBoxContainer/border"]
+custom_minimum_size = Vector2(5, 0)
+layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
 layout_mode = 2

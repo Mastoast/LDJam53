@@ -17,3 +17,6 @@
  - Fixed texts
  - Reworked tutorials
  - Add complete UI french translation
+
+## 1.4.0 - 
+ - Added UI animations

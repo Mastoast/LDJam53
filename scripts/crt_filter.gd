@@ -6,6 +6,9 @@ var shader
 func _ready():
 	shader = self.material
 	get_window().size_changed.connect(size_changed)
+	var animation = $AnimationPlayer
+	if animation:
+		animation.play("system_awake")
 
 func _process(delta):
 	pass
