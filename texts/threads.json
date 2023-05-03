@@ -9,7 +9,7 @@
 			},
 			{
 				"text": [
-					"Yes of course. At last, I won’t have to see their ugly face on my way to work. Please proceed to the eviction of ",
+					"Yes, of course. At last, I won’t have to see their ugly face on my way to work. Please proceed to the eviction of ",
 					"."
 				],
 				"choices": {
@@ -99,7 +99,7 @@
 					""
 				],
 				"choices": {
-					"Cage 10 that’s right. Keep the lights off, we don’t want to startle them": "robber_10",
+					"Cage 10 that’s right. Keep the lights off, we don’t want to startle them.": "robber_10",
 					"No, they changed it to cage 5. Be quick, I’m hungry !": "robber_5"
 				},
 				"type": "sent"
@@ -288,7 +288,7 @@
 		]
 	},
 	{
-		"sender": "The developpers",
+		"sender": "The devs",
 		"receiver": "You",
 		"messages": [
 			{
@@ -311,7 +311,7 @@
 				"choices": {
 					"Bye !" : "answer",
 					"Do you have the opening times of the Olden Shoe Museum ?": "answer_bis",
-					"How can I unlock the secret ending ?": "police_land_robber"
+					"How can I unlock the secret ending ?": "answer_ter"
 				},
 				"type": "sent"
 			}
