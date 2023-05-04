@@ -11,18 +11,24 @@ var is_tutorial_on = true
 var language
 
 func _ready():
+	TranslationServer.set_locale("en")
 	language = "ENG"
 
 func _process(delta):
 	pass
 
-func load_language():
+func change_language(language : String):
 	if language == "ENG":
 		TranslationServer.set_locale("en")
+	elif language == "FRA":
+		TranslationServer.set_locale("fr")
+	self.language = language
+
+func load_threads():
+	if language == "ENG":
 		threads = load_json_file(threads_file)
 		info_threads = load_json_file(info_threads_file)
 	elif language == "FRA":
-		TranslationServer.set_locale("fr")
 		threads = load_json_file(threads_file_fra)
 		info_threads = load_json_file(info_threads_file_fra)
 

@@ -23,11 +23,10 @@ func _on_password_text_submitted(new_text):
 	if password_try_count < max_attempt:
 		$password.text = ""
 		$AnimationPlayer.play("authentification_failed", -1, animation_speed)
-		$warning.text = "Wrong Password, {0} attempts left".format([max_attempt - password_try_count])
+		$warning.text = TranslationServer.translate("PASSWORD_WARNING").format([max_attempt - password_try_count])
 		StaticSfx.play_sfx(StaticSfx.error_sfx)
 	else:
-		StaticData.language = languages[language_index]
-		StaticData.load_language()
+		StaticData.load_threads()
 		var game_handler = get_tree().get_first_node_in_group("game")
 		game_handler.load_threads()
 		$warning.text = ""
@@ -45,6 +44,7 @@ func screen_unlocked():
 func _on_button_pressed():
 	language_index = (language_index + 1) % 2
 	$language_button.text = languages[language_index]
+	StaticData.change_language(languages[language_index])
 
 
 func _on_validate_pressed():

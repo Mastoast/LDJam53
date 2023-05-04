@@ -88,14 +88,12 @@ vertical_alignment = 1
 
 [node name="TextureButton" type="TextureButton" parent="VBoxContainer/border"]
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 4
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("6_5d0af")
-stretch_mode = 0
+stretch_mode = 3
 
 [node name="Control" type="Control" parent="VBoxContainer/border"]
-custom_minimum_size = Vector2(5, 0)
+custom_minimum_size = Vector2(2, 0)
 layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
