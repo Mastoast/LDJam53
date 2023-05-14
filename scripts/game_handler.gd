@@ -11,6 +11,8 @@ var answer_window
 var time_field
 var popup = load("res://scenes/popup_info_news.tscn")
 
+var printed = []
+var printed_articles = []
 var decisions = []
 var news = []
 var press_article = {"title":"prout", "content":"patate"}
@@ -25,10 +27,49 @@ func _process(delta):
 	var current_time = Time.get_time_string_from_system().substr(0, 5)
 	if time_field != null:
 		time_field.text = current_time
+	#check for messages to print
+	if threads:
+		for message in threads:
+			var toprint_choice = false
+			var toprint_print = false
+			if !(message["id"] in printed): 
+				for condition in message["conditions"]:
+					toprint_choice = true
+					toprint_print = true
+					if condition["choice_needed"]:
+						for choice in condition["choice_needed"]:
+							if !(choice in decisions):
+								toprint_choice = false
+					if condition["print_needed"]:
+						for print in condition["print_needed"]:
+							toprint_print = false
+							for decision in decisions:
+								if print == decision.split("_")[0]:
+									toprint_print = true
+			if toprint_choice && toprint_print :
+				printed.append(message["id"])
+				print(printed)
+				create_event(message)
+	checkandprint_news()
 
+func checkandprint_news():
+	for article in article_list:
+		if !(article["title"] in printed_articles):
+			var print_article = true
+			print(article)
+			for set in article["decision_needed"]:
+				var or_condition_test = false
+				for or_condition in set:
+					if or_condition in decisions:
+						or_condition_test = true
+				if !or_condition_test:
+					print_article = false
+			if print_article:
+				create_popup(article)
+				printed_articles.append(article["title"])
+	
 func load_threads():
 	threads = StaticData.threads
-	create_event(threads[0])
 	article_list = StaticData.info_threads
 
 func create_event(thread):
@@ -38,48 +79,14 @@ func _on_send_button_pressed():
 	StaticData.is_tutorial_on = false
 	StaticSfx.play_sfx(StaticSfx.success_sfx, randf_range(0.90, 0.95), 0.55)
 	var new_choice = thread_window.get_current_choice()
+	print(thread_window)
 	thread_window.lock_choice()
 	thread_window.clear()
 	answer_window.clear()
 	decisions.append(new_choice)
 	print(decisions)
-	#
-	popup_check(new_choice)
-	add_message(decisions)
-
-func add_message(decisions):
-	var next_message
-
-	while decisions.size() < threads.size():
-		next_message = threads[decisions.size()]
-		if next_message["sender"] == "CEO Land Robber":
-			if "eviction_land" in decisions:
-				create_event(next_message)
-				return
-			else:
-				decisions.append("embez_none")
-		elif next_message["sender"] == "Mom":
-			if "oyster_friend" in decisions:
-				create_event(next_message)
-				return
-			else:
-				decisions.append("mom_none")
-		elif next_message["sender"] == "Tourism bus driver":
-			if "robber_10" in decisions:
-				if next_message["version"] == "investigation":
-					decisions.append("filler_for_driver")
-				else: 
-					create_event(next_message)
-					return
-			else: 
-				if next_message["version"] == "zoo":
-					decisions.append("filler_for_driver")
-				else: 
-					create_event(next_message)
-					return
-		else:
-			create_event(next_message)
-			return
+	#popup_check(new_choice)
+	#add_message(decisions)
 
 func popup_check(choice):
 	if choice == "eviction_ice" and "eviction_ice" in decisions:

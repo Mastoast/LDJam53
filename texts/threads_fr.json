@@ -1,7 +1,11 @@
 [
 	{
+		"id": "eviction",
 		"sender": "Eviction Team",
 		"receiver": "Mayor",
+		"conditions" : [
+						{"choice_needed": [], "print_needed": []}
+						],
 		"messages": [
 			{
 				"text": "Bonjour, suite à votre récente demande d'expulsion, nos agents sont prêts à intervenir. Pouvez-vous nous donner le nom de l'établissement concerné?",
@@ -22,8 +26,12 @@
 		]
 	},
 	{
+		"id": "classtrip",
 		"sender": "Professor",
 		"receiver": "Principal",
+		"conditions" : [
+						{"choice_needed": [], "print_needed": ["eviction"]}
+						],
 		"messages": [
 			{
 				"text": "Bonjour Mme la Directrice. Bonne nouvelle, le financement du voyage de classe de cette année est enfin assuré ! J'ai acheté les dix derniers billets de tombola de Kevin qui a eu un peu de mal à les écouler. Il ne reste qu'une question, avez-vous décidé où le voyage de classe devra se dérouler ?",
@@ -35,17 +43,21 @@
 					"."
 				],
 				"choices": {
-					"au Musée de la Chaussure": "trip_museum",
-					"à la Piscine": "trip_pool",
-					"au Ski": "trip_ski"
+					"au Musée de la Chaussure": "classtrip_museum",
+					"à la Piscine": "classtrip_pool",
+					"au Ski": "classtrip_ski"
 				},
 				"type": "sent"
 			}
 		]
 	},
 	{
+		"id":"evictionland",
 		"sender": "CEO Land Robber",
 		"receiver": "CEO friend",
+		"conditions" : [
+						{"choice_needed": ["eviction_land"], "print_needed": ["classtrip"]}
+						],
 		"messages": [
 			{
 				"text": "Je viens d'avoir les flics au concessionaire ! Avec un avis d'expulsion ! Tu crois que c'est à cause du détournement de fonds ?",
@@ -57,16 +69,20 @@
 					""
 				],
 				"choices": {
-					"Je ne sais pas. Je vais vérifier avec mon ami à la mairie": "embez_city_hall",
-					"Tu as déja entendu parlé du musée de la chaussure ? C'est bien ?": "embez_museum"
+					"Je ne sais pas. Je vais vérifier avec mon ami à la mairie": "evictionland_city_hall",
+					"Tu as déja entendu parlé du musée de la chaussure ? C'est bien ?": "evictionland_museum"
 				},
 				"type": "sent"
 			}
 		]
 	},
 	{
+		"id":"cages",
 		"sender": "Chief caretaker",
 		"receiver": "Employee",
+		"conditions" : [
+						{"choice_needed": [], "print_needed": ["classtrip"]}
+						],
 		"messages": [
 			{
 				"text": "Oublie pas le changement des cages aujourd'hui. Les Pandas doivent aller dans la cage 5 et les Tigres dans la cage 10. N'oublie pas. Tu sais comment sont les Pandas quand ils mangent de la nourriture pour tigre... Vendredi dernier, c'était déja trop.",
@@ -78,16 +94,20 @@
 					"."
 				],
 				"choices": {
-					"Désolé pour la dernière fois.": "zoo_sorry",
-					"Mais avoue, c'était un sacré spectacle": "zoo_show"
+					"Désolé pour la dernière fois.": "cages_sorry",
+					"Mais avoue, c'était un sacré spectacle": "cages_show"
 				},
 				"type": "sent"
 			}
 		]
 	},
 	{
+		"id":"robber",
 		"sender": "Robber",
 		"receiver": "Boss",
+		"conditions" : [
+						{"choice_needed": [], "print_needed": ["cages"]}
+						],
 		"messages": [
 			{
 				"text": "Tout est prêt pour le cambriolage du zoo Boss. Les déguisements sont parfait. La clef à l'air de marcher. J'arrive pas à croire qu'on va enfin avoir nos propres pandas. Avec un bon vin rouge, ce sera parfait. C'est toujours la cage 10, c'est ça ?",
@@ -107,8 +127,12 @@
 		]
 	},
 	{
+		"id":"oyster",
 		"sender": "Luxury and Perjury",
 		"receiver": "Land Robber CEO",
+		"conditions" : [
+						{"choice_needed": [], "print_needed": ["robber"]}
+						],
 		"messages": [
 			{
 				"text": "Ici le PDG de Land Robber. J'ouvre un nouveau concessionaire, je veux 400 caisses de vos meilleures huitres, avant ce soir. Vite, je suis quelqu'un d'occupé",
@@ -133,8 +157,12 @@
 		]
 	},
 	{
+		"id":"mom",
 		"sender": "Mom",
 		"receiver": "Kid",
+		"conditions" : [
+						{"choice_needed": ["oyster_friend"], "print_needed": ["oyster"]}
+						],
 		"messages": [
 			{
 				"text": "N'oublie pas de sortir la volaille du frigo! Bises.",
@@ -170,9 +198,12 @@
 		]
 	},
 	{
+		"id":"driver_investigation",
 		"sender": "Tourism bus driver",
 		"receiver": "Tourism Agency",
-		"version": "investigation",
+		"conditions" : [
+						{"choice_needed": ["robber_5"], "print_needed": ["oyster"]}
+						],
 		"messages": [
 			{
 				"text": "Je viens de finir les budgets, tu recevras le remboursement d'essence avant la fin de la semaine",
@@ -216,9 +247,12 @@
 		]
 	},
 	{
+		"id":"driver_zoo",
 		"sender": "Tourism bus driver",
 		"receiver": "Tourism Agency",
-		"version": "zoo",
+		"conditions" : [
+						{"choice_needed": ["robber_10"], "print_needed": ["oyster"]}
+						],
 		"messages": [
 			{
 				"text": "Je viens de finir les budgets, tu recevras le remboursement de l'essence avant la fin de la semaine",
@@ -262,8 +296,13 @@
 		]
 	},
 	{
+		"id":"police",
 		"sender": "Police Dispatcher",
 		"receiver": "Patrol",
+		"conditions" : [
+						{"choice_needed": [], "print_needed": ["driver"]},
+						{"choice_needed": [], "print_needed": ["driver"]}
+						],
 		"messages": [
 			{
 				"text": "Nous avons entendu parler d'un pirate informatique qui intercepte des communications et fait beaucoup de bruit dans la ville. Patrouille, allez-y et appréhendez-le !",
@@ -288,8 +327,12 @@
 		]
 	},
 	{
+		"id":"print_dev",
 		"sender": "Les développeurs",
 		"receiver": "Toi",
+		"conditions" : [
+						{"choice_needed": [], "print_needed": ["police"]}
+						],
 		"messages": [
 			{
 				"text": "Fin.",
